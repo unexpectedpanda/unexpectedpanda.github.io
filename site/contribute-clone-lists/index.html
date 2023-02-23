@@ -1,0 +1,1990 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../images/retool.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Clone lists - Retool</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#create-and-edit-clone-lists" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Retool" class="md-header__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Retool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Clone lists
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Retool" class="md-nav__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    Retool
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        Download and install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Understanding Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Understanding Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Understanding Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-retool-works/" class="md-nav__link">
+        How Retool works
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retool-1g1r/" class="md-nav__link">
+        Why Retool's 1G1R is better
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clone-lists/" class="md-nav__link">
+        Clone lists and metadata files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dat-support/" class="md-nav__link">
+        DAT support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          How to use Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How to use Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          How to use Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-retool-gui/" class="md-nav__link">
+        Retool GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-retool-cli/" class="md-nav__link">
+        Retool CLI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Contribute to Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute to Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Clone lists
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Clone lists
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    Before you begin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titles-that-retool-automatically-detects-as-clones" class="md-nav__link">
+    Titles that Retool automatically detects as clones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-list-location-and-names" class="md-nav__link">
+    Clone list location and names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-list-structure" class="md-nav__link">
+    Clone list structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Clone list structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    Categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mias" class="md-nav__link">
+    MIAs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrides" class="md-nav__link">
+    Overrides
+  </a>
+  
+    <nav class="md-nav" aria-label="Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#override-conditions" class="md-nav__link">
+    Override conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removes" class="md-nav__link">
+    Removes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    Variants
+  </a>
+  
+    <nav class="md-nav" aria-label="Variants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordering-variants-arrays" class="md-nav__link">
+    Ordering variants arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-titles" class="md-nav__link">
+    Example: working with titles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-supersets" class="md-nav__link">
+    Example: working with supersets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-compilations" class="md-nav__link">
+    Example: working with compilations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-priorities" class="md-nav__link">
+    Example: working with priorities
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: working with priorities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#titles" class="md-nav__link">
+    Titles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supersets" class="md-nav__link">
+    Supersets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilations" class="md-nav__link">
+    Compilations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-clone-lists" class="md-nav__link">
+    Format clone lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clone-lists" class="md-nav__link">
+    Test clone lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing-for-updates" class="md-nav__link">
+    Hashing for updates
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming-system/" class="md-nav__link">
+        Retool's naming system
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrate/" class="md-nav__link">
+        Integrate Retool into your own software
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#before-you-begin" class="md-nav__link">
+    Before you begin
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#titles-that-retool-automatically-detects-as-clones" class="md-nav__link">
+    Titles that Retool automatically detects as clones
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-list-location-and-names" class="md-nav__link">
+    Clone list location and names
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#clone-list-structure" class="md-nav__link">
+    Clone list structure
+  </a>
+  
+    <nav class="md-nav" aria-label="Clone list structure">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    Description
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#categories" class="md-nav__link">
+    Categories
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#mias" class="md-nav__link">
+    MIAs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#overrides" class="md-nav__link">
+    Overrides
+  </a>
+  
+    <nav class="md-nav" aria-label="Overrides">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#override-conditions" class="md-nav__link">
+    Override conditions
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#removes" class="md-nav__link">
+    Removes
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#variants" class="md-nav__link">
+    Variants
+  </a>
+  
+    <nav class="md-nav" aria-label="Variants">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#ordering-variants-arrays" class="md-nav__link">
+    Ordering variants arrays
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-titles" class="md-nav__link">
+    Example: working with titles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-supersets" class="md-nav__link">
+    Example: working with supersets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-compilations" class="md-nav__link">
+    Example: working with compilations
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#example-working-with-priorities" class="md-nav__link">
+    Example: working with priorities
+  </a>
+  
+    <nav class="md-nav" aria-label="Example: working with priorities">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#titles" class="md-nav__link">
+    Titles
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#supersets" class="md-nav__link">
+    Supersets
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#compilations" class="md-nav__link">
+    Compilations
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#format-clone-lists" class="md-nav__link">
+    Format clone lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#test-clone-lists" class="md-nav__link">
+    Test clone lists
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#hashing-for-updates" class="md-nav__link">
+    Hashing for updates
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/unexpectedpanda/retool/edit/master/docs/contribute-clone-lists.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="create-and-edit-clone-lists">Create and edit clone lists</h1>
+<p>Contributing to Retool's clone lists directly involves code and being familiar with Git
+and GitHub. If that's not something you're interested in, you can still request clone list
+changes by <a href="https://github.com/unexpectedpanda/retool/issues">filing an issue</a>.</p>
+<p>If you want to contribute directly, <a href="https://github.com/unexpectedpanda/retool-clonelists-metadata">fork the clone lists and metadata repository</a>, read the following guidelines, make your
+changes, and then submit a <a href="https://github.com/unexpectedpanda/retool-clonelists-metadata/pulls">pull request</a>.</p>
+<h2 id="before-you-begin">Before you begin</h2>
+<p>If you want to create or edit clone lists, you need to understand <a href="https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Objects/JSON">JSON</a>
+and the following data structures:</p>
+<ul>
+<li>Key/value pairs</li>
+<li>Strings</li>
+<li>Integers</li>
+<li>Arrays</li>
+<li>Objects</li>
+</ul>
+<p>It also helps to understand Retool's <a href="/terminology">terminology</a>, and the different
+<a href="/naming-system">names</a> it assigns to titles to help match and group them together
+accurately.</p>
+<p>Finally, you should read <a href="/how-retool-works">How Retool works</a> so you understand the order
+in which things are processed, and can solve problems using the correct clone list
+features.</p>
+<h2 id="titles-that-retool-automatically-detects-as-clones">Titles that Retool automatically detects as clones</h2>
+<p>Before referencing clone lists, Retool parses a DAT file and creates objects for all of
+its titles. If multiple titles have the same <a href="/naming-system/#group-names">group name</a> and
+<a href="/naming-system/#short-names">short name</a>, Retool assumes they're related to each other.</p>
+<p>Names should only be added to clone lists in the following situations:</p>
+<ul>
+<li>
+<p>To link together titles that ordinarily would have different group/short names due to
+  regional naming, for example <a href="https://en.wikipedia.org/wiki/Fahrenheit_(2005_video_game)"><em>Indigo Prophecy</em> and <em>Fahrenheit</em></a>.</p>
+</li>
+<li>
+<p>To override Retool's default grouping.</p>
+</li>
+<li>
+<p>To assign categories to titles.</p>
+</li>
+<li>
+<p>To designate a title as missing in action (MIA).</p>
+</li>
+</ul>
+<h2 id="clone-list-location-and-names">Clone list location and names</h2>
+<p>Clone lists are found by default in the <code>clonelists</code> subfolder. What subfolder Retool
+looks for clone lists in is defined in <code>config/internal-config.json</code> in the
+<code>cloneLists</code> object:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;cloneLists&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="nt">&quot;localDir&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;clonelists&quot;</span><span class="w"></span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Retool selects the correct clone list and metadata files for the loaded DAT file by
+checking the <code class="highlight"><span class="nt">&lt;name&gt;</span></code> and <code class="highlight"><span class="nt">&lt;url&gt;</span></code> tags in the header of the DAT, and then
+looking for a matching filename with the release group appended in the clone lists and
+metadata folders. For example, for Redump's Sony PlayStation DAT, the <code class="highlight"><span class="nt">&lt;name&gt;</span></code> is
+<code>Sony - PlayStation</code>. Therefore Retool looks for the clone list
+<code>Sony - PlayStation (Redump).json</code> in the clone lists folder. If a matching file isn't
+found, then only Retool's automatic clone detection is used.</p>
+<h2 id="clone-list-structure">Clone list structure</h2>
+<p>Each clone list JSON file contains different top-level keys that determine how Retool
+treats the titles in the related input DAT. The keys are as follows:</p>
+<ul>
+<li>
+<p><a href="#description"><code>description (obj[str, str])</code></a></p>
+</li>
+<li>
+<p><a href="#categories"><code>categories (array[obj])</code></a></p>
+</li>
+<li>
+<p><a href="#mias"><code>mias (array[str])</code></a></p>
+</li>
+<li>
+<p><a href="#overrides"><code>overrides (array[obj])</code></a></p>
+</li>
+<li>
+<p><a href="#removes"><code>removes (array[obj])</code></a></p>
+</li>
+<li>
+<p><a href="#variants"><code>variants (array[obj])</code></a></p>
+</li>
+</ul>
+<p>All keys are optional, except for <code>description</code>. They should be kept in the same order in
+the clone list as the previous list.</p>
+<h3 id="description">Description</h3>
+<p>The <code>description</code> object holds information related to the clone list itself, and is
+always at the top of the file. It is mandatory to include.</p>
+<p>A <code>description</code> object looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="nt">&quot;description&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;name&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sony - PlayStation (Redump)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;lastUpdated&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;24 July 2022&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">  </span><span class="nt">&quot;minimumVersion&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;2.00&quot;</span><span class="w"></span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>A <code>description</code> object contains the following keys:</p>
+<ul>
+<li>
+<p><code>name (str)</code>: The system name and release group of the DAT the clone list is related to.</p>
+</li>
+<li>
+<p><code>lastUpdated (str)</code>: The last time the clone list was updated, in DD-MMMM-YYYY format.</p>
+</li>
+<li>
+<p><code>minimumVersion (str)</code>: The minimum version of Retool required to understand all the
+  features of the clone list.</p>
+</li>
+</ul>
+<p>The <code>minimumVersion</code> key is the only data in the description used by Retool, the rest is
+to make parsing and updating the clone list easier for humans.</p>
+<h3 id="categories">Categories</h3>
+<p>The <code>categories</code> array specifies titles that should have their categories reassigned. A
+category is a class of titles, like <code>Demos</code>, <code>Games</code>, and <code>Multimedia</code>. Multiple
+categories can be assigned to a title.</p>
+<p>A <code>categories</code> array looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (1)!</span><span class="w"></span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Ace Combat 3 - Electrosphere - Direct Audio with AppenDisc&quot;</span><span class="p">,</span><span class="c1">// (2)!</span><span class="w"></span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short&quot;</span><span class="p">,</span><span class="c1">// (3)!</span><span class="w"></span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Audio&quot;</span><span class="p">]</span><span class="c1">// (4)!</span><span class="w"></span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Arc the Lad III (Japan) (Demo 2)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Demos&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Multimedia&quot;</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-2-12" name="__codelineno-2-12" href="#__codelineno-2-12"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-2-13" name="__codelineno-2-13" href="#__codelineno-2-13"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Derby Stallion Magazine Furoku.*&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-14" name="__codelineno-2-14" href="#__codelineno-2-14"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;regex&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-2-15" name="__codelineno-2-15" href="#__codelineno-2-15"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Coverdisc&quot;</span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-2-16" name="__codelineno-2-16" href="#__codelineno-2-16"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-2-17" name="__codelineno-2-17" href="#__codelineno-2-17"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>The categories array.</li>
+<li>The search term used when looking for a title in an input DAT.</li>
+<li>What name type the search term is, so Retool can match it accurately against names in
+    the input DAT.</li>
+<li>The categories to assign to the title if it's found in the input DAT.</li>
+</ol>
+<p>Each object in the <code>categories</code> array can include the following keys:</p>
+<ul>
+<li>
+<p><code>searchTerm (str)</code>: The search term used when looking for a title in an input DAT.</p>
+</li>
+<li>
+<p><code>nameType (str)</code>: Optional, defaults to <code>tagFree</code>. What name type the search term is,
+  so Retool can match it accurately against names in the input DAT. Valid options include:</p>
+<ul>
+<li>
+<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+</li>
+<li>
+<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+</li>
+<li>
+<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+</li>
+<li>
+<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+</li>
+<li>
+<p><code>regex (str)</code>: A regex match on the full name.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>categories (array[str])</code>: An array containing each category to assign to the title.
+  Retool overrides existing categories, so if you want the original category to be kept,
+  include it in the array.</p>
+</li>
+</ul>
+<h3 id="mias">MIAs</h3>
+<p>A missing in action (MIA) title is one that has had its sizes and hashes indexed, but the
+title itself hasn't been made available to the public.</p>
+<p>The <code>mias</code> array is only required in clone lists for Redump DATs, as No-Intro specifies
+MIAs directly in its DATs. MIAs are scraped from <a href="http://wiki.redump.org/index.php?title=MIA_Lists">Redump's wiki</a>,
+and as a general rule shouldn't be manually added or removed.</p>
+<p>An <code>mias</code> array looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="nt">&quot;mias&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (1)!</span><span class="w"></span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="s2">&quot;Arc the Lad III (Japan) (Demo 2)&quot;</span><span class="p">,</span><span class="c1">// (2)!</span><span class="w"></span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="s2">&quot;Cochons de GuerreLes (France) (Rev 1)&quot;</span><span class="w"></span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>The MIAs array.</li>
+<li>The full name of the title to search for in the input DAT.</li>
+</ol>
+<p>MIAs only use <a href="/naming-system/#full-names">full names</a> to search for matching titles in the
+associated DAT, and so an <code>mias</code> array only contains strings that match those full names.</p>
+<h3 id="overrides">Overrides</h3>
+<p>The <code>overrides</code> array assigns titles different <a href="/naming-system/#group-names">group</a> and
+<a href="/naming-system/#short-names">short names</a>, manually bundling together specific games
+instead of using Retool's automatic grouping.</p>
+<p>Because Retool groups together titles with the same <a href="/naming-system/#short-names">short name</a>
+by default, this is particularly useful to work around the problem where games have the
+same short name, but are entirely different in content.</p>
+<p>For example, the Japanese version of <em>King's Field</em> was never released in the USA.
+Japan's <em>King's Field II</em> was released in the USA, however it was given the original
+game's name, <em>King's Field</em>. By default, Retool sees <em>King's Field (USA)</em> and
+<em>King's Field (Japan)</em>, and incorrectly groups them together as the same title as they
+have the same short name, <code>King's Field</code>.</p>
+<p>To get around this, we can assign <em>King's Field (Japan)</em> a unique group and short name
+through the <code>overrides</code> array, to stop it being grouped automatically with
+<em>King's Field (USA)</em>.</p>
+<p>An <code>overrides</code> array looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (1)!</span><span class="w"></span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;King&#39;s Field (Japan)&quot;</span><span class="p">,</span><span class="c1">// (2)!</span><span class="w"></span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="nt">&quot;newGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;King&#39;s Field Japan&quot;</span><span class="c1">// (3)!</span><span class="w"></span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mobile Suit Gundam - Version 2.0 (.*)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;regex&quot;</span><span class="p">,</span><span class="c1">// (4)!</span><span class="w"></span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="w">    </span><span class="nt">&quot;newGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Mobile Suit Gundam - Version 2.0&quot;</span><span class="w"></span>
+<a id="__codelineno-4-10" name="__codelineno-4-10" href="#__codelineno-4-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-4-11" name="__codelineno-4-11" href="#__codelineno-4-11"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>The overrides array.</li>
+<li>The search term used when looking for a title in an input DAT.</li>
+<li>The new group and short name to assign to the title, if it's found in an input DAT.</li>
+<li>What name type the search term is, so Retool can match it accurately against names in
+    the input DAT.</li>
+</ol>
+<p>Each object in the <code>overrides</code> array can include the following keys:</p>
+<ul>
+<li>
+<p><code>searchTerm (str)</code>: The search term used when looking for a title in an input DAT.</p>
+</li>
+<li>
+<p><code>nameType (str)</code>: Optional, defaults to <code>tagFree</code>. What name type the search term is,
+  so Retool can match it accurately against names in the input DAT. Valid options include:</p>
+<ul>
+<li>
+<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+</li>
+<li>
+<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+</li>
+<li>
+<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+</li>
+<li>
+<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+</li>
+<li>
+<p><code>regex (str)</code>: A regex match on the full name.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>newGroup (str)</code>: The new group and short name to assign to the title.</p>
+</li>
+</ul>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>To keep things easy, avoid parentheses <code>()</code> where possible in <code>newGroup</code> values.
+Additionally, avoid adding anything that looks like version string, for example,
+<code>v2.00</code>.</p>
+<p>You want to do this because the group and short names assigned to overridden titles
+aren't an exact copy of the <code>newGroup</code> value. Instead, the value is used as a basis to
+generate these names using Retool's <a href="/naming-system/#names">naming rules</a>.</p>
+</div>
+<h4 id="override-conditions">Override conditions</h4>
+<p>You can specify a <code>condition</code> as to whether or not an override should be implemented. The
+only condition supported is based on the user's region order. Conditions are rare, and are
+often only used to deal with clashes when outputting DATs in legacy parent/clone format.</p>
+<p>A <code>condition</code> looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tomb Raider III - (Adventures of|Les Aventures de) Lara Croft \\((Europe|France|Germany|Italy|Spain|USA)\\)(.*)?&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;regex&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">    </span><span class="nt">&quot;newGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tomb Raider III - Adventures of Lara Croft (Disc 2) (International Version)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">    </span><span class="nt">&quot;condition&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="c1">// (1)!</span><span class="w"></span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">        </span><span class="nt">&quot;regionOrder&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="c1">// (2)!</span><span class="w"></span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">            </span><span class="nt">&quot;higherRegions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Japan&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Asia&quot;</span><span class="p">],</span><span class="c1">// (3)!</span><span class="w"></span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">            </span><span class="nt">&quot;lowerRegions&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;USA&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Europe&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;France&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Germany&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Italy&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;Spain&quot;</span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="w">            </span><span class="nt">&quot;elseGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Tomb Raider III - Adventures of Lara Croft&quot;</span><span class="c1">// (4)!</span><span class="w"></span>
+<a id="__codelineno-5-11" name="__codelineno-5-11" href="#__codelineno-5-11"></a><span class="w">        </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-12" name="__codelineno-5-12" href="#__codelineno-5-12"></a><span class="w">    </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-5-13" name="__codelineno-5-13" href="#__codelineno-5-13"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-5-14" name="__codelineno-5-14" href="#__codelineno-5-14"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>The condition object.</li>
+<li>The <code>regionOrder</code> condition.</li>
+<li>If any of these regions is higher in the user order than all of the regions in the
+    <code>lowerRegions</code> array, then the condition is <code>True</code>.</li>
+<li>If the condition is <code>False</code>, set the group and short name to this group instead of
+    the <code>newGroup</code> value.</li>
+</ol>
+<p>A <code>condition</code> object can include the following keys:</p>
+<ul>
+<li>
+<p><code>regionOrder (object)</code>: Specifies to use the region order condition.</p>
+</li>
+<li>
+<p><code>higherRegions (array[str])</code>: If any of the regions in the <code>higherRegions</code> array is
+   higher in the user region order than all of the regions in the <code>lowerRegions</code> array,
+   then the condition is <code>True</code>.</p>
+</li>
+<li>
+<p><code>lowerRegions (array[str])</code>: If any of the regions in the <code>higherRegions</code> array is
+   higher in the user region order than all of the regions in the <code>lowerRegions</code> array,
+   then the condition is <code>True</code>.</p>
+</li>
+<li>
+<p><code>elseGroup (str)</code>: Optional, defaults to the automatic group and short names assigned by
+  Retool. If the condition is <code>False</code>, set the group and short name to this group instead
+  of the <code>newGroup</code> value.</p>
+</li>
+<li>
+<p><code>priority (int)</code>: Optional. If the condition is <code>True</code>, set the title to this clone list
+  priority. If the condition is <code>False</code>, set the clone list priority to <code>2</code>. A priority
+  directs Retool to choose one title over another if they are in the same region, and have
+  the same group name and short name.</p>
+</li>
+</ul>
+<h3 id="removes">Removes</h3>
+<p>The <code>removes</code> array lists all titles to force remove from the output DAT for that
+particular system. It should only be used if <code>overrides</code> or <code>variants</code> can't achieve the
+same result.</p>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The <code>removes</code> array should almost never be used, as any titles listed are completely
+removed from Retool's consideration during processing, and their relationship with
+other titles is destroyed. This makes it particularly hard to keep track of
+relationships when updating clone lists, and can frustrate any traces you perform to
+debug issues.</p>
+</div>
+<p>A <code>removes</code> array looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&quot;removes&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;King of Fighters 2000-2001, The (Europe)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="w"></span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Each object in the <code>removes</code> array can include the following keys:</p>
+<ul>
+<li>
+<p><code>searchTerm (str)</code>: The search term used when looking for a title in an input DAT.</p>
+</li>
+<li>
+<p><code>nameType (str)</code>: Optional, defaults to <code>tagFree</code>. What name type the search term is,
+  so Retool can match it accurately against names in the input DAT. Valid options include:</p>
+<ul>
+<li>
+<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+</li>
+<li>
+<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+</li>
+<li>
+<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+</li>
+<li>
+<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+</li>
+</ul>
+</li>
+</ul>
+<div class="admonition note">
+<p class="admonition-title">Note<p>Unlike other clone list features, the <code>regex</code> name type isn't supported for
+<code>removes</code>.</p>
+</p>
+</div>
+<h3 id="variants">Variants</h3>
+<p>The <code>variants</code> array is where all the different regional names and variations for titles
+are stored, grouping titles together that Retool would otherwise miss. By default, Retool
+already groups together titles that have the same <a href="/naming-system/#short-names">short name</a>.</p>
+<p>A basic <code>variants</code> array looks similar to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (1)!</span><span class="w"></span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="c1">// (2)!</span><span class="w"></span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (3)!</span><span class="w"></span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">},</span><span class="c1">// (4)!</span><span class="w"></span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exemple de Titre&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Titolo di Esempio&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="c1">// (5)!</span><span class="w"></span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-7-11" name="__codelineno-7-11" href="#__codelineno-7-11"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<ol>
+<li>The variants array.</li>
+<li>The new group and short name to assign to the contained titles, if they're found in an
+    input DAT.</li>
+<li>The <code>titles</code> array contains singular, standard titles that belong to this group.</li>
+<li>The search term used when looking for a title in an input DAT.</li>
+<li>If there are two titles from the same region, a <code>priority</code> can determine which should
+    be selected. Lower numbers are higher priority. If no <code>priority</code> is specified, the
+    priority of the entry is <code>1</code>.</li>
+</ol>
+<p>Each object in the <code>variants</code> array can include the following keys:</p>
+<ul>
+<li>
+<p><code>group (str)</code>: The <code>group</code> value is used as the basis for a new <a href="/naming-system/#group-names">group name</a>
+   and <a href="/naming-system/#short-names">short name</a> for all of the titles in the object.</p>
+</li>
+<li>
+<p><code>titles (array[obj])</code>: Optional. Contains singular, standard titles that belong to the
+  group.</p>
+</li>
+<li>
+<p><code>supersets (array[obj])</code>: Optional. Contains singular titles that contain more content,
+  or for some reason are superior to standard versions. This might include, for example, a
+  Game of the Year edition, an all-in-one pack that bundles a game and all its DLC, or a
+  DVD version of a title that was previously released on multiple CDs.</p>
+</li>
+<li>
+<p><code>compilations (array[obj])</code>: Optional. Contains titles that in themselves contain
+  multiple titles. They might be from the same series of games, a single publisher, from
+  a single genre, or otherwise.</p>
+</li>
+</ul>
+<div class="admonition caution">
+<p class="admonition-title">Caution</p>
+<p>The group and short names assigned to the contained titles aren't an exact copy of the
+top-level key. Instead, the key is used as a basis to generate these names. The rules
+for how these names are created are detailed in <a href="/naming-system">Retool's naming system</a>.</p>
+</div>
+<p>Each object in the <code>titles</code>, <code>supersets</code>, and <code>compilations</code> arrays can include the
+following keys:</p>
+<ul>
+<li>
+<p><code>searchTerm (str)</code>: The search term used when looking for a title in an input DAT.</p>
+</li>
+<li>
+<p><code>nameType (str)</code>: Optional, defaults to <code>short</code>. What name type the search term is,
+  so Retool can match it accurately against names in the input DAT. Valid options include:</p>
+<ul>
+<li>
+<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+</li>
+<li>
+<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+</li>
+<li>
+<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+</li>
+<li>
+<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+</li>
+<li>
+<p><code>regex (str)</code>: A regex match on the full name.</p>
+</li>
+</ul>
+</li>
+<li>
+<p><code>priority (int)</code>: Optional, defaults to <code>1</code>. Lower numbers are considered higher
+  priority, with <code>1</code> the highest priority. Typically, a title with a higher priority wins
+  when Retool is choosing a 1G1R title&gt; However, <em>when</em> priority is calculated in Retool's
+  process, and how it interacts across <code>titles</code>, <code>supersets</code>, and <code>compilations</code> arrays
+  can change the outcome. Read <a href="#example-working-with-priorities">Example: working with priorities</a>
+  for more information.</p>
+</li>
+<li>
+<p><code>titlePosition (int)</code>: Optional, defaults to <code>none</code>, <code>compilations</code> objects only. This
+  determines whether a title comes first, second, third, or later in a compilation's name.
+  This is only really useful for GameBoy Advance titles, as No-Intro's DAT differentiates
+  languages supported by each title in a compilation by using a <code>+</code> symbol. Still, it's
+  wise to include where possible in case that naming standard eventually makes it to other
+  DATs.</p>
+</li>
+</ul>
+<h4 id="ordering-variants-arrays">Ordering variants arrays</h4>
+<p>The order of variants arrays is always:</p>
+<ol>
+<li>
+<p><code>titles</code></p>
+</li>
+<li>
+<p><code>supersets</code></p>
+</li>
+<li>
+<p><code>compilations</code>.</p>
+</li>
+</ol>
+<p>The <code>group</code> key in each array object should be based on one of the title names in the
+group, preferably from the USA version and in English. Some titles won't exist in all
+regions, so follow this order for the <code>group</code> name:</p>
+<ol>
+<li>
+<p>USA name in English</p>
+</li>
+<li>
+<p>United Kingdom name in English</p>
+</li>
+<li>
+<p>European name in English</p>
+</li>
+<li>
+<p>Any other region in English</p>
+</li>
+<li>
+<p>Japanese name</p>
+</li>
+<li>
+<p>Spanish name</p>
+</li>
+<li>
+<p>Portuguese name</p>
+</li>
+<li>
+<p>French name</p>
+</li>
+<li>
+<p>German name</p>
+</li>
+<li>
+<p>Whatever name is available</p>
+</li>
+</ol>
+<p>To ease maintenance, make sure the objects inside the <code>titles</code>, <code>compilations</code>, and
+<code>supersets</code> arrays are ordered by priority, and then alphabetically within those
+priorities.</p>
+<p>For example, this is correct:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exemple de Titre&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Titolo di Esempio&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>This is incorrect:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Titolo di Esempio&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exemple de Titre&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-9-10" name="__codelineno-9-10" href="#__codelineno-9-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-9-11" name="__codelineno-9-11" href="#__codelineno-9-11"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Avoid setting a <code>searchTerm</code> with the same name as its <code>group</code> to a lower priority.
+For example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title Director&#39;s Cut&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">  </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>In this scenario, Retool sees the first entry <code>Title Director's Cut</code>, and goes looking
+for titles with the short name <code>title director's cut</code>. When it finds a match, it
+changes that title's short name to match the group, <code>title</code>.</p>
+<p>When it gets to the second entry, <code>Title</code>, it goes looking for titles with the short
+name <code>title</code>... but that's what we just renamed the <em>Director's Cut</em> short name to.
+Everything ends up being assigned a priority of 2 as a result.</p>
+<p>If you run into this situation, the easiest solution is to rename the group to match
+the higher priority title:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title Director&#39;s Cut&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-11-3" name="__codelineno-11-3" href="#__codelineno-11-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-11-4" name="__codelineno-11-4" href="#__codelineno-11-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title Director&#39;s Cut&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-5" name="__codelineno-11-5" href="#__codelineno-11-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Title&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-11-6" name="__codelineno-11-6" href="#__codelineno-11-6"></a><span class="w">  </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-11-7" name="__codelineno-11-7" href="#__codelineno-11-7"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+</div>
+<h4 id="example-working-with-titles">Example: working with titles</h4>
+<p>If we have the following title names in a DAT file, that are all the same title across
+different regions:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>Example Title (USA)
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>Example Title Budget Edition (USA)
+<a id="__codelineno-12-3" name="__codelineno-12-3" href="#__codelineno-12-3"></a>Example Title (Europe)
+<a id="__codelineno-12-4" name="__codelineno-12-4" href="#__codelineno-12-4"></a>Exemple de Titre (France)
+<a id="__codelineno-12-5" name="__codelineno-12-5" href="#__codelineno-12-5"></a>Titolo di Esempio (Italy)
+</code></pre></div>
+<p>And a user selects the following region order:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>USA
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Europe
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>United Kingdom
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>France
+<a id="__codelineno-13-5" name="__codelineno-13-5" href="#__codelineno-13-5"></a>Italy
+</code></pre></div>
+<p>Then Retool automatically links together <em>Example Title (USA)</em> and
+<em>Example Title (Europe)</em>, as they have the same short name, <code>example title</code>. However it
+misses the other titles, as by default they have different short names.</p>
+<p>A <code>variants</code> object like the following example links them all together:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-14-2" name="__codelineno-14-2" href="#__codelineno-14-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-14-3" name="__codelineno-14-3" href="#__codelineno-14-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-14-4" name="__codelineno-14-4" href="#__codelineno-14-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-14-5" name="__codelineno-14-5" href="#__codelineno-14-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-14-6" name="__codelineno-14-6" href="#__codelineno-14-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exemple de Titre&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-14-7" name="__codelineno-14-7" href="#__codelineno-14-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Titolo di Esempio&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-14-8" name="__codelineno-14-8" href="#__codelineno-14-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-9" name="__codelineno-14-9" href="#__codelineno-14-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-14-10" name="__codelineno-14-10" href="#__codelineno-14-10"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-14-11" name="__codelineno-14-11" href="#__codelineno-14-11"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Because no <code>nameType</code> is specified in each title object, Retool assumes the <code>searchTerm</code>
+is a short name, and looks in the related DAT for names that have the same short name.
+When it finds those titles, it assigns the same group and short name to them,
+<code>example title</code>, and then Retool knows they are related.</p>
+<p>The <code>priority</code> of <code>2</code> for <code>Example Title Budget Edition</code> indicates that when Retool is
+processing the USA region, to select <em>Example Title (USA)</em> over
+<em>Example Title Budget Edition (USA)</em> when Retool considers clone list priority. There are
+other factors that might eliminate a title before Retool gets to clone list priority
+&mdash; read <a href="/how-retool-works">How Retool works</a> for the order in which Retool filters
+titles.</p>
+<p>In this example, because the user has set USA first in the region order, then
+<em>Example Title (USA)</em> is selected as the 1G1R title, and the others are discarded.</p>
+<h4 id="example-working-with-supersets">Example: working with supersets</h4>
+<p>Let's take the titles example, but add another title into the mix:
+<em>Example Title - Game of the Year Edition (United Kingdom)</em>.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-15-1" name="__codelineno-15-1" href="#__codelineno-15-1"></a>Example Title (USA)
+<a id="__codelineno-15-2" name="__codelineno-15-2" href="#__codelineno-15-2"></a>Example Title Budget Edition (USA)
+<a id="__codelineno-15-3" name="__codelineno-15-3" href="#__codelineno-15-3"></a>Example Title - Game of the Year Edition (United Kingdom)
+<a id="__codelineno-15-4" name="__codelineno-15-4" href="#__codelineno-15-4"></a>Example Title (Europe)
+<a id="__codelineno-15-5" name="__codelineno-15-5" href="#__codelineno-15-5"></a>Exemple de Titre (France)
+<a id="__codelineno-15-6" name="__codelineno-15-6" href="#__codelineno-15-6"></a>Titolo di Esempio (Italy)
+</code></pre></div>
+<p>This edition contains the latest version of the game, plus all of its DLC, but was never
+released in the USA or Europe. If the user is an English speaker, then how do we make sure
+this title gets selected as the superior version of a game, even if the USA or Europe is
+higher up their region order? With the <code>supersets</code> array.</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-16-1" name="__codelineno-16-1" href="#__codelineno-16-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-16-2" name="__codelineno-16-2" href="#__codelineno-16-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-16-3" name="__codelineno-16-3" href="#__codelineno-16-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-16-4" name="__codelineno-16-4" href="#__codelineno-16-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-16-5" name="__codelineno-16-5" href="#__codelineno-16-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-16-6" name="__codelineno-16-6" href="#__codelineno-16-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Exemple de Titre&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-16-7" name="__codelineno-16-7" href="#__codelineno-16-7"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Titolo di Esempio&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-16-8" name="__codelineno-16-8" href="#__codelineno-16-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-9" name="__codelineno-16-9" href="#__codelineno-16-9"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-16-10" name="__codelineno-16-10" href="#__codelineno-16-10"></a><span class="w">    </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title - Game of the Year Edition&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>The objects in the <code>supersets</code> array list <a href="/terminology/#supersets">supersets</a>. By
+default, supersets look at language support over region order. If a superset supports the
+top language found in a group of titles (in this example, that's English), then it's
+selected over other standard titles in higher regions as it's considered superior.</p>
+<p>In this example, because no language order is included but USA is listed first, Retool
+infers a preference for English, finds the superset
+<em>Example Title - Game of the Year Edition (United Kingdom)</em>, and selects it as the 1G1R
+title above the standard USA title, as it supports the same language and is considered
+superior due to having more content.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>A user can force adherence to region order  with the <strong>Prefer regions over languages</strong>
+option. In that scenario, <em>Example Title (USA)</em> is selected at the cost of losing the
+extra content in <em>Example Title - Game of the Year Edition (United Kingdom)</em>.</p>
+</div>
+<p>Supersets are also useful to manage things like DVD releases of titles that were
+previously distributed on multiple CDs. For example, if a DAT contains the following title
+names, all of which represent the same title:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-17-1" name="__codelineno-17-1" href="#__codelineno-17-1"></a>Example Title (Disc 1) (USA)
+<a id="__codelineno-17-2" name="__codelineno-17-2" href="#__codelineno-17-2"></a>Example Title (Disc 2) (USA)
+<a id="__codelineno-17-3" name="__codelineno-17-3" href="#__codelineno-17-3"></a>Example Title (Disc 3) (USA)
+<a id="__codelineno-17-4" name="__codelineno-17-4" href="#__codelineno-17-4"></a>Beispieltitel (Disc 1) (Germany)
+<a id="__codelineno-17-5" name="__codelineno-17-5" href="#__codelineno-17-5"></a>Beispieltitel (Disc 2) (Germany)
+<a id="__codelineno-17-6" name="__codelineno-17-6" href="#__codelineno-17-6"></a>Beispieltitel (Disc 3) (Germany)
+<a id="__codelineno-17-7" name="__codelineno-17-7" href="#__codelineno-17-7"></a>Example Title (USA)
+</code></pre></div>
+<p>And <em>Example Title (USA)</em> is the DVD version of the three-disc CD release <em>Example Title</em>
+and <em>Beispieltitel</em>, then you can set up a <code>variants</code> object as follows:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-18-1" name="__codelineno-18-1" href="#__codelineno-18-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-2" name="__codelineno-18-2" href="#__codelineno-18-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-3" name="__codelineno-18-3" href="#__codelineno-18-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 1)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-4" name="__codelineno-18-4" href="#__codelineno-18-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-5" name="__codelineno-18-5" href="#__codelineno-18-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 1)&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-18-6" name="__codelineno-18-6" href="#__codelineno-18-6"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beispieltitel (Disc 1)&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-7" name="__codelineno-18-7" href="#__codelineno-18-7"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-18-8" name="__codelineno-18-8" href="#__codelineno-18-8"></a><span class="w">    </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-9" name="__codelineno-18-9" href="#__codelineno-18-9"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-10" name="__codelineno-18-10" href="#__codelineno-18-10"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-18-11" name="__codelineno-18-11" href="#__codelineno-18-11"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-18-12" name="__codelineno-18-12" href="#__codelineno-18-12"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-13" name="__codelineno-18-13" href="#__codelineno-18-13"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 2)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-14" name="__codelineno-18-14" href="#__codelineno-18-14"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-15" name="__codelineno-18-15" href="#__codelineno-18-15"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 2)&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-18-16" name="__codelineno-18-16" href="#__codelineno-18-16"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beispieltitel (Disc 2)&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-17" name="__codelineno-18-17" href="#__codelineno-18-17"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-18-18" name="__codelineno-18-18" href="#__codelineno-18-18"></a><span class="w">    </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-19" name="__codelineno-18-19" href="#__codelineno-18-19"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-20" name="__codelineno-18-20" href="#__codelineno-18-20"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-18-21" name="__codelineno-18-21" href="#__codelineno-18-21"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-18-22" name="__codelineno-18-22" href="#__codelineno-18-22"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-18-23" name="__codelineno-18-23" href="#__codelineno-18-23"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 3)&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-18-24" name="__codelineno-18-24" href="#__codelineno-18-24"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-25" name="__codelineno-18-25" href="#__codelineno-18-25"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title (Disc 3)&quot;</span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-18-26" name="__codelineno-18-26" href="#__codelineno-18-26"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Beispieltitel (Disc 3)&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-27" name="__codelineno-18-27" href="#__codelineno-18-27"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-18-28" name="__codelineno-18-28" href="#__codelineno-18-28"></a><span class="w">    </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-18-29" name="__codelineno-18-29" href="#__codelineno-18-29"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-30" name="__codelineno-18-30" href="#__codelineno-18-30"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-18-31" name="__codelineno-18-31" href="#__codelineno-18-31"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-18-32" name="__codelineno-18-32" href="#__codelineno-18-32"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Note that the <code>Example Title</code> superset is in all three groups. In this scenario, if a
+user selects USA as their highest region, then <em>Example Title (USA)</em> is selected as the
+1G1R title over the original, multidisc CD version. If they select Germany, then the three
+German discs are chosen instead.</p>
+<h4 id="example-working-with-compilations">Example: working with compilations</h4>
+<p>Retool automatically considers individual titles and compilations that are related, and
+chooses the solution that results in the fewest duplicate titles (and therefore lowest
+storage requirement). Compilations in a <code>variants</code> array are handled in a similar way
+to the following example:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-19-1" name="__codelineno-19-1" href="#__codelineno-19-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-19-2" name="__codelineno-19-2" href="#__codelineno-19-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-3" name="__codelineno-19-3" href="#__codelineno-19-3"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-4" name="__codelineno-19-4" href="#__codelineno-19-4"></a><span class="w">    </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-19-5" name="__codelineno-19-5" href="#__codelineno-19-5"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-6" name="__codelineno-19-6" href="#__codelineno-19-6"></a><span class="w">    </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-19-7" name="__codelineno-19-7" href="#__codelineno-19-7"></a><span class="w">    </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-19-8" name="__codelineno-19-8" href="#__codelineno-19-8"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;titlePosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-9" name="__codelineno-19-9" href="#__codelineno-19-9"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-19-10" name="__codelineno-19-10" href="#__codelineno-19-10"></a><span class="w">  </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-19-11" name="__codelineno-19-11" href="#__codelineno-19-11"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-19-12" name="__codelineno-19-12" href="#__codelineno-19-12"></a><span class="w">    </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Trophy Bass&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-19-13" name="__codelineno-19-13" href="#__codelineno-19-13"></a><span class="w">    </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-19-14" name="__codelineno-19-14" href="#__codelineno-19-14"></a><span class="w">      </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;titlePosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-15" name="__codelineno-19-15" href="#__codelineno-19-15"></a><span class="w">    </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-19-16" name="__codelineno-19-16" href="#__codelineno-19-16"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-19-17" name="__codelineno-19-17" href="#__codelineno-19-17"></a><span class="p">]</span><span class="w"></span>
+</code></pre></div>
+<p>Note that <code>3-D Ultra Pinball &amp; Trophy Bass</code> belongs to both the <code>3-D Ultra Pinball</code> and
+<code>Trophy Bass</code> groups. During processing, Retool splits compilations into virtual versions
+of their consituent titles. This means that when you add a compilation to a variant
+object, it's only being judged on the individual title associated with that group, not all
+titles in the compilation.</p>
+<p>As far as Retool is concerned in this example, <code>3-D Ultra Pinball &amp; Trophy Bass</code> in the
+<code>3-D Ultra Pinball</code> group is just another version of <em>3-D Ultra Pinball</em>, and
+<code>3-D Ultra Pinball &amp; Trophy Bass</code> in the <code>Trophy Bass</code> group is just another version of
+<em>Trophy Bass</em>. It's important to list a compilation in all groups it's related to, even
+if a standalone title doesn't exist. This way Retool knows which titles make up the
+compilation and can make more accurate choices.</p>
+<p>In this example, if a related DAT contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-20-1" name="__codelineno-20-1" href="#__codelineno-20-1"></a>3-D Ultra Pinball (Europe)
+<a id="__codelineno-20-2" name="__codelineno-20-2" href="#__codelineno-20-2"></a>3-D Ultra Pinball &amp; Trophy Bass (USA)
+</code></pre></div>
+<p>And a user selects the following region order:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-21-1" name="__codelineno-21-1" href="#__codelineno-21-1"></a>USA
+<a id="__codelineno-21-2" name="__codelineno-21-2" href="#__codelineno-21-2"></a>Europe
+</code></pre></div>
+<p>Then Retool selects <em>3-D Ultra Pinball &amp; Trophy Bass (USA)</em> as the 1G1R title, as that
+solution is the one with the least duplication.</p>
+<h4 id="example-working-with-priorities">Example: working with priorities</h4>
+<p>It's useful to understand how priorities work across the <code>titles</code>, <code>supersets</code>, and
+<code>compilations</code> arrays.</p>
+<h5 id="titles">Titles</h5>
+<p>If you use <code>priority</code> in a titles array, it's taken into account for titles in the
+same region, with same group and short name. The <code>priority</code> does not take effect for
+titles in different regions.</p>
+<p>For example, if a DAT file contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-22-1" name="__codelineno-22-1" href="#__codelineno-22-1"></a>Example Title (USA)
+<a id="__codelineno-22-2" name="__codelineno-22-2" href="#__codelineno-22-2"></a>Example Title Budget Edition (USA)
+<a id="__codelineno-22-3" name="__codelineno-22-3" href="#__codelineno-22-3"></a>Example Title (Europe)
+</code></pre></div>
+<p>And the following variants array is in the related clone list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-23-1" name="__codelineno-23-1" href="#__codelineno-23-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-2" name="__codelineno-23-2" href="#__codelineno-23-2"></a><span class="w">  </span><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-23-3" name="__codelineno-23-3" href="#__codelineno-23-3"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-23-4" name="__codelineno-23-4" href="#__codelineno-23-4"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-23-5" name="__codelineno-23-5" href="#__codelineno-23-5"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-23-6" name="__codelineno-23-6" href="#__codelineno-23-6"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-7" name="__codelineno-23-7" href="#__codelineno-23-7"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-8" name="__codelineno-23-8" href="#__codelineno-23-8"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-23-9" name="__codelineno-23-9" href="#__codelineno-23-9"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-23-10" name="__codelineno-23-10" href="#__codelineno-23-10"></a><span class="w">  </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-23-11" name="__codelineno-23-11" href="#__codelineno-23-11"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Then both <em>Example Title (USA)</em> and <em>Example Title (Europe)</em> receive a priority of 1, as
+no priority has been specified. <em>Example Title Budget Edition (USA)</em> is assigned a
+priority of 2 as defined by the clone list.</p>
+<p>Because Retool first bundles games from the same region together for comparison,
+<em>Example Title (USA)</em> and <em>Example Title Budget Edition (USA)</em> are compared, and the
+latter is dropped because it has a lower priority of 2.</p>
+<p>Afterwards cross-region comparisons are made, so <em>Example Title (USA)</em> and
+<em>Example Title (Europe)</em> are compared, however priority is not taken into account here,
+only things like user region and language order.</p>
+<h5 id="supersets">Supersets</h5>
+<p>While the behavior for priorities in supersets is similar to that in titles, superset
+priorities are only compared against other superset priorities, and compilation
+priorities.</p>
+<p>For example, if a DAT file contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-24-1" name="__codelineno-24-1" href="#__codelineno-24-1"></a>Example Title (USA)
+<a id="__codelineno-24-2" name="__codelineno-24-2" href="#__codelineno-24-2"></a>Example Title Budget Edition (USA)
+<a id="__codelineno-24-3" name="__codelineno-24-3" href="#__codelineno-24-3"></a>Example Title - Special Edition (Europe)
+<a id="__codelineno-24-4" name="__codelineno-24-4" href="#__codelineno-24-4"></a>Example Title - Super Special Edition (Europe)
+</code></pre></div>
+<p>A user selects the following region order:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-25-1" name="__codelineno-25-1" href="#__codelineno-25-1"></a>USA
+<a id="__codelineno-25-2" name="__codelineno-25-2" href="#__codelineno-25-2"></a>Europe
+</code></pre></div>
+<p>And the following variants array is in the related clone list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-26-1" name="__codelineno-26-1" href="#__codelineno-26-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-2" name="__codelineno-26-2" href="#__codelineno-26-2"></a><span class="w">  </span><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-26-3" name="__codelineno-26-3" href="#__codelineno-26-3"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-26-4" name="__codelineno-26-4" href="#__codelineno-26-4"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-26-5" name="__codelineno-26-5" href="#__codelineno-26-5"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-26-6" name="__codelineno-26-6" href="#__codelineno-26-6"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-7" name="__codelineno-26-7" href="#__codelineno-26-7"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title Budget Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-8" name="__codelineno-26-8" href="#__codelineno-26-8"></a><span class="w">      </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-26-9" name="__codelineno-26-9" href="#__codelineno-26-9"></a><span class="w">      </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-26-10" name="__codelineno-26-10" href="#__codelineno-26-10"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title - Super Special Edition&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-11" name="__codelineno-26-11" href="#__codelineno-26-11"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title - Special Edition&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-12" name="__codelineno-26-12" href="#__codelineno-26-12"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-26-13" name="__codelineno-26-13" href="#__codelineno-26-13"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-26-14" name="__codelineno-26-14" href="#__codelineno-26-14"></a><span class="w">  </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-26-15" name="__codelineno-26-15" href="#__codelineno-26-15"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Then the following happens:</p>
+<ol>
+<li>
+<p>Because the supersets are in English (and English is this user's highest language in
+    their implied language order), they get selected over the standard titles even though
+    they are from Europe, a lower ordered region. This has nothing to do with priority
+    set in the clone list &mdash; it's just how supersets work.</p>
+</li>
+<li>
+<p><em>Example Title - Super Special Edition (Europe)</em> then gets chosen over
+    <em>Example Title - Special Edition</em>, as the latter has a lower priority.</p>
+</li>
+</ol>
+<h5 id="compilations">Compilations</h5>
+<p>Priorities affect compilations slightly differently, as Retool splits compilations into
+individual virtual titles to compare against the other titles.</p>
+<p>For example, if a DAT file contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-27-1" name="__codelineno-27-1" href="#__codelineno-27-1"></a>Example Title (USA)
+<a id="__codelineno-27-2" name="__codelineno-27-2" href="#__codelineno-27-2"></a>Example Title (Europe)
+<a id="__codelineno-27-3" name="__codelineno-27-3" href="#__codelineno-27-3"></a>Example Title 2 - Special Edition (USA)
+<a id="__codelineno-27-4" name="__codelineno-27-4" href="#__codelineno-27-4"></a>Example Title 1 &amp; 2 (Europe)
+</code></pre></div>
+<p>A user selects the following region order:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-28-1" name="__codelineno-28-1" href="#__codelineno-28-1"></a>USA
+<a id="__codelineno-28-2" name="__codelineno-28-2" href="#__codelineno-28-2"></a>Europe
+</code></pre></div>
+<p>And the following variants array is in the related clone list:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-29-1" name="__codelineno-29-1" href="#__codelineno-29-1"></a><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-2" name="__codelineno-29-2" href="#__codelineno-29-2"></a><span class="w">  </span><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-29-3" name="__codelineno-29-3" href="#__codelineno-29-3"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-4" name="__codelineno-29-4" href="#__codelineno-29-4"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-29-5" name="__codelineno-29-5" href="#__codelineno-29-5"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-29-6" name="__codelineno-29-6" href="#__codelineno-29-6"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-7" name="__codelineno-29-7" href="#__codelineno-29-7"></a><span class="w">      </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-29-8" name="__codelineno-29-8" href="#__codelineno-29-8"></a><span class="w">      </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-29-9" name="__codelineno-29-9" href="#__codelineno-29-9"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title 1 &amp; 2&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-10" name="__codelineno-29-10" href="#__codelineno-29-10"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-29-11" name="__codelineno-29-11" href="#__codelineno-29-11"></a><span class="w">    </span><span class="p">},</span><span class="w"></span>
+<a id="__codelineno-29-12" name="__codelineno-29-12" href="#__codelineno-29-12"></a><span class="w">    </span><span class="p">{</span><span class="w"></span>
+<a id="__codelineno-29-13" name="__codelineno-29-13" href="#__codelineno-29-13"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title 2&quot;</span><span class="p">,</span><span class="w"></span>
+<a id="__codelineno-29-14" name="__codelineno-29-14" href="#__codelineno-29-14"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-29-15" name="__codelineno-29-15" href="#__codelineno-29-15"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title 2 - Special Edition&quot;</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-16" name="__codelineno-29-16" href="#__codelineno-29-16"></a><span class="w">      </span><span class="p">],</span><span class="w"></span>
+<a id="__codelineno-29-17" name="__codelineno-29-17" href="#__codelineno-29-17"></a><span class="w">      </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="w"></span>
+<a id="__codelineno-29-18" name="__codelineno-29-18" href="#__codelineno-29-18"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Example Title 1 &amp; 2&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;priority&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-19" name="__codelineno-29-19" href="#__codelineno-29-19"></a><span class="w">      </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-29-20" name="__codelineno-29-20" href="#__codelineno-29-20"></a><span class="w">    </span><span class="p">}</span><span class="w"></span>
+<a id="__codelineno-29-21" name="__codelineno-29-21" href="#__codelineno-29-21"></a><span class="w">  </span><span class="p">]</span><span class="w"></span>
+<a id="__codelineno-29-22" name="__codelineno-29-22" href="#__codelineno-29-22"></a><span class="p">}</span><span class="w"></span>
+</code></pre></div>
+<p>Then the following happens with the compilations:</p>
+<ol>
+<li>
+<p>Retool looks at the <code>Example Title</code> group, and finds <em>Example Title 1 &amp; 2 (Europe)</em>
+    in the DAT via the compilations search term <code>Example Title 1 &amp; 2</code>.</p>
+</li>
+<li>
+<p>That compilation is then assigned a virtual name that matches the group name, and
+    includes region and language information: <em>:V: Example Title (Europe) (En)</em>. This
+    effectively splits out that indvidual title from the compilation for comparison,
+    meaning the second title in the compilation isn't considered when comparing titles in
+    this group. Because no <code>priority</code> is defined, the virtual title is assigned a priority
+    of 1.</p>
+</li>
+<li>
+<p>Retool looks at the <code>Example Title 2</code> group, and finds <em>Example Title 1 &amp; 2 (Europe)</em>
+    in the DAT via the compilations search term <code>Example Title 1 &amp; 2</code>.</p>
+</li>
+<li>
+<p>Although it's the same compilation as before, it's assigned a virtual name that
+    matches the <code>Example Title 2</code> group name: <em>:V: Example Title 2 (Europe) (En)</em>. This
+    means the first title in the compilation isn't considered when comparing titles in
+    this group. The virtual title is assigned a priority of 2, as specified in the clone
+    list.</p>
+</li>
+<li>
+<p>Retool compares the virtual compilation titles against the individual titles in the
+    same groups:</p>
+<ul>
+<li>
+<p><em>Example Title (USA)</em> is compared against <em>:V: Example Title (Europe) (En)</em>. The USA
+  title wins due to region priority.</p>
+</li>
+<li>
+<p><em>Example Title 2 - Special Edition (USA)</em> is compared against
+  <em>:V: Example Title 2 (Europe) (En)</em>. The latter is discarded because it has a lower
+  priority (which is assessed before region order).</p>
+</li>
+<li>
+<p>Ultimately <em>Example Title (USA)</em> and <em>Example Title 2 - Special Edition (USA)</em>
+  become the 1G1R titles, and <em>Example Title 1 &amp; 2 (Europe)</em> is discarded.</p>
+</li>
+</ul>
+</li>
+</ol>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Superset priority is compared directly against compilation priority, just like title
+priority is.</p>
+</div>
+<h2 id="format-clone-lists">Format clone lists</h2>
+<p>Clone lists follow a particular format to keep maintainence easy:</p>
+<ul>
+<li>
+<p>Valid JSON.</p>
+</li>
+<li>
+<p>Tabbed indenting.</p>
+</li>
+<li>
+<p>LF line endings.</p>
+</li>
+<li>
+<p>Top-level keys should be kept in <a href="#clone-list-structure">the order listed in this guide</a>.</p>
+</li>
+<li>
+<p>Object keys should be in the order shown in the examples in this guide.</p>
+</li>
+<li>
+<p>Array contents should be in alphabetical order, sorted by an object's top key. This is
+  either going to be <code>searchTerm</code> or <code>group</code>.</p>
+</li>
+</ul>
+<p>Make sure your format is correct before submitting a pull request.</p>
+<h2 id="test-clone-lists">Test clone lists</h2>
+<p>Before submitting a pull request, it's important to test your changes to make sure they're
+correct.</p>
+<p>Test your clone list update against the newest version of a DAT from No-Intro or Redump,
+and enable the following settings:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="1:2"><input checked="checked" id="gui" name="__tabbed_1" type="radio" /><input id="command-line" name="__tabbed_1" type="radio" /><div class="tabbed-labels"><label for="gui"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M7.724 65.49A64.308 64.308 0 0 1 32 40.56a63.55 63.55 0 0 1 25.46-8.23c2.15-.22 4.33-.33 6.54-.33h384c35.3 0 64 28.65 64 64v320c0 35.3-28.7 64-64 64H64c-35.35 0-64-28.7-64-64V96c0-2.21.112-4.39.33-6.54a63.634 63.634 0 0 1 7.394-23.97zM48 416c0 8.8 7.16 16 16 16h384c8.8 0 16-7.2 16-16V224H48v192z"/></svg></span> GUI</label><label for="command-line"><span class="twemoji"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M8.165 6V3h7.665v3H8.165zm-.5-3H1c-.55 0-1 .45-1 1v2h7.665V3zM23 3h-6.67v3H24V4c0-.55-.45-1-1-1zM0 6.5h24V20c0 .55-.45 1-1 1H1c-.55 0-1-.45-1-1V6.5zM11.5 18c0 .3.2.5.5.5h8c.3 0 .5-.2.5-.5v-1.5c0-.3-.2-.5-.5-.5h-8c-.3 0-.5.2-.5.5V18zm-5.2-4.55-3.1 3.1c-.25.25-.25.6 0 .8l.9.9c.25.25.6.25.8 0l4.4-4.4a.52.52 0 0 0 0-.8l-4.4-4.4c-.2-.2-.6-.2-.8 0l-.9.9c-.25.2-.25.55 0 .8l3.1 3.1z"/></svg></span> Command line</label></div>
+<div class="tabbed-content">
+<div class="tabbed-block">
+<ul>
+<li>
+<p>In the <strong>Global settings</strong> tab, click <strong>Options</strong>.</p>
+</li>
+<li>
+<p>Enable <strong>Report clone list warnings during processing</strong> and
+  <strong>Pause on clone list warnings</strong>.</p>
+</li>
+</ul>
+</div>
+<div class="tabbed-block">
+<p><code>--warnings --warningpause</code></p>
+</div>
+</div>
+</div>
+<p>Run Retool on the DAT, and fix your clone list until no warnings are given.</p>
+<h2 id="hashing-for-updates">Hashing for updates</h2>
+<p>Retool manages clone list updates via the <code>hash.json</code> file in the clone lists subfolder.
+When looking for updates, the newest <code>hash.json</code> is downloaded from from the location
+specified in <code>internal-config.json</code>:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-30-1" name="__codelineno-30-1" href="#__codelineno-30-1"></a><span class="nt">&quot;cloneListMetadataUrl&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;https://raw.githubusercontent.com/unexpectedpanda/retool-clonelists-metadata/&quot;</span><span class="p">,</span><span class="w"></span>
+</code></pre></div>
+<p>The SHA256 hashes in that file are then compared against the clone lists on the local
+disk. If a clone list hash doesn't match, then a new version of that file is downloaded
+from the same location as listed above.</p>
+<p>When submitting PRs for clone lists, make sure to also update the appropriate <code>hash.json</code>
+file with the SHA256 hash of the updated or new clone list.</p>
+
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+      
+        
+        <a href="../how-to-use-retool-cli/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Retool CLI" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Retool CLI
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../naming-system/" class="md-footer__link md-footer__link--next" aria-label="Next: Retool&#39;s naming system" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Retool's naming system
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/unexpectedpanda/retool" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
