@@ -932,16 +932,16 @@ and the following data structures:</p>
 <li>Arrays</li>
 <li>Objects</li>
 </ul>
-<p>It also helps to understand Retool's <a href="/terminology">terminology</a>, and the different
-<a href="/naming-system">names</a> it assigns to titles to help match and group them together
+<p>It also helps to understand Retool's <a href="terminology">terminology</a>, and the different
+<a href="naming-system">names</a> it assigns to titles to help match and group them together
 accurately.</p>
-<p>Finally, you should read <a href="/how-retool-works">How Retool works</a> so you understand the order
+<p>Finally, you should read <a href="how-retool-works">How Retool works</a> so you understand the order
 in which things are processed, and can solve problems using the correct clone list
 features.</p>
 <h2 id="titles-that-retool-automatically-detects-as-clones">Titles that Retool automatically detects as clones</h2>
 <p>Before referencing clone lists, Retool parses a DAT file and creates objects for all of
-its titles. If multiple titles have the same <a href="/naming-system/#group-names">group name</a> and
-<a href="/naming-system/#short-names">short name</a>, Retool assumes they're related to each other.</p>
+its titles. If multiple titles have the same <a href="naming-system/#group-names">group name</a> and
+<a href="naming-system/#short-names">short name</a>, Retool assumes they're related to each other.</p>
 <p>Names should only be added to clone lists in the following situations:</p>
 <ul>
 <li>
@@ -1063,16 +1063,16 @@ categories can be assigned to a title.</p>
   so Retool can match it accurately against names in the input DAT. Valid options include:</p>
 <ul>
 <li>
-<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+<p><code>full (str)</code>: The <a href="naming-system/#full-names">full name</a>.</p>
 </li>
 <li>
-<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+<p><code>short (str)</code>: The <a href="naming-system/#short-names">short name</a>.</p>
 </li>
 <li>
-<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+<p><code>regionFree (str)</code>: The <a href="naming-system/#region-free-names">region-free name</a>.</p>
 </li>
 <li>
-<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+<p><code>tagFree (str)</code>: The <a href="naming-system/#tag-free-names">tag-free name</a>.</p>
 </li>
 <li>
 <p><code>regex (str)</code>: A regex match on the full name.</p>
@@ -1101,13 +1101,13 @@ and as a general rule shouldn't be manually added or removed.</p>
 <li>The MIAs array.</li>
 <li>The full name of the title to search for in the input DAT.</li>
 </ol>
-<p>MIAs only use <a href="/naming-system/#full-names">full names</a> to search for matching titles in the
+<p>MIAs only use <a href="naming-system/#full-names">full names</a> to search for matching titles in the
 associated DAT, and so an <code>mias</code> array only contains strings that match those full names.</p>
 <h3 id="overrides">Overrides</h3>
-<p>The <code>overrides</code> array assigns titles different <a href="/naming-system/#group-names">group</a> and
-<a href="/naming-system/#short-names">short names</a>, manually bundling together specific games
+<p>The <code>overrides</code> array assigns titles different <a href="naming-system/#group-names">group</a> and
+<a href="naming-system/#short-names">short names</a>, manually bundling together specific games
 instead of using Retool's automatic grouping.</p>
-<p>Because Retool groups together titles with the same <a href="/naming-system/#short-names">short name</a>
+<p>Because Retool groups together titles with the same <a href="naming-system/#short-names">short name</a>
 by default, this is particularly useful to work around the problem where games have the
 same short name, but are entirely different in content.</p>
 <p>For example, the Japanese version of <em>King's Field</em> was never released in the USA.
@@ -1148,16 +1148,16 @@ through the <code>overrides</code> array, to stop it being grouped automatically
   so Retool can match it accurately against names in the input DAT. Valid options include:</p>
 <ul>
 <li>
-<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+<p><code>full (str)</code>: The <a href="naming-system/#full-names">full name</a>.</p>
 </li>
 <li>
-<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+<p><code>short (str)</code>: The <a href="naming-system/#short-names">short name</a>.</p>
 </li>
 <li>
-<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+<p><code>regionFree (str)</code>: The <a href="naming-system/#region-free-names">region-free name</a>.</p>
 </li>
 <li>
-<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+<p><code>tagFree (str)</code>: The <a href="naming-system/#tag-free-names">tag-free name</a>.</p>
 </li>
 <li>
 <p><code>regex (str)</code>: A regex match on the full name.</p>
@@ -1175,7 +1175,7 @@ Additionally, avoid adding anything that looks like version string, for example,
 <code>v2.00</code>.</p>
 <p>You want to do this because the group and short names assigned to overridden titles
 aren't an exact copy of the <code>newGroup</code> value. Instead, the value is used as a basis to
-generate these names using Retool's <a href="/naming-system/#names">naming rules</a>.</p>
+generate these names using Retool's <a href="naming-system/#names">naming rules</a>.</p>
 </div>
 <h4 id="override-conditions">Override conditions</h4>
 <p>You can specify a <code>condition</code> as to whether or not an override should be implemented. The
@@ -1262,16 +1262,16 @@ debug issues.</p>
   so Retool can match it accurately against names in the input DAT. Valid options include:</p>
 <ul>
 <li>
-<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+<p><code>full (str)</code>: The <a href="naming-system/#full-names">full name</a>.</p>
 </li>
 <li>
-<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+<p><code>short (str)</code>: The <a href="naming-system/#short-names">short name</a>.</p>
 </li>
 <li>
-<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+<p><code>regionFree (str)</code>: The <a href="naming-system/#region-free-names">region-free name</a>.</p>
 </li>
 <li>
-<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+<p><code>tagFree (str)</code>: The <a href="naming-system/#tag-free-names">tag-free name</a>.</p>
 </li>
 </ul>
 </li>
@@ -1284,7 +1284,7 @@ debug issues.</p>
 <h3 id="variants">Variants</h3>
 <p>The <code>variants</code> array is where all the different regional names and variations for titles
 are stored, grouping titles together that Retool would otherwise miss. By default, Retool
-already groups together titles that have the same <a href="/naming-system/#short-names">short name</a>.</p>
+already groups together titles that have the same <a href="naming-system/#short-names">short name</a>.</p>
 <p>A basic <code>variants</code> array looks similar to the following example:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="c1">// (1)!</span><span class="w"></span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="p">{</span><span class="w"></span>
@@ -1311,8 +1311,8 @@ already groups together titles that have the same <a href="/naming-system/#short
 <p>Each object in the <code>variants</code> array can include the following keys:</p>
 <ul>
 <li>
-<p><code>group (str)</code>: The <code>group</code> value is used as the basis for a new <a href="/naming-system/#group-names">group name</a>
-   and <a href="/naming-system/#short-names">short name</a> for all of the titles in the object.</p>
+<p><code>group (str)</code>: The <code>group</code> value is used as the basis for a new <a href="naming-system/#group-names">group name</a>
+   and <a href="naming-system/#short-names">short name</a> for all of the titles in the object.</p>
 </li>
 <li>
 <p><code>titles (array[obj])</code>: Optional. Contains singular, standard titles that belong to the
@@ -1334,7 +1334,7 @@ already groups together titles that have the same <a href="/naming-system/#short
 <p class="admonition-title">Caution</p>
 <p>The group and short names assigned to the contained titles aren't an exact copy of the
 top-level key. Instead, the key is used as a basis to generate these names. The rules
-for how these names are created are detailed in <a href="/naming-system">Retool's naming system</a>.</p>
+for how these names are created are detailed in <a href="naming-system">Retool's naming system</a>.</p>
 </div>
 <p>Each object in the <code>titles</code>, <code>supersets</code>, and <code>compilations</code> arrays can include the
 following keys:</p>
@@ -1347,16 +1347,16 @@ following keys:</p>
   so Retool can match it accurately against names in the input DAT. Valid options include:</p>
 <ul>
 <li>
-<p><code>full (str)</code>: The <a href="/naming-system/#full-names">full name</a>.</p>
+<p><code>full (str)</code>: The <a href="naming-system/#full-names">full name</a>.</p>
 </li>
 <li>
-<p><code>short (str)</code>: The <a href="/naming-system/#short-names">short name</a>.</p>
+<p><code>short (str)</code>: The <a href="naming-system/#short-names">short name</a>.</p>
 </li>
 <li>
-<p><code>regionFree (str)</code>: The <a href="/naming-system/#region-free-names">region-free name</a>.</p>
+<p><code>regionFree (str)</code>: The <a href="naming-system/#region-free-names">region-free name</a>.</p>
 </li>
 <li>
-<p><code>tagFree (str)</code>: The <a href="/naming-system/#tag-free-names">tag-free name</a>.</p>
+<p><code>tagFree (str)</code>: The <a href="naming-system/#tag-free-names">tag-free name</a>.</p>
 </li>
 <li>
 <p><code>regex (str)</code>: A regex match on the full name.</p>
@@ -1526,7 +1526,7 @@ When it finds those titles, it assigns the same group and short name to them,
 processing the USA region, to select <em>Example Title (USA)</em> over
 <em>Example Title Budget Edition (USA)</em> when Retool considers clone list priority. There are
 other factors that might eliminate a title before Retool gets to clone list priority
-&mdash; read <a href="/how-retool-works">How Retool works</a> for the order in which Retool filters
+&mdash; read <a href="how-retool-works">How Retool works</a> for the order in which Retool filters
 titles.</p>
 <p>In this example, because the user has set USA first in the region order, then
 <em>Example Title (USA)</em> is selected as the 1G1R title, and the others are discarded.</p>
@@ -1559,7 +1559,7 @@ higher up their region order? With the <code>supersets</code> array.</p>
 <a id="__codelineno-16-13" name="__codelineno-16-13" href="#__codelineno-16-13"></a><span class="w">  </span><span class="p">}</span><span class="w"></span>
 <a id="__codelineno-16-14" name="__codelineno-16-14" href="#__codelineno-16-14"></a><span class="p">]</span><span class="w"></span>
 </code></pre></div>
-<p>The objects in the <code>supersets</code> array list <a href="/terminology/#supersets">supersets</a>. By
+<p>The objects in the <code>supersets</code> array list <a href="terminology/#supersets">supersets</a>. By
 default, supersets look at language support over region order. If a superset supports the
 top language found in a group of titles (in this example, that's English), then it's
 selected over other standard titles in higher regions as it's considered superior.</p>

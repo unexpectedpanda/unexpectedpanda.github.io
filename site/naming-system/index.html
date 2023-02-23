@@ -657,9 +657,9 @@
 
 
 <h1 id="retools-naming-system">Retool's naming system</h1>
-<p>Retool generates multiple names for each <a href="/terminology/#titles">title</a> in a DAT to help
+<p>Retool generates multiple names for each <a href="terminology/#titles">title</a> in a DAT to help
 match and group together titles more accurately. These names are used directly in the
-code, and also <a href="/clone-lists">clone lists</a>.</p>
+code, and also <a href="clone-lists">clone lists</a>.</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>Retool's different naming conventions can take a while to get used to. To help you
@@ -686,9 +686,9 @@ lowercase. Additionally, any string that looks like a version is stripped.</p>
 <p>Group names are derived from three places:</p>
 <ul>
 <li>The full name of a title (default).</li>
-<li><code>group</code> values in the <a href="/contribute-clone-lists/#renames"><code>renames</code></a> array in
+<li><code>group</code> values in the <a href="contribute-clone-lists/#renames"><code>renames</code></a> array in
   a clone list.</li>
-<li><code>newGroup</code> or <code>elseGroup</code> values in the <a href="/contribute-clone-lists/#overrides"><code>overrides</code></a>
+<li><code>newGroup</code> or <code>elseGroup</code> values in the <a href="contribute-clone-lists/#overrides"><code>overrides</code></a>
   array in a clone list.</li>
 </ul>
 <h2 id="region-free-names">Region-free names</h2>
@@ -702,7 +702,7 @@ stripped.</p>
 </code></pre></div>
 <h2 id="tag-free-names">Tag-free names</h2>
 <p>Tag-free names are the same as full names, except they have <a href="#normalized-disc-names">normalized disc names</a>,
-and <a href="/terminology/#tags">tags</a> have been stripped from them as defined in the
+and <a href="terminology/#tags">tags</a> have been stripped from them as defined in the
 <code>ignore_tags</code>, <code>promote_editions</code>, <code>demote_editions</code>, and <code>modern_editions</code> arrays in
 <code>config/internal-config.json</code>. Tag-free names still include regions and languages.</p>
 <p>For example, the following full name:</p>
@@ -722,7 +722,7 @@ short names in clone lists.</p>
 it should be. Instead, it's a sequential set of string replacements that's iterated over
 when processing a title's full name, so the order is important.</p>
 <h2 id="short-names">Short names</h2>
-<p>Short names are a shortened version of full names, most often used in <a href="/clone-lists">clone lists</a>
+<p>Short names are a shortened version of full names, most often used in <a href="clone-lists">clone lists</a>
 as a handy way to reference many titles at once without having to list the full name of
 every variant. The short name is built by first getting the tag-free name (which also
 normalizes disc names), and then getting the region-free name from that. It is then
