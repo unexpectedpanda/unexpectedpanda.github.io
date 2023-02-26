@@ -1,0 +1,1493 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      <link rel="icon" href="../images/retool.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-8.5.10">
+    
+    
+      
+        <title>Retool CLI - Retool</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.975780f9.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.2505c338.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#546d78">
+        
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-P63E119561"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-P63E119561",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-P63E119561",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#how-to-use-retool-cli" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+<header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Retool" class="md-header__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Retool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Retool CLI
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Retool" class="md-nav__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    Retool
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        Download and install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_3" type="checkbox" id="__nav_3" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_3">
+          Understanding Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Understanding Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_3">
+          <span class="md-nav__icon md-icon"></span>
+          Understanding Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-retool-works/" class="md-nav__link">
+        How Retool works
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retool-1g1r/" class="md-nav__link">
+        Why Retool's 1G1R is better
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clone-lists/" class="md-nav__link">
+        Clone lists and metadata files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dat-support/" class="md-nav__link">
+        DAT support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    
+    <li class="md-nav__item md-nav__item--active md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4">
+          How to use Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="How to use Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          How to use Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-retool-gui/" class="md-nav__link">
+        Retool GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Retool CLI
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Retool CLI
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-dat-files-and-retool" class="md-nav__link">
+    Download DAT files and Retool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-user-configyaml-file" class="md-nav__link">
+    The user-config.yaml file
+  </a>
+  
+    <nav class="md-nav" aria-label="The user-config.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-order" class="md-nav__link">
+    Language order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-order" class="md-nav__link">
+    Region order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-order" class="md-nav__link">
+    Video order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-prefix-and-suffix" class="md-nav__link">
+    List prefix and suffix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-exclude-and-include-filters" class="md-nav__link">
+    Global exclude and include filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Global exclude and include filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-matches" class="md-nav__link">
+    Partial matches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-expressions" class="md-nav__link">
+    Regular expressions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-matches" class="md-nav__link">
+    Full matches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui-settings" class="md-nav__link">
+    GUI settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-settings-config-files" class="md-nav__link">
+    System settings config files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-options" class="md-nav__link">
+    Command line options
+  </a>
+  
+    <nav class="md-nav" aria-label="Command line options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusions" class="md-nav__link">
+    Exclusions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle md-toggle--indeterminate" data-md-toggle="__nav_5" type="checkbox" id="__nav_5" checked>
+      
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5">
+          Contribute to Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" aria-label="Contribute to Retool" data-md-level="1">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute-clone-lists/" class="md-nav__link">
+        Clone lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming-system/" class="md-nav__link">
+        Retool's naming system
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrate/" class="md-nav__link">
+        Integrate Retool into your own software
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#get-started" class="md-nav__link">
+    Get started
+  </a>
+  
+    <nav class="md-nav" aria-label="Get started">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#download-dat-files-and-retool" class="md-nav__link">
+    Download DAT files and Retool
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    Basic usage
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#the-user-configyaml-file" class="md-nav__link">
+    The user-config.yaml file
+  </a>
+  
+    <nav class="md-nav" aria-label="The user-config.yaml file">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#language-order" class="md-nav__link">
+    Language order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#region-order" class="md-nav__link">
+    Region order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#video-order" class="md-nav__link">
+    Video order
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#list-prefix-and-suffix" class="md-nav__link">
+    List prefix and suffix
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#global-exclude-and-include-filters" class="md-nav__link">
+    Global exclude and include filters
+  </a>
+  
+    <nav class="md-nav" aria-label="Global exclude and include filters">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#partial-matches" class="md-nav__link">
+    Partial matches
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#regular-expressions" class="md-nav__link">
+    Regular expressions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#full-matches" class="md-nav__link">
+    Full matches
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#gui-settings" class="md-nav__link">
+    GUI settings
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#system-settings-config-files" class="md-nav__link">
+    System settings config files
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#command-line-options" class="md-nav__link">
+    Command line options
+  </a>
+  
+    <nav class="md-nav" aria-label="Command line options">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#options" class="md-nav__link">
+    Options
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#exclusions" class="md-nav__link">
+    Exclusions
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#outputs" class="md-nav__link">
+    Outputs
+  </a>
+  
+</li>
+        
+          <li class="md-nav__item">
+  <a href="#debug" class="md-nav__link">
+    Debug
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  <a href="https://github.com/unexpectedpanda/retool/edit/master/docs/how-to-use-retool-cli.md" title="Edit this page" class="md-content__button md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25Z"/></svg>
+  </a>
+
+
+<h1 id="how-to-use-retool-cli">How to use Retool CLI</h1>
+<p>What follows is a step-by-step walkthrough of using Retool CLI and all of its features. If
+you're new to DAT management, it might be beneficial to spend some time reading about
+<a href="../terminology">terminology</a>, and after you've filtered a DAT file with Retool, check out
+the <a href="../beginners">Beginner's guide to ROM managers</a>.</p>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>Depending on your operating system, all Python commands in this guide might need to be
+prefixed with <code>python</code> or <code>python3</code> to work.</p>
+</div>
+<h2 id="get-started">Get started</h2>
+<p>The following sections cover the initial setup for Retool.</p>
+<h3 id="download-dat-files-and-retool">Download DAT files and Retool</h3>
+<p>Before you can filter DAT files, they need to be on your hard drive.</p>
+<ol>
+<li>
+<p>Download the DAT files for the system you want to verify. Retool supports DAT files
+    from the following groups:</p>
+<ul>
+<li>
+<p><a href="https://datomatic.no-intro.org/index.php?page=download">No-Intro</a></p>
+</li>
+<li>
+<p><a href="http://redump.org/downloads/">Redump</a></p>
+</li>
+</ul>
+<p>You might need to extract a ZIP file containing the DAT files to access them.</p>
+</li>
+<li>
+<p><a href="../download">Download Retool</a>, and follow the installation and update instructions for
+    your platform.</p>
+</li>
+</ol>
+<h2 id="basic-usage">Basic usage</h2>
+<p>In your terminal/Command Prompt, change the folder to where Retool is installed, and
+then run the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>retool.py -h
+</code></pre></div>
+<p>This shows all the options available to you.</p>
+<p>To process a DAT file without any options, enter the following command:</p>
+<pre><code>retool.py <span class="variable">PATH_TO_DAT_FILE</span></code></pre>
+
+<h2 id="the-user-configyaml-file">The user-config.yaml file</h2>
+<p>This file is user-editable, and contains the following configuration options for Retool.
+By default it is found in the <code>config</code> folder. See <a href="../user-config">an example of a <code>user-config.yaml</code> file</a>.</p>
+<h3 id="language-order">Language order</h3>
+<p>Optional. This is defined by the <code>language order</code> array. If you leave all languages
+commented out (preceded by a <code>#</code>), then Retool includes all languages during processing,
+and uses an <a href="../terminology/#implied-languages">implied language order</a>
+derived from your region order.</p>
+<p>Order is important. For example, if you have the following title names in an input DAT
+file:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>This is a title (Europe) (En,Fr,De)
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a>This is a title (Europe) (En,Fr,De,Es,It)
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a>This is a title (Europe) (Es)
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a>This is a title (Europe) (Fr,De,Es,It)
+</code></pre></div>
+<p>And the following language order:</p>
+<ol>
+<li>
+<p>English</p>
+</li>
+<li>
+<p>Spanish</p>
+</li>
+<li>
+<p>Italian</p>
+</li>
+</ol>
+<p>Then the following title is selected as the 1G1R title:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>This is a title (Europe) (En,Fr,De,Es,It)
+</code></pre></div>
+<p>And these titles are removed from consideration:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>This is a title (Europe) (Es)
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a>This is a title (Europe) (Fr,De,Es,It)
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a>This is a title (Europe) (En,Fr,De)
+</code></pre></div>
+<p>This is because <code>This is a title (Europe) (En,Fr,De,Es,It)</code> supports all three languages.</p>
+<p>The array doesn't just define an order &mdash; languages are also treated like filters.
+This means if you only add <code>English</code> as a language, for example, then only titles that
+support English or have unknown languages are included by Retool in the final result.</p>
+<p>The <code>language order</code> array is only used by Retool if you pass the <code>-l</code> command line
+option, otherwise it assumes you want all languages.</p>
+<h3 id="region-order">Region order</h3>
+<p>This is defined by the <code>region order</code> array. At least one region must be uncommented.</p>
+<h3 id="video-order">Video order</h3>
+<p>This is defined by the <code>video order</code> array. Video standards are processed after regions,
+languages, and many other criteria like versions and supersets. Additionally, a video
+standard is only determined by an explicit tag in a title's name, for example
+<code>This is a title (World) (NTSC)</code>. As such, the video order is effectively only used as a
+tie-breaker when choosing between two titles that both specify a video standard in their
+names. Don't expect to get NTSC titles if you prioritize NTSC as a video standard, but
+put Europe first in your region order.</p>
+<h3 id="list-prefix-and-suffix">List prefix and suffix</h3>
+<p>Optional. Defined by the <code>list prefix</code> and <code>list suffix</code> arrays. Only one entry is
+permitted per array. If you are using the <code>--listnames</code> option, this defines the prefix
+and suffix to add to each line. If a prefix starts with <code>http://</code>, <code>https://</code>, or
+<code>ftp://</code>, then each line in the output file is URL encoded.</p>
+<h3 id="global-exclude-and-include-filters">Global exclude and include filters</h3>
+<p>Optional. Defined by the <code>exclude</code> and <code>include</code> arrays.</p>
+<p>User filters override the default choices Retool makes by force including or excluding
+titles whose names match a certain string. Each filter must be on its own line.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>If Retool has genuinely missed a relationship between titles, please don't just
+create a filter &mdash; <a href="https://github.com/unexpectedpanda/retool/issues">create an issue</a>
+too so the clone lists or Retool can be updated.</p>
+</div>
+<p>There are three different match types:</p>
+<ul>
+<li>Plain text indicates a partial string match.</li>
+<li>A prefix of <code>/</code> indicates a regular expression match.</li>
+<li>A prefix of <code>|</code> indicates a full string match.</li>
+</ul>
+<p>Additionally, you can wrap any of these strings in <code>&lt;&gt;</code> to also remove any match's related
+clones.</p>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>If you need to use a backslash (<code>\</code>) or double quote (<code>"</code>) in your filters, you
+must escape them with a backslash. For example:</p>
+<ul>
+<li><code>\\</code></li>
+<li><code>\"</code></li>
+</ul>
+</div>
+<p>Additionally, there are rules when it comes to user filters, and how they interact at the
+global settings and system settings level:</p>
+<ul>
+<li>System includes override all excludes.</li>
+<li>System excludes override global includes.</li>
+<li>Global includes override global excludes.</li>
+</ul>
+<h4 id="partial-matches">Partial matches</h4>
+<p>If a line isn't prefixed with <code>|</code> (full match) or <code>/</code> (regular expression) in an
+<strong>Exclude</strong> or <strong>Include</strong>, then it's interpreted as a partial match. A partial match
+looks for the specified text inside all title names.</p>
+<p>For example, if an input DAT contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>Do You Think it&#39;s Hot (USA)
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a>Do You Think it&#39;s Hot (USA) (Alt)
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a>It&#39;s Pretty Cold (Japan)
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a>I Can&#39;t Find My Hotel (Europe)
+</code></pre></div>
+<p>And your <code>user-config.yaml</code> has the following excludes:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>exclude:
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a>- &quot;Hot&quot;
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a>- &quot;Cold&quot;
+</code></pre></div>
+<p>Every title in the example list is excluded from the output DAT file. This is because
+<code>Cold</code> matches <code>It's Pretty Cold (Japan)</code>, and <code>Hot</code> matches every other title, as it's
+found in both the word <code>Hot</code> and <code>Hotel</code>.</p>
+<p>Now let's add an include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>exclude:
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>- &quot;Hot&quot;
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a>- &quot;Cold&quot;
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a>include:
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a>- &quot;Ho&quot;
+</code></pre></div>
+<p>The behavior changes again:</p>
+<ul>
+<li>The include for <code>Ho</code> overrides the exclude for <code>Hot</code>.</li>
+<li>The include for <code>Ho</code> prevents Retool from assigning
+  <code>Do You Think it's Hot (USA) (Alt)</code> to <code>Do You Think it's Hot (USA)</code> as a clone,
+  meaning <em>both</em> titles end up in the output DAT file.</li>
+</ul>
+<p>As you can see, you need to be careful when using partial matches.</p>
+<h4 id="regular-expressions">Regular expressions</h4>
+<p>If you're familiar with regular expressions, also known as "regexes", you know the power
+(and pain) that they can bring. To define an include or exclude as a regex, prefix it
+with a forward slash (<code>/</code>).</p>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't know regex, you can <a href="https://regexlearn.com/learn/regex101">learn the basics at regexlearn.com</a>.
+You want to be well practiced before using them, as without proper care they can lead
+to unintended consequences.</p>
+</div>
+<p>For example, if an input DAT contains the following title names:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>Do You Think it&#39;s Hot (USA)
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>Do You Think it&#39;s Hot (USA) (Alt)
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a>It&#39;s Pretty Cold (Japan)
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a>I Can&#39;t Find My Hotel (Europe)
+</code></pre></div>
+<p>And your <code>user-config.yaml</code> has the following exclude:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>exclude:
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a>- &quot;/^I
+</code></pre></div>
+<p>All titles beginning with <code>I</code> are excluded from the output DAT file.</p>
+<p>Now let's add an include:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>exclude:
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a>- &quot;/^I
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a>include:
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a>- &quot;/\(USA\)&quot;
+</code></pre></div>
+<p>Here all USA titles are kept, even if they start with <code>I</code>, because includes override
+excludes. In our example list the <code>(Alt)</code> title is usually removed by Retool as a clone
+of the original, but the include filter of <code>/\(USA\)</code> makes sure it's kept.</p>
+<h4 id="full-matches">Full matches</h4>
+<p>Full matches only apply to titles with the exact same name. To define an include or
+exclude as a full match, prefix it with a pipe (<code>|</code>).</p>
+<p>For example, if an input DAT contains the following titles:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>Do You Think it&#39;s Hot (USA)
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a>Do You Think it&#39;s Hot (USA) (Alt)
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a>It&#39;s Pretty Cold (Japan)
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a>I Can&#39;t Find My Hotel (Europe)
+</code></pre></div>
+<p>And your <code>user-config.yaml</code> has the following exclude:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>exclude:
+<a id="__codelineno-11-2" name="__codelineno-11-2" href="#__codelineno-11-2"></a>- &quot;|Do You Think it&#39;s Hot (USA)&quot;
+</code></pre></div>
+<p>Then that title is excluded from the output DAT file.</p>
+<p>If you remove the exclude, and then put the following include in:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-12-1" name="__codelineno-12-1" href="#__codelineno-12-1"></a>include:
+<a id="__codelineno-12-2" name="__codelineno-12-2" href="#__codelineno-12-2"></a>- &quot;|Do You Think it&#39;s Hot (USA) (Alt)&quot;
+</code></pre></div>
+<p>Then that title is kept in the output DAT file, and the final titles chosen are:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-13-1" name="__codelineno-13-1" href="#__codelineno-13-1"></a>Do You Think it&#39;s Hot (USA)
+<a id="__codelineno-13-2" name="__codelineno-13-2" href="#__codelineno-13-2"></a>Do You Think it&#39;s Hot (USA) (Alt)
+<a id="__codelineno-13-3" name="__codelineno-13-3" href="#__codelineno-13-3"></a>It&#39;s Pretty Cold (Japan)
+<a id="__codelineno-13-4" name="__codelineno-13-4" href="#__codelineno-13-4"></a>I Can&#39;t Find My Hotel (Europe)
+</code></pre></div>
+<p>In our example list the <code>(Alt)</code> title is usually removed by Retool as a clone of the
+original, but the include filter makes sure it's kept.</p>
+<h3 id="gui-settings">GUI settings</h3>
+<p>Don't edit these. They are used by the GUI and ignored during CLI operation.</p>
+<h2 id="system-settings-config-files">System settings config files</h2>
+<p>Settings are available at two levels in Retool: global and system.</p>
+<ul>
+<li>
+<p><strong>Global settings</strong> are applied to every DAT Retool processes, so long as system
+  settings don't override them. These are stored in <a href="#the-user-configyaml-file"><code>config/user-config.yaml</code></a>.</p>
+</li>
+<li>
+<p><strong>System settings</strong> are applied to a specific system named in a DAT file. For example,
+  you can have settings for just the <em>Sony - PlayStation</em> DAT file from Redump.
+  System settings are mostly the same as global settings, although their config files are
+  slightly different. They are stored in the <code>config/systems</code> folder, and are YAML files
+  named after their system and release group.
+  <a href="../system-config">See an example of a system settings config file</a>.</p>
+</li>
+</ul>
+<p>While it's possible to construct a system settings file by hand, it's more convenient to
+set the options in Retool's GUI and let it generate one for you. After the system config
+file exists, Retool CLI references it every time it processes that system.</p>
+<h2 id="command-line-options">Command line options</h2>
+<p>In addition to the settings found in <a href="#the-user-configyaml-file"><code>user-config.yaml</code></a>, you
+can pass other settings via command line options.</p>
+<h3 id="options">Options</h3>
+<p>These options change how Retool handles certain titles.</p>
+<ul>
+<li>
+<p><strong id="disable-1g1r"><code>-d</code> Disable 1G1R filtering</strong>
+  <br>Ignore clone lists, and treat each title as unique. Useful if you want to keep
+  everything from a specific set of regions and/or languages. You can use this in
+  combination with <a href="#region-split"><code>--regionsplit</code></a> to treat Retool as a region splitter
+  and nothing more.
+  <br>
+  <br>This option isn't compatible with <a href="#legacy"><code>--legacy</code></a>.</p>
+</li>
+<li>
+<p><strong><code>-e</code> Include titles without hashes or sizes specified in the input DAT file</strong>
+  <br>Some DAT files don't list any hashes or sizes for some files, and Retool filters
+  these out by default. This option makes sure those files are kept.</p>
+</li>
+<li>
+<p><strong><code>-l</code> Filter by languages using a list</strong>
+  <br>If a title doesn't support any of the languages on the list, it's removed (see
+  <code>config/user-config.yaml</code>).</p>
+</li>
+<li>
+<p><strong><code>-r</code> Prefer regions over languages</strong>
+  <br>By default, if a title from a higher priority region doesn't support your preferred
+  languages but a lower priority region does, Retool selects the latter. This option
+  disables this behavior, forcing strict adherence to region priority regardless of
+  language support
+  <br>
+  <br>This option also overrides similar behavior in superset selection, which means you
+  might get a title that was released in your preferred region that has less content,
+  instead of one that was released in another region that contains more content and
+  supports your preferred languages.</p>
+</li>
+<li>
+<p><strong><code>-y</code> Prefer licensed versions over unlicensed, aftermarket, or homebrew titles</strong>
+  <br>Sometimes games are rereleased long after the lifespan of a console, in regions they
+  weren't originally available in. By default Retool selects these titles if they match
+  your preferred region/language priorities.
+  <br>
+  <br>Enable this option to choose a production version of a title over the
+  unlicensed/aftermarket/homebrew title if possible. This might select titles from a lower
+  priority region, or with lower priority languages, or with less features.</p>
+</li>
+<li>
+<p><strong><code>-z</code> Prefer titles ripped from modern rereleases over original system releases</strong>
+  <br>For the sake of emulator compatibility, Retool prefers versions of games released
+  on the original system instead of those ripped from rereleases on platforms like
+  Virtual Console and Steam. This option reverses that behavior.</p>
+</li>
+<li>
+<p><strong><code>--nofilters</code> Disable global and system user filters</strong>
+  <br>Ignore both global and system user filters.</p>
+</li>
+</ul>
+<h3 id="exclusions">Exclusions</h3>
+<p>Retool can exclude specific types of titles from the output DAT file. These exclusions are
+either based on the <code>&lt;category&gt;</code> tag found in DAT files, or on a string in the title's
+name.</p>
+<p>To add exclusions, use the <code>--exclude</code> option followed by the single letter filters that
+indicate each title type. For example, <code>--exclude aAbcdD</code>.</p>
+<p>The available exclusions are as follows:</p>
+<ul>
+<li>
+<p><strong><code>a</code> Applications</strong>
+  <br>Titles with the DAT category <code>Applications</code>, or with the following text in the name:</p>
+<ul>
+<li><code>(Program)</code></li>
+<li><code>(Test Program)</code></li>
+<li><code>Check Program</code></li>
+<li><code>Sample Program</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>A</code> Audio</strong>
+  <br>Titles with the DAT category <code>Audio</code>. These might be used as soundtracks by games.</p>
+</li>
+<li>
+<p><strong><code>b</code> Bad dumps</strong>
+  <br>Titles marked as bad dumps with a <code>[b]</code> in the name.</p>
+</li>
+<li>
+<p><strong><code>B</code> BIOS and other chips</strong>
+  <br>Titles with the DAT category <code>Console</code>, or with the following text in the name:</p>
+<ul>
+<li><code>[BIOS]</code></li>
+<li><code>(Enhancement Chip)</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>c</code> Coverdiscs</strong>
+  <br>Titles with the DAT category <code>Coverdiscs</code>. These were discs that were attached to
+  the front of magazines, and could contain demos, or rarely, full games.</p>
+</li>
+<li>
+<p><strong><code>d</code> Demos, kiosks, and samples</strong>
+  <br>Titles with the DAT category <code>Demos</code>, or with the following text in the name:</p>
+<ul>
+<li><code>@barai</code></li>
+<li><code>(Demo [1-9])</code></li>
+<li><code>(Demo-CD)</code></li>
+<li><code>(GameCube Preview)</code></li>
+<li><code>(Kiosk *|* Kiosk)</code></li>
+<li><code>(Preview)</code></li>
+<li><code>Kiosk Demo Disc</code></li>
+<li><code>PS2 Kiosk</code></li>
+<li><code>PSP System Kiosk</code></li>
+<li><code>Sample</code></li>
+<li><code>Taikenban</code></li>
+<li><code>Trial Edition</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>D</code> Add-ons</strong>
+  <br>Titles with the DAT category <code>Add-Ons</code>. This includes expansion packs and additional
+  materials for titles.</p>
+</li>
+<li>
+<p><strong><code>e</code> Educational</strong>
+  <br>Titles with the DAT category <code>Educational</code>.</p>
+</li>
+<li>
+<p><strong><code>k</code> MIA</strong>
+  <br>Titles or ROMs declared as missing in action in the clone lists or DAT files.</p>
+</li>
+<li>
+<p><strong><code>m</code> Manuals</strong>
+  <br>Titles with <code>(Manual)</code> in the name.</p>
+</li>
+<li>
+<p><strong><code>M</code> Multimedia</strong>
+  <br>Titles with the DAT category <code>Multimedia</code>. These might include games.</p>
+</li>
+<li>
+<p><strong><code>o</code> Bonus discs</strong>
+  <br>Titles with the DAT category <code>Bonus Discs</code>. These could be anything other than the
+  main title content, like patches, manuals, collector discs, or otherwise.</p>
+</li>
+<li>
+<p><strong><code>p</code> Pirate</strong>
+  <br>Titles with <code>(Pirate)</code> in the name.</p>
+</li>
+<li>
+<p><strong><code>P</code> Preproduction</strong>
+  <br>Titles with the DAT category <code>Preproduction</code>, or with the following text in the
+  name:</p>
+<ul>
+<li><code>(Alpha [0-99])</code></li>
+<li><code>(Beta [0-99])</code></li>
+<li><code>(Pre-Production)</code></li>
+<li><code>(Possible Proto)</code></li>
+<li><code>(Proto [0-99])</code></li>
+<li><code>(Review Code)</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>r</code> Promotional</strong>
+  <br>Titles with the DAT category <code>Promotional</code>, or with the following text in the name:</p>
+<ul>
+<li><code>(Promo)</code></li>
+<li><code>EPK</code></li>
+<li><code>Press Kit</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>u</code> Unlicensed</strong>
+  <br>Titles unauthorized by console manufacturers, marked by the following text in the
+  name:</p>
+<ul>
+<li><code>(Unl)</code></li>
+<li><code>(Aftermarket)</code></li>
+<li><code>(Homebrew)</code></li>
+</ul>
+</li>
+<li>
+<p><strong><code>v</code> Video</strong>
+  <br>Titles with the DAT category <code>Video</code>.</p>
+</li>
+</ul>
+<h3 id="outputs">Outputs</h3>
+<ul>
+<li>
+<p><strong><code>--listnames</code> Also output a TXT file of just the kept title names</strong>
+  <br>See <a href="#the-user-configyaml-file"><code>config/user-config.yaml</code></a> to add a prefix and/or
+  suffix to each line.</p>
+</li>
+<li>
+<p><strong><code>--log</code> Also output a TXT file of what titles have been kept, removed, and set as clones</strong></p>
+</li>
+<li>
+<p><strong><code>--output &lt;folder&gt;</code> Set an output folder where the new 1G1R DAT file/s will be created</strong></p>
+</li>
+<li>
+<p><strong id="region-split"><code>--regionsplit</code> Split the result into multiple DAT files based on region</strong>
+  <br>Use with <code>-d</code> to only split by region with no 1G1R processing. Not compatible with
+  <a href="#legacy"><code>--legacy</code></a>.</p>
+</li>
+<li>
+<p><strong><code>--removesdat</code> Also output a DAT file containing the titles that were removed from the 1G1R DAT file</strong></p>
+</li>
+</ul>
+<h3 id="debug">Debug</h3>
+<ul>
+<li>
+<p><strong><code>--config &lt;file&gt;</code> Set a custom user config file to use instead of the default</strong>
+  <br>Useful for testing.</p>
+</li>
+<li>
+<p><strong><code>--clonelist &lt;file&gt;</code> Set a custom clone list to use instead of the default</strong>
+  <br>Useful if you want to use your own, or if Redump or No-Intro renames their DAT file
+  and the clone list isn't automatically detected anymore. Often used together with
+  <code>--metadata</code>.</p>
+</li>
+<li>
+<p><strong><code>--metadata &lt;file&gt;</code> Set a custom metadata file to use instead of the default</strong>
+  <br>Useful if you want to use your own, or if Redump or No-Intro renames their DAT
+  file and the metadata file isn't automatically detected anymore. Often used together
+  with <code>--clonelist</code>.</p>
+</li>
+<li>
+<p><strong id="legacy"><code>--legacy</code> Output DAT file/s in legacy parent/clone format</strong>
+  Not recommended unless you're debugging or comparing outputs between DAT versions. Not
+  compatible with <a href="#disable-1g1r"><code>-d</code></a>.</p>
+</li>
+<li>
+<p><strong><code>--nodtd</code> Bypass DTD validation</strong>
+  <br>Skips DTD validation of DAT files, useful if validation is causing issues.</p>
+</li>
+<li>
+<p><strong><code>--singlecpu</code> Disable multiprocessor usage</strong>
+  br&gt;Forces Retool to use only a single CPU core, at the cost of performance. This can
+  be useful when debugging Retool, as multiprocessor doesn't cope well with <code>input</code>
+  statements.</p>
+</li>
+<li>
+<p><strong><code>--trace  [ ...]</code> Trace a title through the Retool process for debugging</strong>
+  <br>Follows a title through Retool's selection process for debugging. Accepts a regular
+  expression. To function properly, this disables using multiple processors during parent
+  selection.
+  <br>
+  <br>Usage:
+  <br>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-14-1" name="__codelineno-14-1" href="#__codelineno-14-1"></a>--trace &quot;regex of titles to trace&quot;
+</code></pre></div></p>
+</li>
+<li>
+<p><strong><code>--warnings</code> Report clone list warnings during processing</strong></p>
+</li>
+<li>
+<p><strong><code>--warningpause</code> Pause when a clone list warning is found</strong>
+  <br>Useful when batch processing DAT files.</p>
+</li>
+</ul>
+<div class="admonition tip">
+<p class="admonition-title">Tip</p>
+<p>If you don't know regular expressions, also known as "regexes", you can
+<a href="https://regexlearn.com/learn/regex101">learn the basics at regexlearn.com</a>. You want
+to be well practiced before using them, as without proper care they can lead to
+unintended consequences.</p>
+</div>
+
+
+  
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+    
+      
+    
+    <nav class="md-footer__inner md-grid" aria-label="Footer" hidden>
+      
+        
+        <a href="../how-to-use-retool-gui/" class="md-footer__link md-footer__link--prev" aria-label="Previous: Retool GUI" rel="prev">
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+          </div>
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Previous
+              </span>
+              Retool GUI
+            </div>
+          </div>
+        </a>
+      
+      
+        
+        <a href="../contribute-clone-lists/" class="md-footer__link md-footer__link--next" aria-label="Next: Clone lists" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Clone lists
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4Z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+      
+      
+    
+    <a href="https://github.com/unexpectedpanda/retool" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.2.1 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2022 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "toc.follow"], "search": "../assets/javascripts/workers/search.16e2a7d4.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version.title": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.5a2dcb6a.min.js"></script>
+      
+    
+    
+  </body>
+</html>
