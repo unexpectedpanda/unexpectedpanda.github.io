@@ -1,0 +1,3017 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+        <link rel="prev" href="../download/">
+      
+      
+        <link rel="next" href="../retool-1g1r/">
+      
+      <link rel="icon" href="../images/retool.ico">
+      <meta name="generator" content="mkdocs-1.4.2, mkdocs-material-9.1.0">
+    
+    
+      
+        <title>Changelog - Retool</title>
+      
+    
+    
+      <link rel="stylesheet" href="../assets/stylesheets/main.402914a4.min.css">
+      
+        
+        <link rel="stylesheet" href="../assets/stylesheets/palette.a0c5b2b5.min.css">
+      
+      
+
+    
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+      <link rel="stylesheet" href="../stylesheets/extra.css">
+    
+    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+  
+
+
+  
+  
+
+
+  <script id="__analytics">function __md_analytics(){function n(){dataLayer.push(arguments)}window.dataLayer=window.dataLayer||[],n("js",new Date),n("config","G-P63E119561"),document.addEventListener("DOMContentLoaded",function(){document.forms.search&&document.forms.search.query.addEventListener("blur",function(){this.value&&n("event","search",{search_term:this.value})}),document$.subscribe(function(){var a=document.forms.feedback;if(void 0!==a)for(var e of a.querySelectorAll("[type=submit]"))e.addEventListener("click",function(e){e.preventDefault();var t=document.location.pathname,e=this.getAttribute("data-md-value");n("event","feedback",{page:t,data:e}),a.firstElementChild.disabled=!0;e=a.querySelector(".md-feedback__note [data-md-value='"+e+"']");e&&(e.hidden=!1)}),a.hidden=!1}),location$.subscribe(function(e){n("config","G-P63E119561",{page_path:e.pathname})})});var e=document.createElement("script");e.async=!0,e.src="https://www.googletagmanager.com/gtag/js?id=G-P63E119561",document.getElementById("__analytics").insertAdjacentElement("afterEnd",e)}</script>
+
+  
+    <script>"undefined"!=typeof __md_analytics&&__md_analytics()</script>
+  
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="slate" data-md-color-primary="blue-grey" data-md-color-accent="">
+  
+    
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#changelog" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href=".." title="Retool" class="md-header__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2Z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Retool
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Changelog
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+      </label>
+      <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5Z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12Z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41Z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+      </div>
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href=".." title="Retool" class="md-nav__button md-logo" aria-label="Retool" data-md-component="logo">
+      
+  <img src="../images/retool.png" alt="logo">
+
+    </a>
+    Retool
+  </label>
+  
+    <div class="md-nav__source">
+      <a href="https://github.com/unexpectedpanda/retool" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    GitHub
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href=".." class="md-nav__link">
+        Home
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../download/" class="md-nav__link">
+        Download and install
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Changelog
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
+        Changelog
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2000-beta-1" class="md-nav__link">
+    2.00.0 Beta 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    1.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    1.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    1.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    1.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    1.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    1.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    1.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" class="md-nav__link">
+    1.09
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" class="md-nav__link">
+    1.08
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    1.07
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    1.06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    1.05
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    1.03
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    1.02
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    1.01
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.00
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#099" class="md-nav__link">
+    0.99
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#098" class="md-nav__link">
+    0.98
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#097" class="md-nav__link">
+    0.97
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#096" class="md-nav__link">
+    0.96
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#095" class="md-nav__link">
+    0.95
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#094" class="md-nav__link">
+    0.94
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#093" class="md-nav__link">
+    0.93
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#092" class="md-nav__link">
+    0.92
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091" class="md-nav__link">
+    0.91
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#090" class="md-nav__link">
+    0.90
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#089" class="md-nav__link">
+    0.89
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#088" class="md-nav__link">
+    0.88
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#087" class="md-nav__link">
+    0.87
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#086" class="md-nav__link">
+    0.86
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#085" class="md-nav__link">
+    0.85
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#084" class="md-nav__link">
+    0.84
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#083" class="md-nav__link">
+    0.83
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#082" class="md-nav__link">
+    0.82
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#081" class="md-nav__link">
+    0.81
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080" class="md-nav__link">
+    0.80
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#079" class="md-nav__link">
+    0.79
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#078" class="md-nav__link">
+    0.78
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#077" class="md-nav__link">
+    0.77
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#076" class="md-nav__link">
+    0.76
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#075" class="md-nav__link">
+    0.75
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#071" class="md-nav__link">
+    0.71
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070" class="md-nav__link">
+    0.70
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060" class="md-nav__link">
+    0.60
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#059" class="md-nav__link">
+    0.59
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#058" class="md-nav__link">
+    0.58
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#057" class="md-nav__link">
+    0.57
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#056" class="md-nav__link">
+    0.56
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#055" class="md-nav__link">
+    0.55
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#054" class="md-nav__link">
+    0.54
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#053" class="md-nav__link">
+    0.53
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#052" class="md-nav__link">
+    0.52
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051" class="md-nav__link">
+    0.51
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050" class="md-nav__link">
+    0.50
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#034" class="md-nav__link">
+    0.34
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#033" class="md-nav__link">
+    0.33
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#032" class="md-nav__link">
+    0.32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#031" class="md-nav__link">
+    0.31
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020" class="md-nav__link">
+    0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_4" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_4" id="__nav_4_label" tabindex="0">
+          Understanding Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_4_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Understanding Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../retool-1g1r/" class="md-nav__link">
+        Why Retool's 1G1R is better
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../clone-lists/" class="md-nav__link">
+        Clone lists and metadata files
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../dat-support/" class="md-nav__link">
+        DAT support
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../terminology/" class="md-nav__link">
+        Terminology
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_5" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_5" id="__nav_5_label" tabindex="0">
+          How to use Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_5_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_5">
+          <span class="md-nav__icon md-icon"></span>
+          How to use Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-retool-gui/" class="md-nav__link">
+        Retool GUI
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../how-to-use-retool-cli/" class="md-nav__link">
+        Retool CLI
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+      
+      
+        
+      
+      <input class="md-nav__toggle md-toggle md-toggle--indeterminate" type="checkbox" id="__nav_6" >
+      
+      
+      
+        <label class="md-nav__link" for="__nav_6" id="__nav_6_label" tabindex="0">
+          Contribute to Retool
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <label class="md-nav__title" for="__nav_6">
+          <span class="md-nav__icon md-icon"></span>
+          Contribute to Retool
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../contribute-clone-lists/" class="md-nav__link">
+        Clone lists
+      </a>
+    </li>
+  
+
+            
+          
+            
+              
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../naming-system/" class="md-nav__link">
+        Retool's naming system
+      </a>
+    </li>
+  
+
+            
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../integrate/" class="md-nav__link">
+        Integrate Retool into your own software
+      </a>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+                
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#2000-beta-1" class="md-nav__link">
+    2.00.0 Beta 1
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#118" class="md-nav__link">
+    1.18
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#117" class="md-nav__link">
+    1.17
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#116" class="md-nav__link">
+    1.16
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#115" class="md-nav__link">
+    1.15
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#114" class="md-nav__link">
+    1.14
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#113" class="md-nav__link">
+    1.13
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#112" class="md-nav__link">
+    1.12
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#111" class="md-nav__link">
+    1.11
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#110" class="md-nav__link">
+    1.10
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#109" class="md-nav__link">
+    1.09
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#108" class="md-nav__link">
+    1.08
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#107" class="md-nav__link">
+    1.07
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#106" class="md-nav__link">
+    1.06
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#105" class="md-nav__link">
+    1.05
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#104" class="md-nav__link">
+    1.04
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#103" class="md-nav__link">
+    1.03
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#102" class="md-nav__link">
+    1.02
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#101" class="md-nav__link">
+    1.01
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#100" class="md-nav__link">
+    1.00
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#099" class="md-nav__link">
+    0.99
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#098" class="md-nav__link">
+    0.98
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#097" class="md-nav__link">
+    0.97
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#096" class="md-nav__link">
+    0.96
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#095" class="md-nav__link">
+    0.95
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#094" class="md-nav__link">
+    0.94
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#093" class="md-nav__link">
+    0.93
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#092" class="md-nav__link">
+    0.92
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#091" class="md-nav__link">
+    0.91
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#090" class="md-nav__link">
+    0.90
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#089" class="md-nav__link">
+    0.89
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#088" class="md-nav__link">
+    0.88
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#087" class="md-nav__link">
+    0.87
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#086" class="md-nav__link">
+    0.86
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#085" class="md-nav__link">
+    0.85
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#084" class="md-nav__link">
+    0.84
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#083" class="md-nav__link">
+    0.83
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#082" class="md-nav__link">
+    0.82
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#081" class="md-nav__link">
+    0.81
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#080" class="md-nav__link">
+    0.80
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#079" class="md-nav__link">
+    0.79
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#078" class="md-nav__link">
+    0.78
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#077" class="md-nav__link">
+    0.77
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#076" class="md-nav__link">
+    0.76
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#075" class="md-nav__link">
+    0.75
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#071" class="md-nav__link">
+    0.71
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#070" class="md-nav__link">
+    0.70
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#060" class="md-nav__link">
+    0.60
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#059" class="md-nav__link">
+    0.59
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#058" class="md-nav__link">
+    0.58
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#057" class="md-nav__link">
+    0.57
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#056" class="md-nav__link">
+    0.56
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#055" class="md-nav__link">
+    0.55
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#054" class="md-nav__link">
+    0.54
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#053" class="md-nav__link">
+    0.53
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#052" class="md-nav__link">
+    0.52
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#051" class="md-nav__link">
+    0.51
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#050" class="md-nav__link">
+    0.50
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#034" class="md-nav__link">
+    0.34
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#033" class="md-nav__link">
+    0.33
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#032" class="md-nav__link">
+    0.32
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#031" class="md-nav__link">
+    0.31
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#020" class="md-nav__link">
+    0.20
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#010" class="md-nav__link">
+    0.10
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+  
+  
+
+
+<h1 id="changelog">Changelog</h1>
+<h2 id="2000-beta-1">2.00.0 Beta 1</h2>
+<p>Retool 2.0 is here in beta form. Ten months in the making, it'll be in beta for
+a few more months to get feedback and fix bugs found by users. Retool 1.x will
+still be available during this time, although it won't receive clone list
+updates from this point. After the beta period, Retool 1.x will be retired, and
+Retool 2.0 will take its place.</p>
+<p>Retool 2.0 is a hefty rewrite with a focus on static typing, better code
+practices, maintainability, and making things go <em>faster</em>.</p>
+<p>Check out how much things have improved over time, despite a huge increase in
+Retool's capability (measurements taken on a Core i7-8700K, Python 3.10):</p>
+<p><strong>Redump: Sony PlayStation (10628) (2021-12-29 02-47-27)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Retool version</th>
+<th>DAT process time</th>
+<th>Speed vs previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.53</td>
+<td>3m, 44s</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>0.62</td>
+<td>28.23s</td>
+<td>7.93x</td>
+</tr>
+<tr>
+<td>1.17</td>
+<td>27.15s</td>
+<td>1.04x</td>
+</tr>
+<tr>
+<td>2.00.0</td>
+<td>7.76s</td>
+<td>3.50x</td>
+</tr>
+</tbody>
+</table>
+<p>Improvement 0.53 &gt; 2.00.0: 29x speed increase</p>
+<p><strong>Redump: IBM - PC Compatible (28316) (2021-07-23 22-27-03)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Retool version</th>
+<th>DAT process time</th>
+<th>Speed vs previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.53</td>
+<td>20m, 56s</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>0.62</td>
+<td>2m, 4s</td>
+<td>10.13x</td>
+</tr>
+<tr>
+<td>1.17</td>
+<td>1m, 27s</td>
+<td>1.43x</td>
+</tr>
+<tr>
+<td>2.00.0</td>
+<td>14.88s</td>
+<td>5.85x</td>
+</tr>
+</tbody>
+</table>
+<p>Improvement 0.53 &gt; 2.00.0: 84x speed increase</p>
+<p><strong>No-Intro: Sony - PlayStation 3 (PSN) (Updates) (20211224-182932)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Retool version</th>
+<th>DAT process time</th>
+<th>Speed vs previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.53</td>
+<td>(Unsupported)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>0.62</td>
+<td>(Unsupported)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>1.17</td>
+<td>5m, 45s</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2.00.0</td>
+<td>21.72s</td>
+<td>15.88x</td>
+</tr>
+</tbody>
+</table>
+<p>Additionally, large and complex DATs like <em>Nintendo 3DS (Digital) (CDN)</em> now
+actually finish processing in a reasonable time. A Retool user <a href="https://github.com/unexpectedpanda/retool/issues/224">timed that DAT</a>
+to take 72,776 seconds on an Intel Core i7 8700K, which equates to 20 hours, 13
+minutes. Retool v2 finishes it on the same processor in 245 seconds, which is
+297x faster.</p>
+<p>There's no doubt code in there that would still make more experienced developers
+shudder, but it's nice to see things get better 😁</p>
+<p>It's not all benefits though &mdash; Retool's increase in complexity means that
+some DATs that were previously ultra-fast in v1 are slower to complete in v2:</p>
+<p><strong>No-Intro: Atari - Lynx - (20220513-205052)</strong></p>
+<table>
+<thead>
+<tr>
+<th>Retool version</th>
+<th>DAT process time</th>
+<th>Speed vs previous</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>0.53</td>
+<td>(Unsupported)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>0.62</td>
+<td>(Unsupported)</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>1.17</td>
+<td>0.39s</td>
+<td>N/A</td>
+</tr>
+<tr>
+<td>2.00.0</td>
+<td>1.83s</td>
+<td>0.21x</td>
+</tr>
+</tbody>
+</table>
+<p>The total time spent is still quite brief, and is worth the price of admission
+for the very slow DATs to be faster and the increase in accuracy.</p>
+<p>Check out the following list for other changes that have come in v2.</p>
+<h3>Accuracy</h3>
+<ul>
+<li>
+<p>Language order is now taken into account. If you don't filter by languages,
+  the language order will be inferred from your region order. This mostly
+  impacts European titles, where compared to previous versions of Retool another
+  title might be selected to better reflect your language choices. For example,
+  take these titles in Redump's PlayStation DAT:</p>
+</li>
+<li>
+<p><em>Hugo (Europe)</em></p>
+</li>
+<li><em>Hugo (Europe) (Nl,Pt) (Rev 1)</em></li>
+<li><em>Hugo (Europe) (Nl,Pt)</em></li>
+<li><em>Hugo (France)</em></li>
+<li><em>Hugo (Germany)</em></li>
+<li><em>Hugo (Italy)</em></li>
+<li><em>Hugo (Scandinavia) (Da,Fi)</em></li>
+<li><em>Hugo (Scandinavia) (Sv,No)</em></li>
+<li><em>Hugo (Spain)</em></li>
+</ul>
+<p>If you have USA as your top region, followed by Europe, Retool 1.x selects
+  <em>Hugo (Europe) (Nl,Pt) (Rev 1)</em> as the 1G1R title, because it's the highest
+  revision in Europe. Retool 2.0 realizes that because USA is your highest
+  region, that it's looking for English titles as a priority, and selects
+  <em>Hugo (Europe)</em> instead.</p>
+<p>This also applies to say, Japanese titles that are only in English, and a
+  special edition is available in English in another region. For example, take
+  these titles, again in Redump's PlayStation DAT:</p>
+<ul>
+<li><em>Car and Driver Presents - Grand Tour Racing '98 (USA)</em></li>
+<li><em>Gekisou!! Grand Racing - Total Drivin' (Japan)</em></li>
+<li><em>M6 Turbo Racing (France)</em></li>
+<li><em>Total Drivin (Europe) (En,Fr,De,Es,It,Pt)</em></li>
+</ul>
+<p>If you have Japan as your top region, Retool 1.x selects
+  <em>Gekisou!! Grand Racing - Total Drivin' (Japan)</em> as the top title. Retool 2.0
+  recognizes that the Japanese title is only in English, sees that the USA title
+  is a special edition, and selects
+  <em>Car and Driver Presents - Grand Tour Racing '98 (USA)</em> instead. You may as
+  well get more content if the title's going to be in the same language anyway.</p>
+<p>If you don't like this style of selection, you can turn on strict region
+  filtering with <code>-r</code>.
+- Compilations are now automatically handled by adding them to a system's
+  clone list with the correct syntax. Retool figures out the most optimal
+  combination of titles, taking your language and region preferences into
+  account. Sometimes it might look like Retool hasn't chosen the optimal
+  combination, but this is usually due to user region preferences and titles
+  being available in both the Europe region <em>and</em> specific European countries.
+  For example, take the following titles, and assume Italy is higher than Europe
+  in the user's region order:</p>
+<ul>
+<li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
+<li><em>2 Games in 1 - Disney Principesse + Koda, Fratello Orso (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
+<li><em>Brother Bear (Europe) (Fr,De,Es,It,Nl,Sv,Da)</em></li>
+</ul>
+<p>For those who don't speak Italian, <em>Fratello Orso</em> is the Italian version of
+  Brother Bear. Therefore, the most optimal solution for disk space and minimal
+  redundancy is:</p>
+<ul>
+<li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
+<li><em>Brother Bear (Europe) (Fr,De,Es,It,Nl,Sv,Da)</em></li>
+</ul>
+<p>This works, as both titles support Italian. However, because Italy is
+  prioritized as a region, Retool selects the Italian release of <em>Brother Bear</em>
+  instead, meaning you end up with:</p>
+<ul>
+<li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
+<li><em>2 Games in 1 - Disney Principesse + Koda, Fratello Orso (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
+</ul>
+<p>Although you get two versions of <em>Disney Princess</em>, this choice is by design.
+  The assumption is that the region-specific version of the game should enable
+  that region's language by default, instead of requiring a language switch
+  after boot up.
+- Priority level 0 is now gone, replaced by a <code>supersets</code> array. It functions in
+  almost the same way, preferring language over region, except that order in the
+  clone lists doesn't determine superset priority any more. For example, here's
+  how things used to look for <em>Persona 3</em> in Redump's PlayStation 2 DAT:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Shin Megami Tensei - Persona 3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Shin Megami Tensei - Persona 3 FES&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
+<a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Persona 3 FES&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
+<a id="__codelineno-0-4" name="__codelineno-0-4" href="#__codelineno-0-4"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Yeosin Jeonsaeng Persona 3 FES&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
+<a id="__codelineno-0-5" name="__codelineno-0-5" href="#__codelineno-0-5"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;P3 - Persona 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">],</span>
+<a id="__codelineno-0-6" name="__codelineno-0-6" href="#__codelineno-0-6"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Persona 3&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">1</span><span class="p">]</span>
+<a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">]</span>
+</code></pre></div>
+<p>Retool used to assume the top 0 priority title had higher priority than the 0
+  priority title after it, and so on. Unfortunately in this scenario, we have
+  two titles that should be the same rank:
+  <em>Shin Megami Tensei - Persona 3 FES</em>, the USA version, and <em>Persona 3 FES</em>,
+  the European version. In Retool v1, if someone put Europe above USA in their
+  region order and specified English as their highest language, they would get
+  the USA title instead of the European title that they wanted, as internally
+  the first 0 priority title was ranked above the second.</p>
+<p>With the introduction of the <code>supersets</code> array, things change a little:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
+<a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shin Megami Tensei - Persona 3&quot;</span><span class="p">,</span>
+<a id="__codelineno-1-3" name="__codelineno-1-3" href="#__codelineno-1-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-4" name="__codelineno-1-4" href="#__codelineno-1-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;P3 - Persona 3&quot;</span><span class="p">},</span>
+<a id="__codelineno-1-5" name="__codelineno-1-5" href="#__codelineno-1-5"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Persona 3&quot;</span><span class="p">},</span>
+<a id="__codelineno-1-6" name="__codelineno-1-6" href="#__codelineno-1-6"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shin Megami Tensei - Persona 3&quot;</span><span class="p">}</span>
+<a id="__codelineno-1-7" name="__codelineno-1-7" href="#__codelineno-1-7"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-1-8" name="__codelineno-1-8" href="#__codelineno-1-8"></a><span class="w">  </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-1-9" name="__codelineno-1-9" href="#__codelineno-1-9"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shin Megami Tensei - Persona 3 FES&quot;</span><span class="p">},</span>
+<a id="__codelineno-1-10" name="__codelineno-1-10" href="#__codelineno-1-10"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Persona 3 FES&quot;</span><span class="p">}</span>
+<a id="__codelineno-1-11" name="__codelineno-1-11" href="#__codelineno-1-11"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
+</code></pre></div>
+<p>Retool v2 now chooses the correct superset for the selected region, You can
+  still specify a <code>priority</code> on supersets, just in case there are multiple
+  supersets of varying amounts of content. That priority is <em>only</em> respected
+  between supersets, and isn't related to the priority set on a <code>title</code>.
+- You can now use regex in the <code>categories</code>, <code>overrides</code> and <code>variants</code> objects
+  in clone lists. Just set the <code>nameType</code> value to <code>regex</code>. The <code>removes</code> object
+  does not support regex.
+- Overrides now support a <code>priority</code> key within a <code>regionOrder</code> condition. This
+  means a title's clone list priority can be set from within a condition if that
+  condition is true, not just its group and short name.
+- You can now define clones in the <code>variants</code> object not just by short name, but
+  full name, region-free name, tag-free name, or regex on the full name. While
+  mostly you should stick to short names, this extra flexibilty can solve some
+  complex problems. For example
+  <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is the USA version of
+  <em>Silent Hill 2 - Director's Cut</em>. Unfortunately, due to its title the short
+  name for
+  <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is just <em>Silent Hill 2</em>
+  &mdash; exactly the same as the standard version of the game. Historically
+  with Retool this would mean we couldn't set unique priorities for both titles,
+  and would have to figure out an esoteric workaround. Now, however, there's
+  another way:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
+<a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2&quot;</span><span class="p">,</span>
+<a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-4" name="__codelineno-2-4" href="#__codelineno-2-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 (?:(?!USA.*v2.01).)*$&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;regex&quot;</span><span class="p">},</span>
+<a id="__codelineno-2-5" name="__codelineno-2-5" href="#__codelineno-2-5"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-2-6" name="__codelineno-2-6" href="#__codelineno-2-6"></a><span class="w">  </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-2-7" name="__codelineno-2-7" href="#__codelineno-2-7"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">},</span>
+<a id="__codelineno-2-8" name="__codelineno-2-8" href="#__codelineno-2-8"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 - Director&#39;s Cut&quot;</span><span class="p">},</span>
+<a id="__codelineno-2-9" name="__codelineno-2-9" href="#__codelineno-2-9"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 - Saigo no Uta&quot;</span><span class="p">}</span>
+<a id="__codelineno-2-10" name="__codelineno-2-10" href="#__codelineno-2-10"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>The first entry effectively says "Match every Silent Hill title except the one
+  with USA and v2.01 in it". We then specifically call out the v2.01 title as a
+  superset afterward. Mind you, this is overkill. The following example works
+  just fine:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
+<a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2&quot;</span><span class="p">,</span>
+<a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-4" name="__codelineno-3-4" href="#__codelineno-3-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-5" name="__codelineno-3-5" href="#__codelineno-3-5"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-3-6" name="__codelineno-3-6" href="#__codelineno-3-6"></a><span class="w">  </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-3-7" name="__codelineno-3-7" href="#__codelineno-3-7"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-8" name="__codelineno-3-8" href="#__codelineno-3-8"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 - Director&#39;s Cut&quot;</span><span class="p">},</span>
+<a id="__codelineno-3-9" name="__codelineno-3-9" href="#__codelineno-3-9"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2 - Saigo no Uta&quot;</span><span class="p">}</span>
+<a id="__codelineno-3-10" name="__codelineno-3-10" href="#__codelineno-3-10"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
+</code></pre></div>
+<p>There's also the situation where the Japanese version of <em>Sonic the Hedgehog</em>
+  is in English, <em>and</em> features extra parallax effects the USA version doesn't,
+  making it the more desirable version. Even if the user preferences USA above
+  Japan, we can still select the Japanese one:</p>
+<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+<a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sonic The Hedgehog&quot;</span><span class="p">,</span>
+<a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sonic The Hedgehog&quot;</span><span class="p">},</span>
+<a id="__codelineno-4-5" name="__codelineno-4-5" href="#__codelineno-4-5"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-4-6" name="__codelineno-4-6" href="#__codelineno-4-6"></a><span class="w">  </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-4-7" name="__codelineno-4-7" href="#__codelineno-4-7"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sonic The Hedgehog \\(Japan.*&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;regex&quot;</span><span class="p">}</span>
+<a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">]</span>
+<a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
+</code></pre></div>
+- Hong Kong's implied language is now Chinese. This is because the available
+  titles in No-Intro are solely in Chinese.
+- India's implied language is now set to English, since all Indian Redump titles
+  feature English, and there are many English-only titles.
+- Thailand's implied language is now set to nothing, as a number of Thai-only
+  titles have been dumped.
+- Scandinavia's implied language is now set to nothing.
+- Iceland and Icelandic have been added to the regions and languages.
+- Retool now handles No-Intro's (Language+Language+Language) format more
+  efficiently, which is used exclusively in its GBA DAT.
+- Retool now supports mastering codes for FM Towns, Nintendo, and NEC consoles,
+  and uses them as a versioning system.
+- Retool now supports disc IDs of some more modern consoles and uses them as a
+  versioning system.
+- Added yet another No-Intro date format, YYYY-MM-DDTHHMMSS.
+- If there are duplicate title names in a DAT, Retool renames the dupes. As a
+  result, they aren't considered when selecting 1G1R titles and remain in the
+  DAT. Contact the DAT author to get the title renamed, as all title names
+  should be unique.
+- The Redump website scraper has been majorly overhauled, which means metadata
+  is now more up to date. This tool is kept internal to prevent people from
+  spamming the Redump site.</p>
+<h3>New features</h3>
+<ul>
+<li>System settings. You can now override global settings on a per-system basis.
+  For example, you can set global settings that affect all of the DATs you
+  process, but set unique options for Sony PlayStation that override the global
+  settings when Retool processes that DAT.</li>
+<li>You can now disable 1G1R mode with <code>-d</code>. This is useful if you only want to
+  filter the input DAT by region, language, or excludes, and ignore all the
+  parent/clone relationships. It's also useful to use with the new
+  <code>--regionsplit</code> feature, which outputs multiple DATs based on the regions
+  you've selected.</li>
+<li>You can now prioritize titles based on their video standard, including MPAL,
+  NTSC, PAL, and SECAM. This only works on titles explicitly tagged with a video
+  standard in their name (for example, <code>(NTSC)</code>), and is processed <em>after</em>
+  languages and regions are processed. It is mainly used as a tie breaker for
+  titles that were released in the same region with multiple video standards.</li>
+<li>You can now additionally output a DAT file featuring all the removed titles
+  with the <code>--removesdat</code> argument.</li>
+<li>You can now exclude known MIA titles and individual MIA ROMs from both
+  No-Intro and Redump DATs by using <code>k</code> with the <code>--exclude</code> option.</li>
+<li>You can now update clone lists directly with Retool using <code>--update</code>. The DTD
+  file is now included as part of this bundle.</li>
+<li>You can now specify a custom clone list to load with <code>--clonelist</code>, and a
+  custom metadata file with <code>--metadata</code>. This is mostly useful if:</li>
+<li>Redump or No-Intro changes their DAT names, and the clone lists/metadata
+    files are no longer automatically detected.</li>
+<li>You're building your own clone lists, and want to compare the output versus
+    the original.</li>
+<li>You can now specify a custom local path where your clone lists and metadata
+  live. You can change this path in <code>internal-config.json</code> &mdash; check out the
+  <code>localDir</code> subkey under <code>clonelists</code> and <code>metadata</code>.</li>
+<li>You can use a different user config file than the default with the <code>--config</code>
+  argument.</li>
+<li>You can wrap custom exclude and include strings in <code>&lt;&gt;</code> to also remove all
+  titles related to a match. For example, <code>&lt;/Fah..nheit.*&gt;</code> would match
+  <em>Fahrenheit (Europe) (En,Fr,De,Es,It)</em>, but also <em>Indigo Prophecy (USA)</em> as
+  they're linked together by clone lists.</li>
+<li>Retool GUI now lets you to add multiple DATs, or DATs recursively in a folder.</li>
+<li>Retool GUI now lets you drag and drop regions and languages, not just use the
+  position buttons.</li>
+</ul>
+<h3>Quality of life updates</h3>
+<ul>
+<li>There's a <a href="https://unexpectedpanda.github.io/retool">brand new Retool website and documentation</a>.</li>
+<li>Retool can now cope with a user entering a trailing backslash in a path in
+  Windows.</li>
+<li>Retool CLI now supports the * wildcard for filenames and folders.</li>
+<li>You can now download <code>internal-config.json</code> if it's missing.</li>
+<li>The help text in the CLI version of Retool has been reorganized to make things
+  easier to parse.</li>
+<li>A DTD check failure now only gives a warning, it doesn't exit Retool. No-Intro
+  introduces new violations to the schema with enough frequency that it's not
+  worth enforcing too strictly any more.</li>
+<li>Global user filters are now located in <code>user-config.yaml</code>.</li>
+<li>The Windows binary now has several files UPX packed. This means on disk the
+  size of Retool is now ~30MB smaller. The compressed archive that users
+  initially download has also reduced to a total of ~24MB, down from ~32MB for
+  Retool v1. I suspect as a result of the UPX packing some overzealous
+  anti-virus tools might raise a false positive for Retool. There's nothing I
+  can do about this, the issue is with the anti-virus suite, not Retool --
+  you'll just have to clear Retool to run.</li>
+<li>The GUI is now written directly in QT6 instead of using the PySimpleGUI
+  middleware. A lot of changes have been made, including the following upgrades:</li>
+<li>The GUI no longer crashes if the console portion of Retool crashes. It
+    simply fails to process the current DAT.</li>
+<li>The issue with the layout getting messed up when the UI was dragged between
+    screens of different scaling factors should be addressed. This mostly
+    impacted users with both 4k and HD screens.</li>
+<li>The GUI is now more horizontally rectangular, to avoid elements going
+    offscreen if people have set their scaling high on low resolution monitors.</li>
+<li>You now add DATs to a list to process, not just open a single file or
+    folder at a time. This means you can add multiple sets of individual DATs,
+    multiple folders, or multiple folders recursively to the list, in any
+    combination.</li>
+<li>You can now drag and drop between region and language lists, and reorder
+    items in the selected region and language lists.</li>
+<li>A title tool is accessible from the <strong>File</strong> menu. If you enter a title's
+    full name from the DAT, it shows you the other names Retool assigns to it
+    to work its magic. This tool is only useful if you intend to contribute to
+    clone lists or Retool itself.</li>
+<li>You can now change some default file locations in <strong>Settings</strong>, also found
+    in the <strong>File</strong> menu.</li>
+<li><strong>Select all</strong> and <strong>Deselect all</strong> buttons have been added to the
+    exclusions tab.</li>
+</ul>
+<h3>Performance and maintenance</h3>
+<ul>
+<li>Improved conversion of CLRMAMEPro formatted DATs to Logiqx XML, which should
+  avoid some crashes and handle larger files.</li>
+<li>Removed BeautifulSoup for increased performance.</li>
+<li>Changed some functions to use multiple processors.</li>
+<li>More accurate and readable regular expressions for tag selection.</li>
+<li>Removed regex queries where not necessary, concatenated them where possible.</li>
+<li>A lot of code is now statically typed for better predictability.</li>
+<li>Extra data validation is now performed on clone lists. The upshot is: you get
+  a warning if things aren't formatted correctly, and even if they are, they
+  shouldn't crash Retool &mdash; just that clone list entry is skipped.</li>
+</ul>
+<h3>Developer updates</h3>
+<ul>
+<li>New clone list format. This is for consistency and to explicitly name
+  features, so newcomers have a better chance of understanding what's
+  going on and contributing.</li>
+</ul>
+<p><strong>Old style categories</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;BASIC Programming&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-3" name="__codelineno-5-3" href="#__codelineno-5-3"></a><span class="w">    </span><span class="nt">&quot;match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-4" name="__codelineno-5-4" href="#__codelineno-5-4"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Applications&quot;</span><span class="p">]</span>
+<a id="__codelineno-5-5" name="__codelineno-5-5" href="#__codelineno-5-5"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-5-6" name="__codelineno-5-6" href="#__codelineno-5-6"></a><span class="w">  </span><span class="nt">&quot;Color Bar Generator&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-5-7" name="__codelineno-5-7" href="#__codelineno-5-7"></a><span class="w">    </span><span class="nt">&quot;match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short&quot;</span><span class="p">,</span>
+<a id="__codelineno-5-8" name="__codelineno-5-8" href="#__codelineno-5-8"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Applications&quot;</span><span class="p">]</span>
+<a id="__codelineno-5-9" name="__codelineno-5-9" href="#__codelineno-5-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-5-10" name="__codelineno-5-10" href="#__codelineno-5-10"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>New style categories</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-6-3" name="__codelineno-6-3" href="#__codelineno-6-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;BASIC Programming&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-4" name="__codelineno-6-4" href="#__codelineno-6-4"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-5" name="__codelineno-6-5" href="#__codelineno-6-5"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Applications&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-6" name="__codelineno-6-6" href="#__codelineno-6-6"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-6-7" name="__codelineno-6-7" href="#__codelineno-6-7"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-6-8" name="__codelineno-6-8" href="#__codelineno-6-8"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Color Bar Generator&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-9" name="__codelineno-6-9" href="#__codelineno-6-9"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;short&quot;</span><span class="p">,</span>
+<a id="__codelineno-6-10" name="__codelineno-6-10" href="#__codelineno-6-10"></a><span class="w">    </span><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span><span class="s2">&quot;Applications&quot;</span><span class="p">]</span>
+<a id="__codelineno-6-11" name="__codelineno-6-11" href="#__codelineno-6-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">]</span>
+</code></pre></div>
+<p>The biggest thing to call out here is that the search term is now explicitly
+  named, instead of being an undefined object key. Additionally, keys now us
+  camel case. Overrides have had much the same makeover:</p>
+<p><strong>Old style overrides</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;CD-Action 03-1997 (10B) (Poland)&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-3" name="__codelineno-7-3" href="#__codelineno-7-3"></a><span class="w">    </span><span class="nt">&quot;new group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 03-1997 (10B) (Poland)&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-4" name="__codelineno-7-4" href="#__codelineno-7-4"></a><span class="w">    </span><span class="nt">&quot;match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span>
+<a id="__codelineno-7-5" name="__codelineno-7-5" href="#__codelineno-7-5"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-7-6" name="__codelineno-7-6" href="#__codelineno-7-6"></a><span class="w">  </span><span class="nt">&quot;CD-Action 06-1997 (13B) (Poland)&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-7-7" name="__codelineno-7-7" href="#__codelineno-7-7"></a><span class="w">    </span><span class="nt">&quot;new group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 06-1997 (13B) (Poland)&quot;</span><span class="p">,</span>
+<a id="__codelineno-7-8" name="__codelineno-7-8" href="#__codelineno-7-8"></a><span class="w">    </span><span class="nt">&quot;match&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span>
+<a id="__codelineno-7-9" name="__codelineno-7-9" href="#__codelineno-7-9"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-7-10" name="__codelineno-7-10" href="#__codelineno-7-10"></a><span class="p">}</span>
+</code></pre></div>
+<p><strong>New style overrides</strong></p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-8-2" name="__codelineno-8-2" href="#__codelineno-8-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-8-3" name="__codelineno-8-3" href="#__codelineno-8-3"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 03-1997 (10B) (Poland)&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-4" name="__codelineno-8-4" href="#__codelineno-8-4"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-5" name="__codelineno-8-5" href="#__codelineno-8-5"></a><span class="w">    </span><span class="nt">&quot;newGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 03-1997 10B Poland&quot;</span>
+<a id="__codelineno-8-6" name="__codelineno-8-6" href="#__codelineno-8-6"></a><span class="w">  </span><span class="p">},</span>
+<a id="__codelineno-8-7" name="__codelineno-8-7" href="#__codelineno-8-7"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-8-8" name="__codelineno-8-8" href="#__codelineno-8-8"></a><span class="w">    </span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 06-1997 (13B) (Poland)&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-9" name="__codelineno-8-9" href="#__codelineno-8-9"></a><span class="w">    </span><span class="nt">&quot;nameType&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;full&quot;</span><span class="p">,</span>
+<a id="__codelineno-8-10" name="__codelineno-8-10" href="#__codelineno-8-10"></a><span class="w">    </span><span class="nt">&quot;newGroup&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;CD-Action 06-1997 13B Poland&quot;</span>
+<a id="__codelineno-8-11" name="__codelineno-8-11" href="#__codelineno-8-11"></a><span class="w">  </span><span class="p">}</span>
+<a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">]</span>
+</code></pre></div>
+<p>Renames have had the biggest rework. They have been renamed to <em>variants</em>, and
+  are significantly more verbose. Supersets and compilations have now been split
+  out into their own arrays, as they are treated differently by Retool. Most
+  notably, the confusing priority <code>0</code> is no longer a thing, with that work now
+  done by either the <code>compilations</code> or <code>supersets</code> array.</p>
+<p><strong>Old style renames</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&quot;renames&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;3-D Ultra Pinball&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="p">[</span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">]</span>
+<a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">[</span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;title_position&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-9-5" name="__codelineno-9-5" href="#__codelineno-9-5"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-9-6" name="__codelineno-9-6" href="#__codelineno-9-6"></a><span class="w">  </span><span class="nt">&quot;Black &amp; White (Data Disc)&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-9-7" name="__codelineno-9-7" href="#__codelineno-9-7"></a><span class="w">    </span><span class="p">[</span><span class="s2">&quot;Black &amp; White - Platinum Pack&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
+<a id="__codelineno-9-8" name="__codelineno-9-8" href="#__codelineno-9-8"></a><span class="w">  </span><span class="p">],</span>
+<a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span>
+</code></pre></div></p>
+<p><strong>New style variants (formerly renames)</strong>
+  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p">{</span>
+<a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-5" name="__codelineno-10-5" href="#__codelineno-10-5"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">}</span>
+<a id="__codelineno-10-6" name="__codelineno-10-6" href="#__codelineno-10-6"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-10-7" name="__codelineno-10-7" href="#__codelineno-10-7"></a><span class="w">      </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-8" name="__codelineno-10-8" href="#__codelineno-10-8"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;titlePosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}</span>
+<a id="__codelineno-10-9" name="__codelineno-10-9" href="#__codelineno-10-9"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-10-10" name="__codelineno-10-10" href="#__codelineno-10-10"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-10-11" name="__codelineno-10-11" href="#__codelineno-10-11"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-10-12" name="__codelineno-10-12" href="#__codelineno-10-12"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Black &amp; White (Data Disc)&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-13" name="__codelineno-10-13" href="#__codelineno-10-13"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-14" name="__codelineno-10-14" href="#__codelineno-10-14"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Black &amp; White (Data Disc)&quot;</span><span class="p">}</span>
+<a id="__codelineno-10-15" name="__codelineno-10-15" href="#__codelineno-10-15"></a><span class="w">      </span><span class="p">],</span>
+<a id="__codelineno-10-16" name="__codelineno-10-16" href="#__codelineno-10-16"></a><span class="w">      </span><span class="nt">&quot;supersets&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-17" name="__codelineno-10-17" href="#__codelineno-10-17"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Black &amp; White - Platinum Pack&quot;</span><span class="p">}</span>
+<a id="__codelineno-10-18" name="__codelineno-10-18" href="#__codelineno-10-18"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-10-19" name="__codelineno-10-19" href="#__codelineno-10-19"></a><span class="w">    </span><span class="p">},</span>
+<a id="__codelineno-10-20" name="__codelineno-10-20" href="#__codelineno-10-20"></a><span class="w">    </span><span class="p">{</span>
+<a id="__codelineno-10-21" name="__codelineno-10-21" href="#__codelineno-10-21"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Trophy Bass&quot;</span><span class="p">,</span>
+<a id="__codelineno-10-22" name="__codelineno-10-22" href="#__codelineno-10-22"></a><span class="w">      </span><span class="nt">&quot;compilations&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<a id="__codelineno-10-23" name="__codelineno-10-23" href="#__codelineno-10-23"></a><span class="w">        </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="nt">&quot;titlePosition&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2</span><span class="p">}</span>
+<a id="__codelineno-10-24" name="__codelineno-10-24" href="#__codelineno-10-24"></a><span class="w">      </span><span class="p">]</span>
+<a id="__codelineno-10-25" name="__codelineno-10-25" href="#__codelineno-10-25"></a><span class="w">    </span><span class="p">}</span>
+<a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="p">]</span>
+</code></pre></div></p>
+<p>Not seen here: you can add <code>priority</code> and <code>nameType</code> keys to each object in
+  the <code>titles</code>, <code>compilations</code>, and <code>supersets</code> arrays. See the documentation
+  for more information.
+- All user messages now go to STDERR instead of STDOUT. If you redirect the
+  STDOUT with &gt;, &lt;, or &gt;&gt;, the only output is now the data of the final filtered
+  DAT. This is most useful for those who build their own scripts and want to
+  chain tools together.
+- There's a new <code>--trace</code> argument that you can use to trace a title's journey
+  through Retool. It's useful when you're trying to figure out where something
+  unexpected happens, and don't want to insert a bunch of print and input
+  statements. It works on regex matches and is very verbose, so be careful with
+  precision. Running a trace disables file output and multiprocessor operation
+  in some places, as it's intended for testing only.
+- There's a new <code>--singlecpu</code> argument that you can use to run Retool on just
+  one CPU. Python doesn't like <code>input</code> statements when it's running things
+  across multiple processors, so use this argument if you're debugging
+  multiprocessing parts of the code.
+- There's a new <code>--nodtd</code> argument that bypasses Logiqx's DTD validation.
+  Despite quoting it in their DATs, No-Intro and Redump don't validate against
+  the DTD schema. This effectively hides the warning that the input DAT isn't
+  compliant.
+- All classes and functions now have consistent docstrings so people (including
+  myself) have a chance to figure out what's going on.
+- You can add the <code>@perf_test</code> decorator to any function to run memory and time
+  tests.
+- There's a new <code>config</code> object that gets passed around a lot, which contains
+  almost all the settings Retool needs to operate. Because it's quite large, it
+  can be browsed interactively by running <code>print(config)</code> where the <code>config</code>
+  instance is available. This should help those new to the codebase, or myself
+  when I'm trying to track down bugs or haven't looked at the code in a while.
+- The <code>input_dat</code> object can now be browsed interactively just like the <code>config</code>
+  object. It contains all the information about the DAT the user has fed into
+  Retool.
+- Incidentally, the objects that contain the titles (DatNode objects) can also
+  be printed to show the title's information in a tree-like fashion.</p>
+<h2 id="118">1.18</h2>
+<ul>
+<li>A small change to handle a new versioning system in No-Intro.</li>
+</ul>
+<h2 id="117">1.17</h2>
+<ul>
+<li>Retool can now handle No-Intro DATs that reference an XSD file.</li>
+</ul>
+<h2 id="116">1.16</h2>
+<ul>
+<li>The <code>&lt;name&gt;</code> tag in the output DAT header has been changed so CLRMAMEPro
+  recognizes DAT updates between Retool versions.</li>
+<li>The order of <code>&lt;rom&gt;</code> attributes has been changed in the output DAT to match
+  that of the in-progress Retool v2. This is mainly to help with internal
+  testing.</li>
+<li>A message has been improved that tells a user when Retool can't find titles
+  that match their preferences.</li>
+</ul>
+<h2 id="115">1.15</h2>
+<ul>
+<li>Titles that have invalid filename characters
+  (<code>:</code>, <code>\</code>, <code>/</code>, <code>&lt;</code>, <code>&gt;</code>, <code>"</code>, <code>|</code>, <code>?</code>, <code>*</code>) in DATs now have those
+  characters removed or replaced with valid ones. No-Intro metadata is
+  also checked for invalid filename characters.</li>
+</ul>
+<h2 id="114">1.14</h2>
+<ul>
+<li>Ring code version checking is now turned on for FM-Towns.</li>
+<li>The <code>(Homebrew)</code> tag is now recognized.</li>
+<li>When you exclude unlicensed titles, that now includes aftermarket and
+  homebrew titles.</li>
+<li>Unlicensed titles now get demoted if there's a production title in the same
+  region.</li>
+<li>Clone lists and metadata have been moved to their own <a href="https://github.com/unexpectedpanda/retool-clonelists-metadata">repository</a>.
+  This is in preparation for the shift to Retool v2.</li>
+<li>Retool CLI now prompts you to download clone lists and metadata if it finds
+  the <code>clonelists</code> or <code>metadata</code> folders missing.</li>
+</ul>
+<h2 id="113">1.13</h2>
+<ul>
+<li>The <code>(Headered)</code> and <code>(Headerless)</code> tags No-Intro were adding to the new NES
+  DATs caused Retool to not associate them with the NES clone list. This has
+  now been fixed.</li>
+</ul>
+<h2 id="112">1.12</h2>
+<ul>
+<li>Retool now brings over ROM manager directives in headers, including header
+  skippers. This should resolve issues around things like headered DATs.</li>
+</ul>
+<h2 id="111">1.11</h2>
+<ul>
+<li>Fixed how Retool searches for <code>rom</code> attributes to avoid incorrect substring
+  matches. Retool should no longer crash on game names that contain <code>mia</code>.</li>
+</ul>
+<h2 id="110">1.10</h2>
+<ul>
+<li>Updated Retool to support <code>mia</code> attributes on <code>rom</code> elements.</li>
+</ul>
+<h2 id="109">1.09</h2>
+<ul>
+<li>Updated Retool to support <code>header</code> attributes on <code>rom</code> elements.</li>
+</ul>
+<h2 id="108">1.08</h2>
+<ul>
+<li>Updated Retool to support SHA256 hashes.</li>
+</ul>
+<h2 id="107">1.07</h2>
+<ul>
+<li>Changed the way Retool handles versions to deal with more complex version
+  systems introduced in recent No-Intro DATs. Some version selections are now
+  more accurate as a result.</li>
+<li>Retool can now handle empty <code>&lt;url&gt;</code> tags in DAT headers.</li>
+</ul>
+<h2 id="106">1.06</h2>
+<ul>
+<li>The <code>release</code> tag now copies the <code>game name</code> attribute, instead of the
+  <code>description</code> tag. This is because No-Intro started using descriptions in the
+  GBA DAT that were different from the name.</li>
+<li>The <code>(Deprecated)</code> tag is now ignored in DAT file names when matching to
+  clone lists and metadata.</li>
+</ul>
+<h2 id="105">1.05</h2>
+<ul>
+<li>Fixed a region selection regex bug which caused Retool to crash when
+  including files with specific regex custom filters.</li>
+<li>Added a more specific error message for DATs with no games.</li>
+<li>The DTD was updated to make <code>size</code> an optional attribute of <code>rom</code>.</li>
+</ul>
+<h2 id="104">1.04</h2>
+<ul>
+<li>Fixed a bug where <em>(United Kingdom)</em> titles in No-Intro DATs were being
+  recognized as <em>(Unknown)</em> titles as well.</li>
+</ul>
+<h2 id="103">1.03</h2>
+<ul>
+<li>The Satellaview-specific <code>(Magazine)</code> tag has been added to the multimedia
+  filter.</li>
+<li>The <code>(DEBUG)</code> tag has been added to the preproduction filter.</li>
+</ul>
+<h2 id="102">1.02</h2>
+<ul>
+<li>Fixed a Sega ring code version comparison bug.</li>
+<li>The N-Gage-specific tag <code>(Full Trial)</code> has been added to the demos filter.</li>
+<li>The N-Gage-specific tag <code>(Review Kit ##)</code> has been added to the preproduction
+  filter.</li>
+<li>Fixed errors in the Redump scraper that stopped Croatian and Slovakian being
+  added as a language to the metadata.</li>
+<li>Added new languages: Albanian, Indonesian, Latvian, Macedonian, Serbian.</li>
+<li>Added metadata languages: Catalan, Estonian, Gaelic, Hindi, Lithuanian,
+  Punjabi, Tamil, Ukranian.</li>
+</ul>
+<h2 id="101">1.01</h2>
+<ul>
+<li>Fixed an issue where titles assigned to <code>BIOS</code> in a clone list weren't
+  removed if a user had selected to remove BIOSes.</li>
+</ul>
+<h2 id="100">1.00</h2>
+<ul>
+<li>Fixed an issue where multiple regions caused a crash when determining the
+  implied language of a title.</li>
+</ul>
+<h2 id="099">0.99</h2>
+<ul>
+<li>Fixed an issue where titles on the system include list wouldn't be recovered.</li>
+</ul>
+<h2 id="098">0.98</h2>
+<ul>
+<li>Fixed an issue where if a title was reassigned to the <code>Demos</code> category, and
+  was also featured in the <code>renames</code> object of a clone list, the clone wouldn't
+  be assigned.</li>
+</ul>
+<h2 id="097">0.97</h2>
+<ul>
+<li>Fixed titles with manually set categories in clone lists being erroneously
+  added to remove lists when the <code>--log</code> option was set.</li>
+</ul>
+<h2 id="096">0.96</h2>
+<ul>
+<li>Fixed DATs with an empty author field causing a crash.</li>
+</ul>
+<h2 id="095">0.95</h2>
+<ul>
+<li>Fixed a bug where a combination of modern editions and the <code>(Unl)</code> tag caused
+  the wrong 1G1R title to be selected when the user preferred modern ripped
+  titles over the original.</li>
+<li>Added an option to not replace <code>(Unl)</code> or <code>(Aftermarket)</code> titles if a
+  production version is found in another region.</li>
+<li>The Retool version used to create a DAT is now recorded in the DAT header to
+  assist with troubleshooting.</li>
+<li>Fixed a bug where "&amp; Retool" was added multiple times to the author field
+  of a DAT previously processed by Retool.</li>
+</ul>
+<h2 id="094">0.94</h2>
+<ul>
+<li>Fixed a QT issue where the Retool icon wouldn't load properly on Windows.</li>
+</ul>
+<h2 id="093">0.93</h2>
+<ul>
+<li>Fixed a crash for Linux users by adding conditionals to the new Windows CLI
+  code.</li>
+<li>Removed Colorama import accidentally left in when fixing Windows formatting.</li>
+</ul>
+<h2 id="092">0.92</h2>
+<ul>
+<li>Retool CLI no longer clears the screen on start. Turns out this was also
+  accidentally enabling VT-100 mode in Windows 10 (which allows ANSI codes
+  like color formatting and bold to work), so there's now some new code to
+  manually enable it instead.</li>
+<li>You can now manually assign categories to titles in clone lists using the
+  <code>categories</code> key. This is a highly manual task, and will only be maintained
+  through user submissions.</li>
+<li>You can now include titles that don't have hashes, ROMs, or disks specified.
+  This might allow the conversion of DATs from parties other than No-Intro or
+  Redump &mdash; these DATs aren't officially supported.</li>
+<li>Files now write in UTF-8 to avoid characters causing crashes.</li>
+<li>Enhancement chips are now set to the category <code>BIOS</code> in the output DAT.</li>
+<li>Added some new modern edition tags.</li>
+<li>Titles with the <code>(Aftermarket)</code> tags are now demoted below
+  official ones within the same region.</li>
+<li>Titles with the <code>(Prerelease)</code> tag are now treated as preproduction.</li>
+<li>The regex for capturing demo titles is now more comprehensive.</li>
+<li>Added Estonia &amp; Lithuania as regions, along with their languages.</li>
+</ul>
+<h2 id="091">0.91</h2>
+<ul>
+<li>Fixed a crash when processing the Mega CD/Sega CD DAT, and Europe or USA was
+  not included in the region order.</li>
+<li>Specified in the GUI that custom filters are case sensitive.</li>
+</ul>
+<h2 id="090">0.90</h2>
+<ul>
+<li>Excluding demos now also excludes kiosk titles, and matches some extra strings
+  for trial versions.</li>
+<li>Excluding videos now excludes trailers as well.</li>
+</ul>
+<h2 id="089">0.89</h2>
+<p>Things of note for this release:</p>
+<ul>
+<li>The way supersets and compilations are handled has changed. Supersets are now
+  default 1G1R titles. Compilations sometimes get removed, sometimes become 1G1R
+  titles depending on region order/situation. Right now you won't see much
+  difference outside of Master System &mdash; the point of this version was to get
+  the functionality out, then the clone lists can be updated later.</li>
+<li>Custom global/system includes now recover files from countries/languages/type
+  exclusions. Grab that one title you want from Japan, or save that one demo
+  while excluding the rest.</li>
+</ul>
+<h3>New features</h3>
+<ul>
+<li>Custom global or system filter includes can now force inclusion of titles that
+  have been removed due to:</li>
+<li>Region exclusions.</li>
+<li>Language exclusions.</li>
+<li>Any of the exclusion options being set in Retool.</li>
+<li>Stat calculation now reports removals due to country and language filters.</li>
+<li>Titles with the string "Game Boy Advance Video" are now removed when videos
+  are excluded.</li>
+<li>You can now set a custom URL to update from in <code>internal-config.json</code>. This
+  means should the clone lists stop being updated at the main Git repository,
+  someone else can more easily take over.</li>
+<li>Titles with the category "Add-Ons" and "Bonus Discs" can now be excluded.</li>
+<li>Clone lists now have Retool minimum version requirements. The user will be
+  prompted in the command line output whether to continue or not if Retool is
+  out of date compared to what the clone list requires.</li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Stat calculation of custom global/system filters would crash Retool when
+  <code>--nofilters</code> was set. This has been fixed.</li>
+<li>Stat calculation of the dat's final title count has been fixed to include
+  custom global/system includes.</li>
+<li>Fixed a potential problem when outputting a 1G1R list with a web/ftp protocol
+  prefix.</li>
+<li>Fixed Retool GUI not remembering output folders or exclusion settings.</li>
+<li>Updated a few dependencies.</li>
+</ul>
+<h3>Behavior changes</h3>
+<ul>
+<li>Tried to capture general crashes in order to give feedback to Retool GUI
+  users, to help diagnose future issues.</li>
+<li>Overrides and conditional overrides in clone lists are now merged into just
+  overrides. They can also now match on full or tag free names. Note that some
+  key names have changed &mdash; anything with an underscore in the name has
+  been replaced by a space.</li>
+<li>For the longest time, I kept matches as case sensitive just in case there was
+  an oddity along the way. Turns out for the sake of Windows users not having
+  problems this isn't the case, so all titles now get lowercase matched. This
+  should help with clone list resilience as naming standards change over time.</li>
+<li>Things started getting confusing with compilations and supersets when it came
+  to choosing a 1G1R title. This was always an incredibly grey and fuzzy area,
+  was a pain to maintain, and it became apparent over time that things needed
+  to change for the sake of clarity. The upshot of all this? You get a better
+  1G1R selection without having to select the right options.</li>
+</ul>
+<p>Things that have changed:</p>
+<ul>
+<li>Mega-CD 32x now gets hoisted above Sega CD 32x if you have Europe above
+    USA in your region order.</li>
+<li>A <code>removes</code> key is now available to use in clone lists to remove specific
+    titles from a DAT. It works with full, tag free, or short names. This is
+    mostly useful to take out titles that don't quite match anything, but should
+    still be removed &mdash; for example, compilations whose titles are covered
+    by other compilations, or individual titles in the same region.</li>
+<li>
+<p>The supersets option has been removed. It was nice to have in theory, but in
+    practice, game of the year editions, special editions, and so on are mostly
+    just the latest versions of games with bonus content and/or DLC included.</p>
+<p>There are incredibly rare exceptions &mdash; such as <em>Ninja Gaiden</em> vs
+<em>Ninja Gaiden Black</em>, where dramatic rebalancing was done in addition to the
+extra content, along with new enemies and weapons &mdash; but for the most
+part, this isn't the case. If you care enough about an older version of a
+game, you can always add it to a custom system filter.</p>
+<p>Supersets are now often assigned a 1 or 0 priority, depending on the
+situation.
+  - The exclude compilations option has been removed, and compilations are now
+usually treated in one of two ways:
+- As a remove; that is, the compilation is removed entirely from the DAT as
+  it's covered by other titles or compilations.
+- As the 1G1R title for a set, depending on the region.
+  - The guidelines for when to use a 0 priority in clone lists have changed
+because of this. You can use a 0 for:
+- Compilations that include multiple titles.
+- DVD releases of titles that are distributed as multiple CDs for other
+  releases.
+- World releases that should be elevated above USA (as a World release
+  includes USA).
+- A superset (gold edition, game of the year edition, etc) version of a
+  title available in one region, but not in another.
+- A title in one region that definitely has more content than another
+  region. For example, a release in Europe that's uncensored compared to the
+  US release.</p>
+</li>
+</ul>
+<h2 id="088">0.88</h2>
+<p>Things of note for this release:</p>
+<ul>
+<li>A key bug fix for clone list resilience.</li>
+<li>A lot of command line options have changed.</li>
+<li>Windows binaries no longer live in the <code>/dist/</code> folder, as it was becoming a
+  download burden to those cloning the repo.</li>
+</ul>
+<h3>New features</h3>
+<ul>
+<li>You can now exclude Manuals.</li>
+<li>Excluding BIOSes now also excludes enhancement chips.</li>
+<li>Excluding applications now excludes titles with "Check Program" and "Sample
+  Program" in their name.</li>
+<li>A lot has shifted around in terms of Retool CLI arguments, so Retool can
+  continue to grow:<ul>
+<li>The <code>-o</code> option is now <code>--output</code>.</li>
+<li>The <code>-g</code> option has been removed to bring things in line with Retool GUI.</li>
+<li>A new <code>--exclude</code> option that takes arguments is now used in place of a
+  lot of the old filter options. Check <code>-h</code> for the full list.</li>
+</ul>
+</li>
+<li>Output file names are now a tiny bit smaller in length. User options and title
+  counts are now at the end of the file name too, so sorting by alpha doesn't
+  get confusing.</li>
+<li>Added yet another beta tag variation.</li>
+<li>In Retool GUI, the user is now prompted to download clone lists if they don't
+  have any.</li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>If a key title in a clone list didn't exist in an input DAT (or had been
+  removed by a Retool option), then all other titles in that array would become
+  unlinked from one another. This has been fixed.</li>
+<li>Fixed inaccurate and missing removal stats.</li>
+<li>Fixed the program crashing if a prefix or suffix wasn't supplied when
+  exporting a 1G1R list.</li>
+<li>In Retool GUI, the up/down region priority buttons no longer crash the program
+  if a region hasn't been selected.</li>
+<li>Made sure release tags output consistently in legacy mode.</li>
+</ul>
+<h3>Behavior changes</h3>
+<ul>
+<li>The demotion of modern ripped titles (for example, Virtual Console) is now
+  working cross-region. You'll still get them if the modern edition is the only
+  one available with a language associated with a higher region priority. For
+  example, sometimes English versions of games were only released much later on
+  modern platforms, whereas previously they had exclusive Japanese releases. In
+  this case, if you have an implied English speaking region high up in your
+  region order, the modern edition will remain.</li>
+</ul>
+<h2 id="087">0.87</h2>
+<p>Some big changes this time around, including some requested features.</p>
+<h3>New features</h3>
+<ul>
+<li>There are now user-customizable exclude and include filters, so you can keep
+  or remove specific titles regardless of what Retool thinks should be done
+  with them. You can set filters as partial strings, full strings, or regex.
+  It's fairly advanced, so read the documentation to see how it works.</li>
+<li>You can now output lists of what titles have been kept, removed, and set as
+  clones by Retool GUI, just like Retool CLI. Check the <strong>Modes</strong> tab for the
+  option.</li>
+<li>You can now output a list of just the 1G1R title names, and optionally add
+  your own prefix or suffix to each line. Starting a prefix with http://,
+  https://, or ftp:// will URL encode each line.</li>
+<li>The binary version for Windows now opens a heck of a lot faster, at the cost
+  of having a much messier folder structure. Formerly everything was packed into
+  a single executable, which meant the operating system had to extract all the
+  dependencies before it could even think about launching the program, slowing
+  things down.</li>
+</ul>
+<h3>Bug fixes</h3>
+<ul>
+<li>Rewrote the parent assignment code to correct misassignment issues in the
+  NES DAT. It turns out this results in fixes for other sets too, requiring
+  clone list changes. For accurate matches, you must update to Retool 0.87 to
+  use the latest clone lists.</li>
+<li>Fixed a bug that removed titles from the United Kingdom from No-Intro DATs.</li>
+<li>Can now handle the new (DV #, #) versioning in No-Intro's FDS DAT without
+  crashing.</li>
+<li>Fixed the clone list/metadata update thinking that there was a new file if the
+  original had been converted from CRLF to LF. Made sure all new clone lists
+  and metadata are converted to LF before uploading to the repo.</li>
+<li>The PlayStation Portable No-Intro and Redump DATs now refer to separate
+  metadata from their respective databases.</li>
+<li>Numbered samples are now removed when excluding demos and samples, for example
+  <code>(Sample 1)</code>, <code>(Sample 2)</code> and so on.</li>
+<li>Those using font scaling &gt; 100% in Windows 10 should no longer have Retool
+  GUI's layout be thrown all over the place, so long as they stick to the
+  provided scaling levels. Note that Retool GUI on Windows 7 and 8 isn't
+  supported.</li>
+<li>Ubuntu users now get the Ubuntu font in Retool GUI. The UI is also slightly
+  scaled to avoid text inside buttons being cut off.</li>
+<li>Removed font colors, styles and fancy terminal things when running Retool CLI
+  on Windows 7 and 8, as those versions of Command Prompt don't support them.
+  Things still look shiny on Windows 10 and modern Linux terminals.</li>
+<li>Stopped the command line instructions showing when Retool GUI was processing
+  a DAT.</li>
+<li>The lxml module has been updated, as GitHub advised of a security flaw with
+  the previously used version.</li>
+<li>Fixed dependency problems when running <code>updateclonelists.py</code> from the
+  command line.</li>
+</ul>
+<h3>Behavior changes</h3>
+<ul>
+<li>More titles ripped from modern platform rereleases (such as Virtual Console
+  titles in the SNES DAT, for example) have been demoted by default, as they
+  don't necessarily play well (or at all) in emulators. You can make these
+  titles the preferred 1G1R title instead with the <code>-v</code> option, or by selecting
+  the
+  <strong>Titles ripped from modern platform rereleases replace retro editions</strong>
+  checkbox in Retool GUI.</li>
+<li>Good titles are now preferred over bad (<code>[b]</code>) ones.</li>
+<li>No-Intro pre-production titles are now categorized properly in the output DAT.</li>
+<li>Updating clone lists now downloads <code>internal-config.json</code> as well, as
+  updates to this file affect 1G1R title selection.</li>
+<li>Retool now identifies Redump BIOS titles by the category <code>Console</code>, and
+  they'll be removed if you excluded BIOSes. BIOS titles are also now assigned
+  the category of <code>BIOS</code> in the output DAT.</li>
+<li>Release tags are now only output in legacy mode. They also generate for
+  every region and language of a title, not just the primary region. This is
+  just tying a bow on Logiqx-style 1G1R parent/clone DAT files, 1G1R modes in
+  DAT managers still aren't very useful.</li>
+</ul>
+<h3>Internal changes</h3>
+<ul>
+<li><code>user-config.yaml</code> is no longer stored in the GitHub repo. It's also been
+  removed from Windows ZIP file. This is to prevent users accidentally
+  overwriting their own <code>user-config.yaml</code> when updating Retool. Both Retool
+  CLI and GUI auto-generate the file if it's missing.</li>
+<li>Metadata is now in alphabetical order.</li>
+</ul>
+<h2 id="086">0.86</h2>
+<ul>
+<li>Modern rereleases like Virtual Console titles have been demoted in priority,
+  as quite often emulators won't play them.</li>
+<li>Now includes scraped language data from No-Intro for more accurate language
+  filtering.</li>
+<li>You can now exclude titles that contain the string <code>[BIOS]</code>. This should only
+  apply to No-Intro DATs.</li>
+<li>Excluding applications now additionally excludes titles with the string
+  <code>(Test Program)</code>.</li>
+<li>Removed a few unused properties from metadata files, which greatly reduced
+  file sizes.</li>
+<li><code>-i</code> removed from <code>-g</code> option as some titles are used for soundtracks
+  in games.</li>
+</ul>
+<h2 id="085">0.85</h2>
+<ul>
+<li>Updated the date sorting to take into account another of No-Intro's
+  inconsistent date formats <code>(Month name, YYYY)</code>.</li>
+<li>Another tweak to the ordering of the output DAT.</li>
+</ul>
+<h2 id="084">0.84</h2>
+<ul>
+<li>Updated the Sega ring code regex so more ring codes are captured.</li>
+</ul>
+<h2 id="083">0.83</h2>
+<ul>
+<li>Accidentally uploaded the wrong <code>user-config.yaml</code>, where all regions were
+  commented out. This resulted in the CLI version of Retool finding no clones
+  unless manually edited by the user. This has now been fixed.</li>
+<li>Some code clean up and extra explanation for some options.</li>
+</ul>
+<h2 id="082">0.82</h2>
+<ul>
+<li>(Unl) titles in a higher region are now demoted below equivalent production
+  titles in other regions.</li>
+<li>You can now exclude by the "Audio" and "Video" categories.</li>
+<li>Removed Multimedia from the <code>-g</code> option as the category might contain games.</li>
+<li>Made clear that the Multimedia category might include games in the GUI.</li>
+<li>Explained what a coverdisc is in the GUI.</li>
+<li>Fixed a natural sort bug in the alphabetical ordering of output DATs.</li>
+</ul>
+<h2 id="081">0.81</h2>
+<ul>
+<li>Fixed a bug in <code>retool-gui.py</code> where the output DAT file had <code>(-)</code> in its
+  file name if no options were set.</li>
+<li>Fixed a bug where clone lists and metadata wouldn't download if their
+  respective folders didn't exist.</li>
+</ul>
+<h2 id="080">0.80</h2>
+<ul>
+<li>Retool can now handle No-Intro numbered DATs.</li>
+<li>Output DATs used to do alphabetical order based on group, which could look
+  like things were out of order if you didn't know what was happening behind
+  the scenes. Output DATs are now ordered based on title.</li>
+<li>Updated wording around enabling the supersets option, so it was clear that if
+  you turned it on, supersets would replace standard editions in the output
+  DAT.</li>
+<li>Added some extra tooltips to the exclusion options in the GUI, so users have
+  more information to work with.</li>
+</ul>
+<h2 id="079">0.79</h2>
+<ul>
+<li>Fixed the online updating of clone lists to include Redump metadata.</li>
+</ul>
+<h2 id="078">0.78</h2>
+<ul>
+<li>Implemented a GUI. You'll need to install <code>pysimpleguiqt</code> with pip, and after
+  that you can run it with <code>retool-gui.py</code>. It's not as tight and consistent as
+  it could be due to limitations with PySimpleGUIQt, but given PySimpleGUI's
+  rapid, active development this should improve over time. Right now it looks
+  best on Windows. Ubuntu has been tested, and looks a little janky, but is
+  functional. MacOS hasn't been tested.</li>
+<li>You can now run <code>updateclonelists.py</code> to download the latest clone lists.
+  There's also an option available in the GUI under the File menu.</li>
+<li>Reformatted <code>user-config.yaml</code> so strictyaml liked it a bit more, and things
+  played well with the GUI. Improved YAML handling at the same time. Make sure
+  to backup your current <code>user-config.yaml</code> before grabbing this version, so
+  you can port your region order/language settings over.</li>
+<li>Moved to argparse to handle user input in the CLI. It's less pretty, but it's
+  more robust and scalable. This also means that the <code>-i</code> option is no longer a
+  thing when specifying your input dat/folder &mdash; instead, specify it
+  immediately after <code>retool.py</code>:</li>
+</ul>
+<p><code>retool.py &lt;input dat/folder&gt; &lt;options&gt;</code>
+- Stopped misassignment in clone lists if Redump left off the <code>(Demo)</code> tag from
+  a title.
+- Fixed an exit bug when the user would select only regions and/or languages
+  that didn't exist in the input DAT.
+- Added a few promote tags.
+- Cleaned up some unused variables and imports.
+- Lots of code tweaks to better suit GUI interaction.</p>
+<h2 id="077">0.77</h2>
+<ul>
+<li>The <code>-g</code> option now keeps applications, as they are useful for computer
+  platforms like the Atari ST and Commodore Amiga.</li>
+<li>The new <code>-y</code> option outputs a list of what titles have been kept and removed
+  in the output DAT.</li>
+<li>Refactored how Retool options get listed in the output name.</li>
+<li>Removed requirement for the !DOCTYPE element to exist that quotes the Logiqx
+  DTD, so Retool can work with files from sites.dat. The DAT is still validated
+  against the DTD, however.</li>
+<li>Dealt with an edge case in selecting the right title if somehow there was
+  both a version <em>and</em> a revision of a title.</li>
+<li>Hid displaying options behind the <code>-?</code> option.</li>
+</ul>
+<h2 id="076">0.76</h2>
+<ul>
+<li>Fixed filtering by language. This was broken due to a last minute change from
+  a string to regex in the 0.75 release.</li>
+<li>Fixed folders not being processed to completion when filter by language was
+  selected, and no valid titles were found in the current DAT.</li>
+<li>Added <code>Ukranian</code> as a language.</li>
+<li>When filtering by language, if titles in the following regions don't have
+  languages specified, they will be included if you select any of their
+  respective languages:</li>
+<li>Asia &mdash; English, Chinese, Japanese.</li>
+<li>Hong Kong, Taiwan &mdash; Chinese, English.</li>
+<li>Latin America &mdash; Spanish, Portuguese</li>
+<li>South Africa &mdash; Afrikaans, English</li>
+<li>Switzerland &mdash; German, French, Italian</li>
+<li>Ukraine &mdash; Ukranian, Russian.</li>
+<li>Retool can now handle <code>rom</code> entries with no CRC specified. A <code>rom</code> entry must
+  have at least a CRC, MD5, or SHA1, otherwise the title is dropped.</li>
+<li>The <code>-g</code> option now keeps preproduction titles, as they're treated as
+  versions of titles instead of a separate thing, and many will be removed
+  automatically on account of production versions existing. You will need
+  to specify <code>-p</code> if you want to remove all preproduction titles.</li>
+</ul>
+<h2 id="075">0.75</h2>
+<ul>
+<li>Now handles No-Intro DATs. Note that Retool grouping follows different rules
+  to No-Intro. For example, in the Atari 2600 DAT, a compilation is listed as
+  a clone of a single title, despite featuring unique games. No-Intro also
+  tends to include demos as clones of production titles. Retool also doesn't
+  set clones for BIOSes, as you might need a different BIOS version in
+  different situations. Retool also ignores titles that don't have <code>rom</code> or
+  <code>disk</code> entries, which happens quite a bit in No-Intro's parent/clone sets.</li>
+<li>Added <code>Mexico</code> and <code>Hong Kong</code> as regions.</li>
+<li>Added <code>Zh-Hant</code> and <code>Zh-Hans</code> as languages.</li>
+<li>Alphas, betas, and prototypes are now treated as versions of titles.
+  This way you get the highest version of a title available, and less noise
+  without stripping everything away with the <code>-p</code> tag. Retool prefers production
+  versions of titles, even if there is a preproduction title in a higher
+  priority region. Priority is as follows:</li>
+<li>Production with highest version</li>
+<li>Production with highest revision</li>
+<li>Production with no version/revision</li>
+<li>Highest beta revision</li>
+<li>Highest alpha revision</li>
+<li>Highest prototype revision</li>
+<li>The exclude coverdiscs flag is now <code>-f</code>.</li>
+<li>You can now exclude bad dumps, pirate titles, promotional titles (titles that
+  contain <code>(Promo)</code>, <code>EPK</code>, and <code>Press Kit</code>), and samples.</li>
+<li>Retool can now deal with DATs that fail DTD validation due to <code>&lt;clrmamepro&gt;</code>
+  and <code>&lt;romcenter&gt;</code> tags being in an unexpected order in the header.</li>
+<li>The DTD file has been updated to take into account that even though people
+  include it in their XML files, their XML files don't actually validate
+  against it.</li>
+<li>Retool can now deal with DATs that don't include MD5 or SHA-1 hashes.</li>
+<li>Windows and MacOS binaries have been removed. The Windows binary had
+  performance issues due to the Python environment needing significant
+  start up time, and I can no longer build the MacOS binary after the virtual
+  machine stopped working.</li>
+<li>Some crash fixes and message format tweaking.</li>
+</ul>
+<h2 id="071">0.71</h2>
+<ul>
+<li>Moved internal-config.json to the clonelists + metadata file so new
+  releases of Retool aren't required each time the file is updated.</li>
+</ul>
+<h2 id="070">0.70</h2>
+<p>Oof, this is a big update, with feature and performance improvements all over
+the place.</p>
+<h3>Code readability and performance</h3>
+<p>Retool has been largely rewritten for readability, performance, security, and
+to make forward momentum easier. This means a few breaking changes:</p>
+<ul>
+<li>A new format for clone lists, so you need to update them. Retool is now
+    better at automatically detecting different types of clones, so some titles
+    no longer need to be listed in the clone lists.</li>
+<li>The selected 1G1R titles might change compared to previous versions of
+    Retool, due to a a major audit of clone lists, tags, and increases in
+    parent detection accuracy.</li>
+<li>Retool no longer exports parent/clone DATs by default. Turns out the format
+    can't really do the job properly, as it has no concept of priority within
+    individual regions (and dealing with languages is a misery). As such, using
+    DAT managers like CLRMAMEPro or Romcenter to manage 1G1R can lead to
+    unexpected outcomes. Instead, you now use Retool to produce the 1G1R DAT
+    you want, and only use the DAT manager to manage your files.</li>
+<li>Retool now has a minimum requirement of Python 3.8.</li>
+</ul>
+<p>Processing DATs is now also much faster as a result of better coding practices.
+While this is nice for all DATs, you'll mostly feel it on the big ones.
+The PlayStation and IBM DATs, for example, are now 2x faster.</p>
+<h3>Custom region orders, filter by language</h3>
+<p>Custom region orders are now supported &mdash; even for supersets. You can
+also filter by languages. Make your choices by editing the <code>region order</code> and
+<code>filter languages</code> sections in <code>user-config.yaml</code>. You can use the <code>-l</code> option
+to filter by language, or leave it off to include all languages.</p>
+<h3>Other language and region stuff</h3>
+<p>Retool's a lot smarter with languages now.</p>
+<p>For a start, implied languages are now enabled for most regions, and language
+data for titles has been scraped from Redump's site. Redump doesn't always
+include language data in the filename of their titles, so this assists in more
+accurately selecting parent titles. For example, say your region priority is
+USA, Europe. The USA title has CDs, but the European title has a DVD version
+that we now know for sure supports English. Retool can now choose the European
+DVD version over the USA CD version, depending on how clone lists are set up.</p>
+<p>The following things have also changed:</p>
+<ul>
+<li>A bunch of languages (<code>Af</code>, <code>Ca</code>, <code>Gd</code>, <code>Hr</code>, <code>Pa</code>, <code>Sk</code>, <code>Sl</code>, <code>Ta</code>) have
+  been added.</li>
+<li>Slovenia has been added as a region.</li>
+<li>The incorrect <code>Gr</code> language code has been changed to <code>El</code>.</li>
+<li>Multi-region titles are now handled more elegantly.</li>
+<li>Fixed tags with regions in them causing a title to be filtered into the wrong
+  region. For example, <em>Virtua Fighter 2 (Europe) (Rev A) (Made in USA)</em> used
+  to be categorized as a USA title &mdash; it's now correctly identified as a
+  European title.</li>
+</ul>
+<h3>Other updates</h3>
+<ul>
+<li>You can now exclude unlicensed titles.</li>
+<li>Sega ring codes are now mostly handled automatically for assigning clones.
+  This has greatly reduced the size of some clone lists.</li>
+<li>Retool can now deal with "cloneof" tags in input DATs, as Redump has started
+  adding a few.</li>
+<li>Retool now handles Genteiban, Fukyuuban, and many other editions automatically.</li>
+<li>If the user specifies an output folder that doesn't exist, that folder is now
+  created.</li>
+<li>Fixed problems that previously required overrides in clone lists.</li>
+<li>Added basic failure states for not finding required data in JSON config
+  files.</li>
+<li>DAT header details are now escaped for valid XML, and XML file error handling
+  is better.</li>
+<li>A bug in CLRMAMEPro DAT conversions has been fixed.</li>
+<li>DAT file output is now naturally sorted instead of lexicographically.</li>
+<li>The decision to include the version of a title on the newest operating
+  system has been reversed. For the sake of compatibility, if there are
+  multiple OS versions for a title, all are included.</li>
+</ul>
+<h2 id="060">0.60</h2>
+<ul>
+<li>Removed pointless milliseconds from output file name.</li>
+<li>Added "Scholastic" to the publisher/distributor list.</li>
+<li>Added more disc synonyms.</li>
+<li>Automated handling PlayStation EDC titles.</li>
+<li>Language codes removed: <code>At</code>, <code>Be</code>, <code>Ch</code>, <code>Hr</code>.</li>
+<li>Languages codes added: <code>Bg</code>, <code>Cs</code>, <code>He</code>, <code>Ro</code>, <code>Tr</code>.</li>
+<li>Regions added: Bulgaria, Romania. There are no games yet from these regions,
+  but there are games with their languages.</li>
+<li>Extracted configuration data from the main Python script, and moved it into
+  an external JSON file. This can potentially lead to greater user
+  customization later.</li>
+</ul>
+<h2 id="059">0.59</h2>
+<ul>
+<li>Added "Best of the Best" and "Best Hit Selection" as publishers/distributors.</li>
+<li>Added another disc synonym.</li>
+</ul>
+<h2 id="058">0.58</h2>
+<ul>
+<li>Added yet another disc synonym.</li>
+<li>Added "Hitsquad - Regenerator" as a publisher/distributor.</li>
+<li>Removed <code>_version.py</code>.</li>
+</ul>
+<h2 id="057">0.57</h2>
+<ul>
+<li>Separated removing coverdiscs from demos (<code>-d</code>), making it its own option
+  (<code>-b</code>). Turns out plenty of full version games were given away as coverdiscs.</li>
+<li>Made handling the XML definition in a DAT a bit more robust.</li>
+<li>Fixed importing of CLRMAMEPro DAT files.</li>
+<li>When a parent or clone of a superset, override, or compilation title is not
+  found, it no longer crashes Retool or silently fails, but tells you what's
+  missing.</li>
+<li>Added "Teil" as a synonym for "Disc", to automatically pick up some German
+  titles.</li>
+<li>Added a <code>-g</code> option, which is shorthand for all options (-abcdemps).</li>
+<li>Added Th as a language.</li>
+<li>Converted clone lists to JSON so they're more portable, and binaries don't
+  require an update every time the clones update.</li>
+<li>Fixed a bug in selecting supersets.</li>
+<li>Noted that supersets only currently really work if you follow Retool region
+  order. Otherwise current limitations in DAT format and DAT managers get in
+  the way.</li>
+</ul>
+<h2 id="056">0.56</h2>
+<ul>
+<li>Messed with the region order a little to be more fair to more popular
+  languages, taking in mind how many titles were actually released for
+  those languages.</li>
+<li>Bumped Portuguese up the priority list when deciding between two
+  identical titles that support different languages.</li>
+<li>Moved stuff out of readme.md to make it more readable, and created
+  a GitHub wiki for more detailed information.</li>
+</ul>
+<h2 id="055">0.55</h2>
+<ul>
+<li>Code changes to support a build pipeline.</li>
+</ul>
+<h2 id="054">0.54</h2>
+<ul>
+<li>Greatly sped up parent/clone processing, and removed XML conversion in
+  favor of writing directly to the output DAT. This will be mostly noticeable
+  for large DATs. The IBM and Sony Redump DATs, for example, now process around
+  10x faster, cutting a minutes long process for each into seconds on an
+  i7 8700K.</li>
+<li>Added another distributor/publisher to check for when scanning for clones.</li>
+<li>Removed the option to remove titles with Alt tags, as it was a leftover
+  from when Retool didn't do 1G1R properly.</li>
+<li>Added a counter for how many compilations were removed, if the option is
+  enabled.</li>
+</ul>
+<h2 id="053">0.53</h2>
+<ul>
+<li>Fixed a bug where if a region name was in a title, it caused clones to be
+  assigned to the wrong parents. For example,
+  <em>Daytona <strong>USA</strong> Deluxe Edition (Taiwan)</em>,
+  <em>Cossacks II - Battle for <strong>Europe</strong> (Germany)</em> would confuse the logic in
+  Retool as to what region the title belonged to.</li>
+<li>Fixed a normalization bug when converting <em>Disc III</em> into <em>Disc 3</em> for title
+  matching.</li>
+</ul>
+<h2 id="052">0.52</h2>
+<ul>
+<li>Added better parent selection for the following:</li>
+<li>Titles with multiple date versions.</li>
+<li>Titles with distributor/publisher, OEM, and covermount tags.</li>
+<li>Budget titles vs the originals.</li>
+</ul>
+<h2 id="051">0.51</h2>
+<ul>
+<li>Added Zh as a language.</li>
+<li>Fixed a crash if a DAT had no titles, and Retool was trying to process
+  supersets.</li>
+</ul>
+<h2 id="050">0.50</h2>
+<ul>
+<li>A huge architectural shift to move Retool to a 1G1R DAT generator. Due to
+  this, the <code>_regional_renames.py</code> file has been renamed to <code>_renames.py</code> and
+    massively expanded to take into account localized title dupes. The file has
+    also been reorganized to make future dupe additions easier.</li>
+<li>The <code>-re</code>, <code>-ra</code>, and <code>-en</code> options have been removed.</li>
+<li>The <code>-o</code> flag is no longer mandatory, and now defines an output folder.
+  Output files are automatically named.</li>
+<li>You can now remove alternate (Alt) titles with the <code>-l</code> option.</li>
+<li>You can now promote supersets (for example, Game of the Year editions) to
+  parents with the <code>-s</code> option.</li>
+<li>Expanded demo removal criteria, as Redump does not always put demos in the
+  "Demos" category.</li>
+<li>Region processing is now much faster.</li>
+<li>OEM and Hibaihin titles that have a matching commercial title with the same
+  name are now marked as clones.</li>
+<li>Titles that aren't the latest revisions or versions are now marked as clones.
+  This doesn't support release versioning, like 0.100 being larger than 0.99,
+  however there's not much evidence of that style of versioning being used
+  across Redump titles.</li>
+<li>Titles that include multiple regions are now deduped, preferencing titles
+  with more regions. For example, out of <strong><em>Grim Fandango (USA)</em></strong> and
+  <strong><em>Grim Fandango (USA, Europe)</em></strong>, the former is marked as a clone.</li>
+<li>Titles with the same name from the same region that include different
+  language sets are now handled. The rules are quite complex:</li>
+<li>If one title is in English, but the other isn't, mark the English title as
+    the parent.</li>
+<li>If one title from Europe has no languages listed, and the other has
+    languages listed but English isn't one of them, mark the title with no
+    languages listed as the parent (on the assumption that English may be in
+    there).</li>
+<li>If English is listed for both titles, and one title has more languages,
+    mark the title with more languages as the parent.</li>
+<li>If English is listed for both titles, and both titles have the same number
+    of languages, check for preferred languages one by one, in the order listed
+    below. The first title that doesn't support a preferred language is marked
+    as a clone.<ol>
+<li>Spanish</li>
+<li>French</li>
+<li>Japanese</li>
+<li>Portuguese</li>
+<li>German</li>
+<li>Italian</li>
+<li>Swedish</li>
+<li>Danish</li>
+<li>Norwegian</li>
+<li>Polish</li>
+<li>Greek</li>
+<li>Dutch</li>
+<li>Finnish</li>
+<li>Swiss</li>
+<li>Hungarian</li>
+<li>Russian</li>
+</ol>
+</li>
+<li>Brazil and Latin America have been moved off the native English list. Modern
+  games from these regions aren't guaranteed to have English translations.</li>
+<li>Japan has been moved up to second highest priority for non-native English
+  regions, after Europe. The Asia region being higher priority than Japan was
+  stealing titles that should have had Japanese parents.</li>
+<li>The requirement for the Logiqx doctype string in input files has been
+  removed, as some non-Redump DATs didn't have the string and were erroring.</li>
+<li>DTD validation has been added for Logiqx-style DAT files. Redump DAT files
+  are invalid by default, as the category tag isn't in the spec. A modified DTD
+  file has been included in the release with the category tag added, so Redump
+  DATs should pass.</li>
+<li>When you add a newer version of a DAT to CLRMAMEPro that has been generated
+  by Retool, it now triggers an update prompt where appropriate.</li>
+<li>Redump is no longer required to be the DAT author.</li>
+<li>Characters that aren't valid in XML (&lt;, &gt;, &amp;) have been escaped in generated
+  DAT files.</li>
+<li>Empty name, description, author, url, and version fields in DATs are now
+  handled, instead of crashing the program.</li>
+<li>Several bugs involving options flags were fixed.</li>
+<li>The title count was missing when DATs were split into regions. This is now
+  fixed.</li>
+<li>Bye bye ASCII logo. Vertical screen real estate is now more important.</li>
+<li>Added CloneRel tool, that exports an Excel file from a DAT to better display
+  existing parent/clone relationships.</li>
+<li>Dealt with the "<em>King's Field</em> problem". <em>King's Field (Japan)</em> didn't get a
+  Western release. <em>King's Field</em> in the USA is known as <em>King's Field II</em> in
+  Japan. <strong><em>King's Field II</em></strong> in the USA is <strong><em>King's Field III</em></strong> in Japan.
+  Without extra logic, the program would mark all <strong><em>King's Field II</em></strong> titles
+  as clones, which is not what we want.</li>
+</ul>
+<h2 id="034">0.34</h2>
+<ul>
+<li>Added textwrap module for better readability on MacOS/Linux.</li>
+<li>Bundled MacOS and Windows binaries.</li>
+</ul>
+<h2 id="033">0.33</h2>
+<ul>
+<li>Added ability to operate on folders.</li>
+<li>Fixed output file naming bugs.</li>
+<li>Fixed some user input issues.</li>
+<li>Tidied up some output for increased readability.</li>
+<li>Added the following regions: Argentina, Czech, Hungary, Singapore, Slovakia,
+  Thailand, Turkey, Ukraine, United Arab Emirates.</li>
+</ul>
+<h2 id="032">0.32</h2>
+<ul>
+<li>Reimplemented <code>-re</code> and <code>-ra</code> flags.</li>
+<li>Fixed header so the user wasn't prompted with false update warnings when the
+  DAT was loaded in CLRMAMEPro.</li>
+</ul>
+<h2 id="031">0.31</h2>
+<ul>
+<li>Used dictionaries and classes to greatly increase performance and improve
+  code readability.</li>
+<li>Removed minidom dependency.</li>
+<li>Removed unused importlib dependency.</li>
+<li>Usability tweaks.</li>
+</ul>
+<h2 id="020">0.20</h2>
+<ul>
+<li>Refactored for performance, code readability, and usability.</li>
+<li>Can handle CLRMAMEPro DAT files now, not just Logiqx XML format.</li>
+<li>Added Germany, Ireland, Israel, Latin America, New Zealand, and Taiwan
+  locales.</li>
+<li>Fixed user input bugs.</li>
+<li>Fixed excessive looping in some sections.</li>
+<li>Fixed title exclusion bugs.</li>
+<li>Added more error checking.</li>
+<li>Removed <code>-re</code> and <code>-ra</code> flags until refactor is finished next version.</li>
+</ul>
+<h2 id="010">0.10</h2>
+<ul>
+<li>Initial release.</li>
+</ul>
+
+
+  
+
+
+  
+
+
+
+                
+              </article>
+            </div>
+          
+          
+  <script>var tabs=__md_get("__tabs");if(Array.isArray(tabs))e:for(var set of document.querySelectorAll(".tabbed-set")){var tab,labels=set.querySelector(".tabbed-labels");for(tab of tabs)for(var label of labels.getElementsByTagName("label"))if(label.innerText.trim()===tab){var input=document.getElementById(label.htmlFor);input.checked=!0;continue e}}</script>
+
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+</div>
+      
+        <div class="md-social">
+  
+    
+    
+    
+    
+      
+      
+    
+    <a href="https://github.com/unexpectedpanda/retool" target="_blank" rel="noopener" title="github.com" class="md-social__link">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><!--! Font Awesome Free 6.3.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free (Icons: CC BY 4.0, Fonts: SIL OFL 1.1, Code: MIT License) Copyright 2023 Fonticons, Inc.--><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.expand", "toc.follow"], "search": "../assets/javascripts/workers/search.208ed371.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    
+    
+      <script src="../assets/javascripts/bundle.ce72ebac.min.js"></script>
+      
+    
+  </body>
+</html>
