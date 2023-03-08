@@ -629,35 +629,29 @@ platform, then this option is for you.</p>
 </code></pre></div>
 </li>
 <li>
-<p>For the v2 beta, make sure to switch to the <code>v2</code> branch:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>git checkout v2
-</code></pre></div>
-<p>When out of beta, v2 will be migrated to the main branch.</p>
-</li>
-<li>
 <p>Install Retool's dependencies, either with Pip or
     <a href="https://python-poetry.org/">Poetry</a>:</p>
 <div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="pip" name="__tabbed_2" type="radio" /><input id="poetry" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="pip">Pip</label><label for="poetry">Poetry</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install alive-progress lxml psutil pyside6 strictyaml validators
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install alive-progress lxml psutil pyside6 strictyaml validators
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <ol>
 <li>
 <p>Install Poetry if you haven't already:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>pip install poetry
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install poetry
 </code></pre></div>
 </li>
 <li>
 <p>Install Retool's dependencies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>poetry install
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>poetry install
 </code></pre></div>
 </li>
 <li>
 <p>Enter the Poetry virtual environment:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>poetry shell
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>poetry shell
 </code></pre></div>
 </li>
 </ol>
@@ -672,7 +666,7 @@ instead of <code>pip</code>.</p>
 </li>
 <li>
 <p>Download the latest clone lists and metadata files:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>retool.py --update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>retool.py --update
 </code></pre></div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
@@ -687,8 +681,8 @@ or <code>python</code> to run them.</p>
 <p><strong>Linux issues</strong></p>
 <p>If you get a libxcb error in Linux when launching <code>retoolgui.py</code>, this fixed
 the problem for me in Ubuntu 20.04:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>sudo apt-get install libxcb-randr0-dev \
-<a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a>        libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo apt-get install libxcb-randr0-dev \
+<a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>        libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev
 </code></pre></div>
 </div>
 </div>
