@@ -1700,15 +1700,15 @@
 <h1 id="changelog">Changelog</h1>
 <h2 id="2004">2.00.4</h2>
 <ul>
-<li>Added another level of language selection fallback if you have a language order
-  specified. If Retool finds none of the languages it's looking for in your language
-  order when it compares titles, its next step is to check the language order derived from
-  your region order.</li>
-</ul>
+<li>
+<p>Added another level of language selection fallback if you have a language order
+    specified. If Retool finds none of the languages it's looking for in your language
+    order when it compares titles, its next step is to check the language order derived from
+    your region order.</p>
 <p>This is most beneficial for European titles when you're filtering by a language, and
-  want to <em>preference</em> but not <em>filter</em> by other languages. You might want to do this when
-  you want a title that was released in a specific country, but due to No-Intro and Redump
-  naming rules gets assigned to the Europe region.</p>
+want to <em>preference</em> but not <em>filter</em> by other languages. You might want to do this when
+you want a title that was released in a specific country, but due to No-Intro and Redump
+naming rules gets assigned to the Europe region.</p>
 <p>For example, if a DAT file has the following titles:</p>
 <ul>
 <li><em>Example Title (Europe) (En,Fr,De,It)</em></li>
@@ -1722,12 +1722,12 @@
 <li>France</li>
 </ol>
 <p>And you filter by English and no other language, Retool used to choose
-  <em>Example Title (Europe) (En,Fr,De,It)</em>, as it contains English (the only language you
-  specified in your language priority) and has the most languages.</p>
+<em>Example Title (Europe) (En,Fr,De,It)</em>, as it contains English (the only language you
+specified in your language priority) and has the most languages.</p>
 <p>But given your region order, you've expressed a clear preference for Spanish and
-  Portuguese above French.</p>
+Portuguese above French.</p>
 <p>Now because of the new region order language fallback, the language order effectively
-  becomes:</p>
+becomes:</p>
 <ol>
 <li>English (explicity in the language filter, and also the implied language for Europe)</li>
 <li>Spanish</li>
@@ -1735,9 +1735,9 @@
 <li>French</li>
 </ol>
 <p>You still only get titles that support English because of the filter, however this means
-  that Retool now selects <em>Example Title (Europe) (En,Es,Pt)</em> instead of
-  <em>Example Title (Europe) (En,Fr,De,It)</em>.</p>
-<ul>
+that Retool now selects <em>Example Title (Europe) (En,Es,Pt)</em> instead of
+<em>Example Title (Europe) (En,Fr,De,It)</em>.</p>
+</li>
 <li>
 <p>Added granularity back to the kept/removed list. Instead of filing every user exclusion
   under "category removes", Retool now categorizes under individual exclusions like
@@ -1783,37 +1783,39 @@
   titles.</li>
 <li>
 <p>When considering compilations, individual titles are now preferred over compilations
-  except in the following scenarios:</p>
-</li>
-<li>
-<p>The compilation has a higher priority primary region than the individual title (during
-    compilation comparisons, the <em>World</em> and <em>USA</em> regions are considered equivalent).</p>
-</li>
+    except in the following scenarios:</p>
+<ul>
+<li>The compilation has a higher priority primary region than the individual title (during
+  compilation comparisons, the <em>World</em> and <em>USA</em> regions are considered equivalent).</li>
 <li>The compilation has a higher priority primary language than the individual title.</li>
 <li>The individual title is set as lower priority than the compilation in the related
-    clone list.</li>
+  clone list.</li>
 </ul>
 <p>Compilations are otherwise only included if they feature unique titles. This increases
-  duplicates in the output DAT, but is much better for patches, retro achievements, and
-  actually knowing which individual titles you have.
-* Compilation selection has been dramatically sped up.
-* If you overrode global settings for system languages but didn't specify any languages,
+duplicates in the output DAT, but is much better for patches, retro achievements, and
+actually knowing which individual titles you have.</p>
+</li>
+<li>
+<p>Compilation selection has been dramatically sped up.</p>
+</li>
+<li>If you overrode global settings for system languages but didn't specify any languages,
   Retool used to fall back to the global language order and disable the system languages
   override. This isn't what the label says: "an empty filter list includes all languages".
   This behavior has been changed to match the label &mdash; when you override system
   languages and leave an empty filter list, it first uses the implied language order from
   the system regions, and if they're not available, the implied language order from the
-  global regions. In both cases, this is makes sure all languages are included.
-* The Python version check is now done earlier, and explains to the user the minimum
-  version required.
-* The CLI progress bar no longer shows if multiprocessing is disabled, to make debugging
-  with print and input statements easier.
-* Fixed a bug where compilations specified in a clone list broke user filter includes.
-* Fixed a bug where clone list priorities could be misassigned.
-* Fixed a bug where user-supplied regexes weren't validated for some patterns.
-* Fixed a bug where regex escapes for a title trace that were set in the GUI weren't
-  interpreted properly.
-* Polished up some rough areas of code, made some minor GUI tweaks.</p>
+  global regions. In both cases, this is makes sure all languages are included.</li>
+<li>The Python version check is now done earlier, and explains to the user the minimum
+  version required.</li>
+<li>The CLI progress bar no longer shows if multiprocessing is disabled, to make debugging
+  with print and input statements easier.</li>
+<li>Fixed a bug where compilations specified in a clone list broke user filter includes.</li>
+<li>Fixed a bug where clone list priorities could be misassigned.</li>
+<li>Fixed a bug where user-supplied regexes weren't validated for some patterns.</li>
+<li>Fixed a bug where regex escapes for a title trace that were set in the GUI weren't
+  interpreted properly.</li>
+<li>Polished up some rough areas of code, made some minor GUI tweaks.</li>
+</ul>
 <h2 id="2000-beta-7">2.00.0 Beta 7</h2>
 <ul>
 <li>System languages are now filtering correctly again.</li>
@@ -2012,17 +2014,16 @@ some DATs that were previously ultra-fast in v1 are slower to complete in v2:</p
 for the very slow DATs to be faster and the increase in accuracy.</p>
 <p>Check out the following list for other changes that have come in v2.</p>
 <h3>Accuracy</h3>
+
 <ul>
 <li>
 <p>Language order is now taken into account. If you don't filter by languages,
-  the language order will be inferred from your region order. This mostly
-  impacts European titles, where compared to previous versions of Retool another
-  title might be selected to better reflect your language choices. For example,
-  take these titles in Redump's PlayStation DAT:</p>
-</li>
-<li>
-<p><em>Hugo (Europe)</em></p>
-</li>
+    the language order will be inferred from your region order. This mostly
+    impacts European titles, where compared to previous versions of Retool another
+    title might be selected to better reflect your language choices. For example,
+    take these titles in Redump's PlayStation DAT:</p>
+<ul>
+<li><em>Hugo (Europe)</em></li>
 <li><em>Hugo (Europe) (Nl,Pt) (Rev 1)</em></li>
 <li><em>Hugo (Europe) (Nl,Pt)</em></li>
 <li><em>Hugo (France)</em></li>
@@ -2033,13 +2034,13 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <li><em>Hugo (Spain)</em></li>
 </ul>
 <p>If you have USA as your top region, followed by Europe, Retool 1.x selects
-  <em>Hugo (Europe) (Nl,Pt) (Rev 1)</em> as the 1G1R title, because it's the highest
-  revision in Europe. Retool 2.0 realizes that because USA is your highest
-  region, that it's looking for English titles as a priority, and selects
-  <em>Hugo (Europe)</em> instead.</p>
+<em>Hugo (Europe) (Nl,Pt) (Rev 1)</em> as the 1G1R title, because it's the highest
+revision in Europe. Retool 2.0 realizes that because USA is your highest
+region, that it's looking for English titles as a priority, and selects
+<em>Hugo (Europe)</em> instead.</p>
 <p>This also applies to say, Japanese titles that are only in English, and a
-  special edition is available in English in another region. For example, take
-  these titles, again in Redump's PlayStation DAT:</p>
+special edition is available in English in another region. For example, take
+these titles, again in Redump's PlayStation DAT:</p>
 <ul>
 <li><em>Car and Driver Presents - Grand Tour Racing '98 (USA)</em></li>
 <li><em>Gekisou!! Grand Racing - Total Drivin' (Japan)</em></li>
@@ -2047,48 +2048,52 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <li><em>Total Drivin (Europe) (En,Fr,De,Es,It,Pt)</em></li>
 </ul>
 <p>If you have Japan as your top region, Retool 1.x selects
-  <em>Gekisou!! Grand Racing - Total Drivin' (Japan)</em> as the top title. Retool 2.0
-  recognizes that the Japanese title is only in English, sees that the USA title
-  is a special edition, and selects
-  <em>Car and Driver Presents - Grand Tour Racing '98 (USA)</em> instead. You may as
-  well get more content if the title's going to be in the same language anyway.</p>
+<em>Gekisou!! Grand Racing - Total Drivin' (Japan)</em> as the top title. Retool 2.0
+recognizes that the Japanese title is only in English, sees that the USA title
+is a special edition, and selects
+<em>Car and Driver Presents - Grand Tour Racing '98 (USA)</em> instead. You may as
+well get more content if the title's going to be in the same language anyway.</p>
 <p>If you don't like this style of selection, you can turn on strict region
-  filtering with <code>-r</code>.
-- Compilations are now automatically handled by adding them to a system's
-  clone list with the correct syntax. Retool figures out the most optimal
-  combination of titles, taking your language and region preferences into
-  account. Sometimes it might look like Retool hasn't chosen the optimal
-  combination, but this is usually due to user region preferences and titles
-  being available in both the Europe region <em>and</em> specific European countries.
-  For example, take the following titles, and assume Italy is higher than Europe
-  in the user's region order:</p>
+filtering with <code>-r</code>.</p>
+</li>
+<li>
+<p>Compilations are now automatically handled by adding them to a system's
+    clone list with the correct syntax. Retool figures out the most optimal
+    combination of titles, taking your language and region preferences into
+    account. Sometimes it might look like Retool hasn't chosen the optimal
+    combination, but this is usually due to user region preferences and titles
+    being available in both the Europe region <em>and</em> specific European countries.
+    For example, take the following titles, and assume Italy is higher than Europe
+    in the user's region order:</p>
 <ul>
 <li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
 <li><em>2 Games in 1 - Disney Principesse + Koda, Fratello Orso (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
 <li><em>Brother Bear (Europe) (Fr,De,Es,It,Nl,Sv,Da)</em></li>
 </ul>
 <p>For those who don't speak Italian, <em>Fratello Orso</em> is the Italian version of
-  Brother Bear. Therefore, the most optimal solution for disk space and minimal
-  redundancy is:</p>
+Brother Bear. Therefore, the most optimal solution for disk space and minimal
+redundancy is:</p>
 <ul>
 <li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
 <li><em>Brother Bear (Europe) (Fr,De,Es,It,Nl,Sv,Da)</em></li>
 </ul>
 <p>This works, as both titles support Italian. However, because Italy is
-  prioritized as a region, Retool selects the Italian release of <em>Brother Bear</em>
-  instead, meaning you end up with:</p>
+prioritized as a region, Retool selects the Italian release of <em>Brother Bear</em>
+instead, meaning you end up with:</p>
 <ul>
 <li><em>2 Games in 1 - Disney Principesse + Il Re Leone (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
 <li><em>2 Games in 1 - Disney Principesse + Koda, Fratello Orso (Italy) (It+En,Fr,De,Es,It,Nl,Sv,Da)</em></li>
 </ul>
 <p>Although you get two versions of <em>Disney Princess</em>, this choice is by design.
-  The assumption is that the region-specific version of the game should enable
-  that region's language by default, instead of requiring a language switch
-  after boot up.
-- Priority level 0 is now gone, replaced by a <code>supersets</code> array. It functions in
-  almost the same way, preferring language over region, except that order in the
-  clone lists doesn't determine superset priority any more. For example, here's
-  how things used to look for <em>Persona 3</em> in Redump's PlayStation 2 DAT:</p>
+The assumption is that the region-specific version of the game should enable
+that region's language by default, instead of requiring a language switch
+after boot up.</p>
+</li>
+<li>
+<p>Priority level 0 is now gone, replaced by a <code>supersets</code> array. It functions in
+    almost the same way, preferring language over region, except that order in the
+    clone lists doesn't determine superset priority any more. For example, here's
+    how things used to look for <em>Persona 3</em> in Redump's PlayStation 2 DAT:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a><span class="nt">&quot;Shin Megami Tensei - Persona 3&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-0-2" name="__codelineno-0-2" href="#__codelineno-0-2"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Shin Megami Tensei - Persona 3 FES&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
 <a id="__codelineno-0-3" name="__codelineno-0-3" href="#__codelineno-0-3"></a><span class="w">  </span><span class="p">[</span><span class="s2">&quot;Persona 3 FES&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">],</span>
@@ -2098,13 +2103,13 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-0-7" name="__codelineno-0-7" href="#__codelineno-0-7"></a><span class="p">]</span>
 </code></pre></div>
 <p>Retool used to assume the top 0 priority title had higher priority than the 0
-  priority title after it, and so on. Unfortunately in this scenario, we have
-  two titles that should be the same rank:
-  <em>Shin Megami Tensei - Persona 3 FES</em>, the USA version, and <em>Persona 3 FES</em>,
-  the European version. In Retool v1, if someone put Europe above USA in their
-  region order and specified English as their highest language, they would get
-  the USA title instead of the European title that they wanted, as internally
-  the first 0 priority title was ranked above the second.</p>
+priority title after it, and so on. Unfortunately in this scenario, we have
+two titles that should be the same rank:
+<em>Shin Megami Tensei - Persona 3 FES</em>, the USA version, and <em>Persona 3 FES</em>,
+the European version. In Retool v1, if someone put Europe above USA in their
+region order and specified English as their highest language, they would get
+the USA title instead of the European title that they wanted, as internally
+the first 0 priority title was ranked above the second.</p>
 <p>With the introduction of the <code>supersets</code> array, things change a little:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a><span class="p">{</span>
 <a id="__codelineno-1-2" name="__codelineno-1-2" href="#__codelineno-1-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Shin Megami Tensei - Persona 3&quot;</span><span class="p">,</span>
@@ -2120,27 +2125,31 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-1-12" name="__codelineno-1-12" href="#__codelineno-1-12"></a><span class="p">}</span>
 </code></pre></div>
 <p>Retool v2 now chooses the correct superset for the selected region, You can
-  still specify a <code>priority</code> on supersets, just in case there are multiple
-  supersets of varying amounts of content. That priority is <em>only</em> respected
-  between supersets, and isn't related to the priority set on a <code>title</code>.
-- You can now use regex in the <code>categories</code>, <code>overrides</code> and <code>variants</code> objects
+still specify a <code>priority</code> on supersets, just in case there are multiple
+supersets of varying amounts of content. That priority is <em>only</em> respected
+between supersets, and isn't related to the priority set on a <code>title</code>.</p>
+</li>
+<li>
+<p>You can now use regex in the <code>categories</code>, <code>overrides</code> and <code>variants</code> objects
   in clone lists. Just set the <code>nameType</code> value to <code>regex</code>. The <code>removes</code> object
-  does not support regex.
-- Overrides now support a <code>priority</code> key within a <code>regionOrder</code> condition. This
+  does not support regex.</p>
+</li>
+<li>Overrides now support a <code>priority</code> key within a <code>regionOrder</code> condition. This
   means a title's clone list priority can be set from within a condition if that
-  condition is true, not just its group and short name.
-- You can now define clones in the <code>variants</code> object not just by short name, but
-  full name, region-free name, tag-free name, or regex on the full name. While
-  mostly you should stick to short names, this extra flexibilty can solve some
-  complex problems. For example
-  <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is the USA version of
-  <em>Silent Hill 2 - Director's Cut</em>. Unfortunately, due to its title the short
-  name for
-  <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is just <em>Silent Hill 2</em>
-  &mdash; exactly the same as the standard version of the game. Historically
-  with Retool this would mean we couldn't set unique priorities for both titles,
-  and would have to figure out an esoteric workaround. Now, however, there's
-  another way:</p>
+  condition is true, not just its group and short name.</li>
+<li>
+<p>You can now define clones in the <code>variants</code> object not just by short name, but
+    full name, region-free name, tag-free name, or regex on the full name. While
+    mostly you should stick to short names, this extra flexibilty can solve some
+    complex problems. For example
+    <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is the USA version of
+    <em>Silent Hill 2 - Director's Cut</em>. Unfortunately, due to its title the short
+    name for
+    <em>Silent Hill 2 (USA) (En,Ja,Fr,De,Es,It) (v2.01)</em> is just <em>Silent Hill 2</em>
+    &mdash; exactly the same as the standard version of the game. Historically
+    with Retool this would mean we couldn't set unique priorities for both titles,
+    and would have to figure out an esoteric workaround. Now, however, there's
+    another way:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a><span class="p">{</span>
 <a id="__codelineno-2-2" name="__codelineno-2-2" href="#__codelineno-2-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2&quot;</span><span class="p">,</span>
 <a id="__codelineno-2-3" name="__codelineno-2-3" href="#__codelineno-2-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2154,9 +2163,9 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-2-11" name="__codelineno-2-11" href="#__codelineno-2-11"></a><span class="p">}</span>
 </code></pre></div>
 <p>The first entry effectively says "Match every Silent Hill title except the one
-  with USA and v2.01 in it". We then specifically call out the v2.01 title as a
-  superset afterward. Mind you, this is overkill. The following example works
-  just fine:</p>
+with USA and v2.01 in it". We then specifically call out the v2.01 title as a
+superset afterward. Mind you, this is overkill. The following example works
+just fine:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a><span class="p">{</span>
 <a id="__codelineno-3-2" name="__codelineno-3-2" href="#__codelineno-3-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Silent Hill 2&quot;</span><span class="p">,</span>
 <a id="__codelineno-3-3" name="__codelineno-3-3" href="#__codelineno-3-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2170,10 +2179,10 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-3-11" name="__codelineno-3-11" href="#__codelineno-3-11"></a><span class="p">}</span>
 </code></pre></div>
 <p>There's also the situation where the Japanese version of <em>Sonic the Hedgehog</em>
-  is in English, <em>and</em> features extra parallax effects the USA version doesn't,
-  making it the more desirable version. Even if the user preferences USA above
-  Japan, we can still select the Japanese one:</p>
-<p><div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
+is in English, <em>and</em> features extra parallax effects the USA version doesn't,
+making it the more desirable version. Even if the user preferences USA above
+Japan, we can still select the Japanese one:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a><span class="p">{</span>
 <a id="__codelineno-4-2" name="__codelineno-4-2" href="#__codelineno-4-2"></a><span class="w">  </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sonic The Hedgehog&quot;</span><span class="p">,</span>
 <a id="__codelineno-4-3" name="__codelineno-4-3" href="#__codelineno-4-3"></a><span class="w">  </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-4-4" name="__codelineno-4-4" href="#__codelineno-4-4"></a><span class="w">    </span><span class="p">{</span><span class="nt">&quot;searchTerm&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;Sonic The Hedgehog&quot;</span><span class="p">},</span>
@@ -2183,29 +2192,34 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-4-8" name="__codelineno-4-8" href="#__codelineno-4-8"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-4-9" name="__codelineno-4-9" href="#__codelineno-4-9"></a><span class="p">}</span>
 </code></pre></div>
-- Hong Kong's implied language is now Chinese. This is because the available
-  titles in No-Intro are solely in Chinese.
-- India's implied language is now set to English, since all Indian Redump titles
-  feature English, and there are many English-only titles.
-- Thailand's implied language is now set to nothing, as a number of Thai-only
-  titles have been dumped.
-- Scandinavia's implied language is now set to nothing.
-- Iceland and Icelandic have been added to the regions and languages.
-- Retool now handles No-Intro's (Language+Language+Language) format more
-  efficiently, which is used exclusively in its GBA DAT.
-- Retool now supports mastering codes for FM Towns, Nintendo, and NEC consoles,
-  and uses them as a versioning system.
-- Retool now supports disc IDs of some more modern consoles and uses them as a
-  versioning system.
-- Added yet another No-Intro date format, YYYY-MM-DDTHHMMSS.
-- If there are duplicate title names in a DAT, Retool renames the dupes. As a
+</li>
+<li>
+<p>Hong Kong's implied language is now Chinese. This is because the available
+  titles in No-Intro are solely in Chinese.</p>
+</li>
+<li>India's implied language is now set to English, since all Indian Redump titles
+  feature English, and there are many English-only titles.</li>
+<li>Thailand's implied language is now set to nothing, as a number of Thai-only
+  titles have been dumped.</li>
+<li>Scandinavia's implied language is now set to nothing.</li>
+<li>Iceland and Icelandic have been added to the regions and languages.</li>
+<li>Retool now handles No-Intro's (Language+Language+Language) format more
+  efficiently, which is used exclusively in its GBA DAT.</li>
+<li>Retool now supports mastering codes for FM Towns, Nintendo, and NEC consoles,
+  and uses them as a versioning system.</li>
+<li>Retool now supports disc IDs of some more modern consoles and uses them as a
+  versioning system.</li>
+<li>Added yet another No-Intro date format, YYYY-MM-DDTHHMMSS.</li>
+<li>If there are duplicate title names in a DAT, Retool renames the dupes. As a
   result, they aren't considered when selecting 1G1R titles and remain in the
   DAT. Contact the DAT author to get the title renamed, as all title names
-  should be unique.
-- The Redump website scraper has been majorly overhauled, which means metadata
+  should be unique.</li>
+<li>The Redump website scraper has been majorly overhauled, which means metadata
   is now more up to date. This tool is kept internal to prevent people from
-  spamming the Redump site.</p>
+  spamming the Redump site.</li>
+</ul>
 <h3>New features</h3>
+
 <ul>
 <li>System settings. You can now override global settings on a per-system basis.
   For example, you can set global settings that affect all of the DATs you
@@ -2227,15 +2241,21 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   No-Intro and Redump DATs by using <code>k</code> with the <code>--exclude</code> option.</li>
 <li>You can now update clone lists directly with Retool using <code>--update</code>. The DTD
   file is now included as part of this bundle.</li>
-<li>You can now specify a custom clone list to load with <code>--clonelist</code>, and a
-  custom metadata file with <code>--metadata</code>. This is mostly useful if:</li>
+<li>
+<p>You can now specify a custom clone list to load with <code>--clonelist</code>, and a
+    custom metadata file with <code>--metadata</code>. This is mostly useful if:</p>
+<ul>
 <li>Redump or No-Intro changes their DAT names, and the clone lists/metadata
-    files are no longer automatically detected.</li>
+  files are no longer automatically detected.</li>
 <li>You're building your own clone lists, and want to compare the output versus
-    the original.</li>
-<li>You can now specify a custom local path where your clone lists and metadata
+  the original.</li>
+</ul>
+</li>
+<li>
+<p>You can now specify a custom local path where your clone lists and metadata
   live. You can change this path in <code>internal-config.json</code> &mdash; check out the
-  <code>localDir</code> subkey under <code>clonelists</code> and <code>metadata</code>.</li>
+  <code>localDir</code> subkey under <code>clonelists</code> and <code>metadata</code>.</p>
+</li>
 <li>You can use a different user config file than the default with the <code>--config</code>
   argument.</li>
 <li>You can wrap custom exclude and include strings in <code>&lt;&gt;</code> to also remove all
@@ -2247,6 +2267,7 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   position buttons.</li>
 </ul>
 <h3>Quality of life updates</h3>
+
 <ul>
 <li>There's a <a href="https://unexpectedpanda.github.io/retool">brand new Retool website and documentation</a>.</li>
 <li>Retool can now cope with a user entering a trailing backslash in a path in
@@ -2266,31 +2287,36 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   anti-virus tools might raise a false positive for Retool. There's nothing I
   can do about this, the issue is with the anti-virus suite, not Retool --
   you'll just have to clear Retool to run.</li>
-<li>The GUI is now written directly in QT6 instead of using the PySimpleGUI
-  middleware. A lot of changes have been made, including the following upgrades:</li>
+<li>
+<p>The GUI is now written directly in QT6 instead of using the PySimpleGUI
+    middleware. A lot of changes have been made, including the following upgrades:</p>
+<ul>
 <li>The GUI no longer crashes if the console portion of Retool crashes. It
-    simply fails to process the current DAT.</li>
+  simply fails to process the current DAT.</li>
 <li>The issue with the layout getting messed up when the UI was dragged between
-    screens of different scaling factors should be addressed. This mostly
-    impacted users with both 4k and HD screens.</li>
+  screens of different scaling factors should be addressed. This mostly
+  impacted users with both 4k and HD screens.</li>
 <li>The GUI is now more horizontally rectangular, to avoid elements going
-    offscreen if people have set their scaling high on low resolution monitors.</li>
+  offscreen if people have set their scaling high on low resolution monitors.</li>
 <li>You now add DATs to a list to process, not just open a single file or
-    folder at a time. This means you can add multiple sets of individual DATs,
-    multiple folders, or multiple folders recursively to the list, in any
-    combination.</li>
+  folder at a time. This means you can add multiple sets of individual DATs,
+  multiple folders, or multiple folders recursively to the list, in any
+  combination.</li>
 <li>You can now drag and drop between region and language lists, and reorder
-    items in the selected region and language lists.</li>
+  items in the selected region and language lists.</li>
 <li>A title tool is accessible from the <strong>File</strong> menu. If you enter a title's
-    full name from the DAT, it shows you the other names Retool assigns to it
-    to work its magic. This tool is only useful if you intend to contribute to
-    clone lists or Retool itself.</li>
+  full name from the DAT, it shows you the other names Retool assigns to it
+  to work its magic. This tool is only useful if you intend to contribute to
+  clone lists or Retool itself.</li>
 <li>You can now change some default file locations in <strong>Settings</strong>, also found
-    in the <strong>File</strong> menu.</li>
+  in the <strong>File</strong> menu.</li>
 <li><strong>Select all</strong> and <strong>Deselect all</strong> buttons have been added to the
-    exclusions tab.</li>
+  exclusions tab.</li>
+</ul>
+</li>
 </ul>
 <h3>Performance and maintenance</h3>
+
 <ul>
 <li>Improved conversion of CLRMAMEPro formatted DATs to Logiqx XML, which should
   avoid some crashes and handle larger files.</li>
@@ -2304,11 +2330,12 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   shouldn't crash Retool &mdash; just that clone list entry is skipped.</li>
 </ul>
 <h3>Developer updates</h3>
+
 <ul>
-<li>New clone list format. This is for consistency and to explicitly name
-  features, so newcomers have a better chance of understanding what's
-  going on and contributing.</li>
-</ul>
+<li>
+<p>New clone list format. This is for consistency and to explicitly name
+    features, so newcomers have a better chance of understanding what's
+    going on and contributing.</p>
 <p><strong>Old style categories</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a><span class="nt">&quot;categories&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-5-2" name="__codelineno-5-2" href="#__codelineno-5-2"></a><span class="w">  </span><span class="nt">&quot;BASIC Programming&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -2336,8 +2363,8 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-6-12" name="__codelineno-6-12" href="#__codelineno-6-12"></a><span class="p">]</span>
 </code></pre></div>
 <p>The biggest thing to call out here is that the search term is now explicitly
-  named, instead of being an undefined object key. Additionally, keys now us
-  camel case. Overrides have had much the same makeover:</p>
+named, instead of being an undefined object key. Additionally, keys now us
+camel case. Overrides have had much the same makeover:</p>
 <p><strong>Old style overrides</strong></p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a><span class="nt">&quot;overrides&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-7-2" name="__codelineno-7-2" href="#__codelineno-7-2"></a><span class="w">  </span><span class="nt">&quot;CD-Action 03-1997 (10B) (Poland)&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
@@ -2365,12 +2392,12 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-8-12" name="__codelineno-8-12" href="#__codelineno-8-12"></a><span class="p">]</span>
 </code></pre></div>
 <p>Renames have had the biggest rework. They have been renamed to <em>variants</em>, and
-  are significantly more verbose. Supersets and compilations have now been split
-  out into their own arrays, as they are treated differently by Retool. Most
-  notably, the confusing priority <code>0</code> is no longer a thing, with that work now
-  done by either the <code>compilations</code> or <code>supersets</code> array.</p>
+are significantly more verbose. Supersets and compilations have now been split
+out into their own arrays, as they are treated differently by Retool. Most
+notably, the confusing priority <code>0</code> is no longer a thing, with that work now
+done by either the <code>compilations</code> or <code>supersets</code> array.</p>
 <p><strong>Old style renames</strong>
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&quot;renames&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a><span class="nt">&quot;renames&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <a id="__codelineno-9-2" name="__codelineno-9-2" href="#__codelineno-9-2"></a><span class="w">  </span><span class="nt">&quot;3-D Ultra Pinball&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-9-3" name="__codelineno-9-3" href="#__codelineno-9-3"></a><span class="w">    </span><span class="p">[</span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">]</span>
 <a id="__codelineno-9-4" name="__codelineno-9-4" href="#__codelineno-9-4"></a><span class="w">    </span><span class="p">[</span><span class="s2">&quot;3-D Ultra Pinball &amp; Trophy Bass&quot;</span><span class="p">,</span><span class="w"> </span><span class="s2">&quot;title_position&quot;</span><span class="p">,</span><span class="w"> </span><span class="mi">0</span><span class="p">]</span>
@@ -2381,7 +2408,7 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-9-9" name="__codelineno-9-9" href="#__codelineno-9-9"></a><span class="p">}</span>
 </code></pre></div></p>
 <p><strong>New style variants (formerly renames)</strong>
-  <div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a><span class="nt">&quot;variants&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
 <a id="__codelineno-10-2" name="__codelineno-10-2" href="#__codelineno-10-2"></a><span class="w">  </span><span class="p">{</span>
 <a id="__codelineno-10-3" name="__codelineno-10-3" href="#__codelineno-10-3"></a><span class="w">      </span><span class="nt">&quot;group&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;3-D Ultra Pinball&quot;</span><span class="p">,</span>
 <a id="__codelineno-10-4" name="__codelineno-10-4" href="#__codelineno-10-4"></a><span class="w">      </span><span class="nt">&quot;titles&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
@@ -2409,40 +2436,44 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <a id="__codelineno-10-26" name="__codelineno-10-26" href="#__codelineno-10-26"></a><span class="p">]</span>
 </code></pre></div></p>
 <p>Not seen here: you can add <code>priority</code> and <code>nameType</code> keys to each object in
-  the <code>titles</code>, <code>compilations</code>, and <code>supersets</code> arrays. See the documentation
-  for more information.
-- All user messages now go to STDERR instead of STDOUT. If you redirect the
+the <code>titles</code>, <code>compilations</code>, and <code>supersets</code> arrays. See the documentation
+for more information.</p>
+</li>
+<li>
+<p>All user messages now go to STDERR instead of STDOUT. If you redirect the
   STDOUT with &gt;, &lt;, or &gt;&gt;, the only output is now the data of the final filtered
   DAT. This is most useful for those who build their own scripts and want to
-  chain tools together.
-- There's a new <code>--trace</code> argument that you can use to trace a title's journey
+  chain tools together.</p>
+</li>
+<li>There's a new <code>--trace</code> argument that you can use to trace a title's journey
   through Retool. It's useful when you're trying to figure out where something
   unexpected happens, and don't want to insert a bunch of print and input
   statements. It works on regex matches and is very verbose, so be careful with
   precision. Running a trace disables file output and multiprocessor operation
-  in some places, as it's intended for testing only.
-- There's a new <code>--singlecpu</code> argument that you can use to run Retool on just
+  in some places, as it's intended for testing only.</li>
+<li>There's a new <code>--singlecpu</code> argument that you can use to run Retool on just
   one CPU. Python doesn't like <code>input</code> statements when it's running things
   across multiple processors, so use this argument if you're debugging
-  multiprocessing parts of the code.
-- There's a new <code>--nodtd</code> argument that bypasses Logiqx's DTD validation.
+  multiprocessing parts of the code.</li>
+<li>There's a new <code>--nodtd</code> argument that bypasses Logiqx's DTD validation.
   Despite quoting it in their DATs, No-Intro and Redump don't validate against
   the DTD schema. This effectively hides the warning that the input DAT isn't
-  compliant.
-- All classes and functions now have consistent docstrings so people (including
-  myself) have a chance to figure out what's going on.
-- You can add the <code>@perf_test</code> decorator to any function to run memory and time
-  tests.
-- There's a new <code>config</code> object that gets passed around a lot, which contains
+  compliant.</li>
+<li>All classes and functions now have consistent docstrings so people (including
+  myself) have a chance to figure out what's going on.</li>
+<li>You can add the <code>@perf_test</code> decorator to any function to run memory and time
+  tests.</li>
+<li>There's a new <code>config</code> object that gets passed around a lot, which contains
   almost all the settings Retool needs to operate. Because it's quite large, it
   can be browsed interactively by running <code>print(config)</code> where the <code>config</code>
   instance is available. This should help those new to the codebase, or myself
-  when I'm trying to track down bugs or haven't looked at the code in a while.
-- The <code>input_dat</code> object can now be browsed interactively just like the <code>config</code>
+  when I'm trying to track down bugs or haven't looked at the code in a while.</li>
+<li>The <code>input_dat</code> object can now be browsed interactively just like the <code>config</code>
   object. It contains all the information about the DAT the user has fed into
-  Retool.
-- Incidentally, the objects that contain the titles (DatNode objects) can also
-  be printed to show the title's information in a tree-like fashion.</p>
+  Retool.</li>
+<li>Incidentally, the objects that contain the titles (DatNode objects) can also
+  be printed to show the title's information in a tree-like fashion.</li>
+</ul>
 <h2 id="118">1.18</h2>
 <ul>
 <li>A small change to handle a new versioning system in No-Intro.</li>
@@ -2651,6 +2682,7 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   while excluding the rest.</li>
 </ul>
 <h3>New features</h3>
+
 <ul>
 <li>Custom global or system filter includes can now force inclusion of titles that
   have been removed due to:</li>
@@ -2669,6 +2701,7 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
   out of date compared to what the clone list requires.</li>
 </ul>
 <h3>Bug fixes</h3>
+
 <ul>
 <li>Stat calculation of custom global/system filters would crash Retool when
   <code>--nofilters</code> was set. This has been fixed.</li>
@@ -2680,6 +2713,7 @@ for the very slow DATs to be faster and the increase in accuracy.</p>
 <li>Updated a few dependencies.</li>
 </ul>
 <h3>Behavior changes</h3>
+
 <ul>
 <li>Tried to capture general crashes in order to give feedback to Retool GUI
   users, to help diagnose future issues.</li>
@@ -2745,6 +2779,7 @@ because of this. You can use a 0 for:
   download burden to those cloning the repo.</li>
 </ul>
 <h3>New features</h3>
+
 <ul>
 <li>You can now exclude Manuals.</li>
 <li>Excluding BIOSes now also excludes enhancement chips.</li>
@@ -2766,6 +2801,7 @@ because of this. You can use a 0 for:
   have any.</li>
 </ul>
 <h3>Bug fixes</h3>
+
 <ul>
 <li>If a key title in a clone list didn't exist in an input DAT (or had been
   removed by a Retool option), then all other titles in that array would become
@@ -2778,6 +2814,7 @@ because of this. You can use a 0 for:
 <li>Made sure release tags output consistently in legacy mode.</li>
 </ul>
 <h3>Behavior changes</h3>
+
 <ul>
 <li>The demotion of modern ripped titles (for example, Virtual Console) is now
   working cross-region. You'll still get them if the modern edition is the only
@@ -2790,6 +2827,7 @@ because of this. You can use a 0 for:
 <h2 id="087">0.87</h2>
 <p>Some big changes this time around, including some requested features.</p>
 <h3>New features</h3>
+
 <ul>
 <li>There are now user-customizable exclude and include filters, so you can keep
   or remove specific titles regardless of what Retool thinks should be done
@@ -2808,6 +2846,7 @@ because of this. You can use a 0 for:
   things down.</li>
 </ul>
 <h3>Bug fixes</h3>
+
 <ul>
 <li>Rewrote the parent assignment code to correct misassignment issues in the
   NES DAT. It turns out this results in fixes for other sets too, requiring
@@ -2840,6 +2879,7 @@ because of this. You can use a 0 for:
   command line.</li>
 </ul>
 <h3>Behavior changes</h3>
+
 <ul>
 <li>More titles ripped from modern platform rereleases (such as Virtual Console
   titles in the SNES DAT, for example) have been demoted by default, as they
@@ -2861,6 +2901,7 @@ because of this. You can use a 0 for:
   DAT managers still aren't very useful.</li>
 </ul>
 <h3>Internal changes</h3>
+
 <ul>
 <li><code>user-config.yaml</code> is no longer stored in the GitHub repo. It's also been
   removed from Windows ZIP file. This is to prevent users accidentally
@@ -2947,19 +2988,23 @@ because of this. You can use a 0 for:
   played well with the GUI. Improved YAML handling at the same time. Make sure
   to backup your current <code>user-config.yaml</code> before grabbing this version, so
   you can port your region order/language settings over.</li>
-<li>Moved to argparse to handle user input in the CLI. It's less pretty, but it's
-  more robust and scalable. This also means that the <code>-i</code> option is no longer a
-  thing when specifying your input dat/folder &mdash; instead, specify it
-  immediately after <code>retool.py</code>:</li>
+<li>
+<p>Moved to argparse to handle user input in the CLI. It's less pretty, but it's
+    more robust and scalable. This also means that the <code>-i</code> option is no longer a
+    thing when specifying your input dat/folder &mdash; instead, specify it
+    immediately after <code>retool.py</code>:</p>
+<p><code>retool.py &lt;input dat/folder&gt; &lt;options&gt;</code></p>
+</li>
+<li>
+<p>Stopped misassignment in clone lists if Redump left off the <code>(Demo)</code> tag from
+  a title.</p>
+</li>
+<li>Fixed an exit bug when the user would select only regions and/or languages
+  that didn't exist in the input DAT.</li>
+<li>Added a few promote tags.</li>
+<li>Cleaned up some unused variables and imports.</li>
+<li>Lots of code tweaks to better suit GUI interaction.</li>
 </ul>
-<p><code>retool.py &lt;input dat/folder&gt; &lt;options&gt;</code>
-- Stopped misassignment in clone lists if Redump left off the <code>(Demo)</code> tag from
-  a title.
-- Fixed an exit bug when the user would select only regions and/or languages
-  that didn't exist in the input DAT.
-- Added a few promote tags.
-- Cleaned up some unused variables and imports.
-- Lots of code tweaks to better suit GUI interaction.</p>
 <h2 id="077">0.77</h2>
 <ul>
 <li>The <code>-g</code> option now keeps applications, as they are useful for computer
@@ -3043,6 +3088,7 @@ because of this. You can use a 0 for:
 <p>Oof, this is a big update, with feature and performance improvements all over
 the place.</p>
 <h3>Code readability and performance</h3>
+
 <p>Retool has been largely rewritten for readability, performance, security, and
 to make forward momentum easier. This means a few breaking changes:</p>
 <ul>
@@ -3064,11 +3110,13 @@ to make forward momentum easier. This means a few breaking changes:</p>
 While this is nice for all DATs, you'll mostly feel it on the big ones.
 The PlayStation and IBM DATs, for example, are now 2x faster.</p>
 <h3>Custom region orders, filter by language</h3>
+
 <p>Custom region orders are now supported &mdash; even for supersets. You can
 also filter by languages. Make your choices by editing the <code>region order</code> and
 <code>filter languages</code> sections in <code>user-config.yaml</code>. You can use the <code>-l</code> option
 to filter by language, or leave it off to include all languages.</p>
 <h3>Other language and region stuff</h3>
+
 <p>Retool's a lot smarter with languages now.</p>
 <p>For a start, implied languages are now enabled for most regions, and language
 data for titles has been scraped from Redump's site. Redump doesn't always
@@ -3090,6 +3138,7 @@ DVD version over the USA CD version, depending on how clone lists are set up.</p
   European title.</li>
 </ul>
 <h3>Other updates</h3>
+
 <ul>
 <li>You can now exclude unlicensed titles.</li>
 <li>Sega ring codes are now mostly handled automatically for assigning clones.
@@ -3209,8 +3258,8 @@ DVD version over the USA CD version, depending on how clone lists are set up.</p
 <ul>
 <li>A huge architectural shift to move Retool to a 1G1R DAT generator. Due to
   this, the <code>_regional_renames.py</code> file has been renamed to <code>_renames.py</code> and
-    massively expanded to take into account localized title dupes. The file has
-    also been reorganized to make future dupe additions easier.</li>
+  massively expanded to take into account localized title dupes. The file has
+  also been reorganized to make future dupe additions easier.</li>
 <li>The <code>-re</code>, <code>-ra</code>, and <code>-en</code> options have been removed.</li>
 <li>The <code>-o</code> flag is no longer mandatory, and now defines an output folder.
   Output files are automatically named.</li>
