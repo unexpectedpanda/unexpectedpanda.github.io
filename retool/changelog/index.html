@@ -300,6 +300,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2004" class="md-nav__link">
+    2.00.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2003" class="md-nav__link">
     2.00.3
   </a>
@@ -1134,6 +1141,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#2004" class="md-nav__link">
+    2.00.4
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#2003" class="md-nav__link">
     2.00.3
   </a>
@@ -1684,6 +1698,62 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="2004">2.00.4</h2>
+<ul>
+<li>Added another level of language selection fallback if you have a language order
+  specified. If Retool finds none of the languages it's looking for in your language
+  order when it compares titles, its next step is to check the language order derived from
+  your region order.</li>
+</ul>
+<p>This is most beneficial for European titles when you're filtering by a language, and
+  want to <em>preference</em> but not <em>filter</em> by other languages. You might want to do this when
+  you want a title that was released in a specific country, but due to No-Intro and Redump
+  naming rules gets assigned to the Europe region.</p>
+<p>For example, if a DAT file has the following titles:</p>
+<ul>
+<li><em>Example Title (Europe) (En,Fr,De,It)</em></li>
+<li><em>Example Title (Europe) (En,Es,Pt)</em></li>
+</ul>
+<p>And you have the following region order:</p>
+<ol>
+<li>Europe</li>
+<li>Spain</li>
+<li>Portugal</li>
+<li>France</li>
+</ol>
+<p>And you filter by English and no other language, Retool used to choose
+  <em>Example Title (Europe) (En,Fr,De,It)</em>, as it contains English (the only language you
+  specified in your language priority) and has the most languages.</p>
+<p>But given your region order, you've expressed a clear preference for Spanish and
+  Portuguese above French.</p>
+<p>Now because of the new region order language fallback, the language order effectively
+  becomes:</p>
+<ol>
+<li>English (explicity in the language filter, and also the implied language for Europe)</li>
+<li>Spanish</li>
+<li>Portuguese</li>
+<li>French</li>
+</ol>
+<p>You still only get titles that support English because of the filter, however this means
+  that Retool now selects <em>Example Title (Europe) (En,Es,Pt)</em> instead of
+  <em>Example Title (Europe) (En,Fr,De,It)</em>.</p>
+<ul>
+<li>
+<p>Added granularity back to the kept/removed list. Instead of filing every user exclusion
+  under "category removes", Retool now categorizes under individual exclusions like
+  "application", "audio", "bad dump" and so on.</p>
+</li>
+<li>
+<p>Made heading underlines in the kept/removed list variable depending on heading length.</p>
+</li>
+<li>
+<p>Fixed an index heading in the kept/removed list that incorrectly had "system excludes"
+  instead of "global excludes".</p>
+</li>
+<li>
+<p>Made some minor GUI tweaks for consistency.</p>
+</li>
+</ul>
 <h2 id="2003">2.00.3</h2>
 <ul>
 <li>Due to the influx of pirate ROMs in the No-Intro NES DAT, pirate ROMs are now treated
