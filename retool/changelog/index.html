@@ -3414,13 +3414,15 @@ because of this. You can use a 0 for:
 <li>Added <code>Ukranian</code> as a language.</li>
 <li>When filtering by language, if titles in the following regions don't have
   languages specified, they will be included if you select any of their
-  respective languages:</li>
+  respective languages:<ul>
 <li>Asia &mdash; English, Chinese, Japanese.</li>
 <li>Hong Kong, Taiwan &mdash; Chinese, English.</li>
 <li>Latin America &mdash; Spanish, Portuguese</li>
 <li>South Africa &mdash; Afrikaans, English</li>
 <li>Switzerland &mdash; German, French, Italian</li>
 <li>Ukraine &mdash; Ukranian, Russian.</li>
+</ul>
+</li>
 <li>Retool can now handle <code>rom</code> entries with no CRC specified. A <code>rom</code> entry must
   have at least a CRC, MD5, or SHA1, otherwise the title is dropped.</li>
 <li>The <code>-g</code> option now keeps preproduction titles, as they're treated as
@@ -3443,13 +3445,15 @@ because of this. You can use a 0 for:
   This way you get the highest version of a title available, and less noise
   without stripping everything away with the <code>-p</code> tag. Retool prefers production
   versions of titles, even if there is a preproduction title in a higher
-  priority region. Priority is as follows:</li>
+  priority region. Priority is as follows:<ul>
 <li>Production with highest version</li>
 <li>Production with highest revision</li>
 <li>Production with no version/revision</li>
 <li>Highest beta revision</li>
 <li>Highest alpha revision</li>
 <li>Highest prototype revision</li>
+</ul>
+</li>
 <li>The exclude coverdiscs flag is now <code>-f</code>.</li>
 <li>You can now exclude bad dumps, pirate titles, promotional titles (titles that
   contain <code>(Promo)</code>, <code>EPK</code>, and <code>Press Kit</code>), and samples.</li>
@@ -3482,7 +3486,7 @@ to make forward momentum easier. This means a few breaking changes:</p>
     better at automatically detecting different types of clones, so some titles
     no longer need to be listed in the clone lists.</li>
 <li>The selected 1G1R titles might change compared to previous versions of
-    Retool, due to a a major audit of clone lists, tags, and increases in
+    Retool, due to a major audit of clone lists, tags, and increases in
     parent detection accuracy.</li>
 <li>Retool no longer exports parent/clone DATs by default. Turns out the format
     can't really do the job properly, as it has no concept of priority within
@@ -3597,7 +3601,7 @@ DVD version over the USA CD version, depending on how clone lists are set up.</p
   those languages.</li>
 <li>Bumped Portuguese up the priority list when deciding between two
   identical titles that support different languages.</li>
-<li>Moved stuff out of readme.md to make it more readable, and created
+<li>Moved stuff out of <code>readme.md</code> to make it more readable, and created
   a GitHub wiki for more detailed information.</li>
 </ul>
 <h2 id="055">0.55</h2>
@@ -3608,8 +3612,8 @@ DVD version over the USA CD version, depending on how clone lists are set up.</p
 <ul>
 <li>Greatly sped up parent/clone processing, and removed XML conversion in
   favor of writing directly to the output DAT. This will be mostly noticeable
-  for large DATs. The IBM and Sony Redump DATs, for example, now process around
-  10x faster, cutting a minutes long process for each into seconds on an
+  for large DATs. The IBM and PlayStation Redump DATs, for example, now process
+  around 10x faster, cutting a minutes long process for each into seconds on an
   i7 8700K.</li>
 <li>Added another distributor/publisher to check for when scanning for clones.</li>
 <li>Removed the option to remove titles with Alt tags, as it was a leftover
@@ -3628,8 +3632,8 @@ DVD version over the USA CD version, depending on how clone lists are set up.</p
   matching.</li>
 </ul>
 <h2 id="052">0.52</h2>
+<p>Added better parent selection for the following:</p>
 <ul>
-<li>Added better parent selection for the following:</li>
 <li>Titles with multiple date versions.</li>
 <li>Titles with distributor/publisher, OEM, and covermount tags.</li>
 <li>Budget titles vs the originals.</li>
