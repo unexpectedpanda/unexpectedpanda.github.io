@@ -2772,7 +2772,7 @@
     <code>Shining Force II - Inishie no Fuuin (Japan)</code>, you can output
     <code>シャイニング●フォースII 『古の封印』 (Japan)</code>. Tags like <code>(Japan)</code> and
     <code>(Disc 1)</code> remain in English.</p>
-<p>Open the <strong>Localization</strong> tab to choose which languages to enable local
+<p>Open the <strong>Local names</strong> tab to choose which languages to enable local
 names for, and to set language priorities for titles with multiple local
 names.</p>
 <p>This is very much a work in progress. Both No-Intro and Redump aren't
@@ -2813,7 +2813,7 @@ is moved to the group <code>Bomberman GB</code> instead.</p>
   condition to be true.</p>
 </li>
 <li>
-<p><strong><code>matchLanguages</code></strong>: <code>array[string]</code>. Regions a title must have for the
+<p><strong><code>matchLanguages</code></strong>: <code>array[string]</code>. Languages a title must have for the
   condition to be true.</p>
 </li>
 <li>
@@ -2877,8 +2877,8 @@ is moved to the group <code>Bomberman GB</code> instead.</p>
 <a id="__codelineno-1-18" name="__codelineno-1-18" href="#__codelineno-1-18"></a><span class="w">    </span><span class="p">]</span>
 <a id="__codelineno-1-19" name="__codelineno-1-19" href="#__codelineno-1-19"></a><span class="p">}</span>
 </code></pre></div>
-<p>You don't need a filter to apply the <code>englishFriendly</code> tag &mdash; it's available at
-the <code>searchTerm</code> level as well.</p>
+<p>You don't always need a filter to apply the <code>englishFriendly</code> tag &mdash; it's
+available at the <code>searchTerm</code> level as well.</p>
 </li>
 <li>
 <p><strong><em>Change</em></strong>: To better support regional language variants, the following
@@ -2902,7 +2902,8 @@ the <code>searchTerm</code> level as well.</p>
 <li>
 <p>Spanish is now available as Spanish, Spanish (Latin American), and Spanish
   (Mexican). Mexican titles with no language set are now set to <code>Es-MX</code>
-  instead of <code>Es.</code></p>
+  instead of <code>Es.</code> Latin American titles with no languages set are now set to
+  <code>Es-XL</code>.</p>
 </li>
 <li>
 <p>French is now available as French and French (Canadian).</p>
@@ -2917,7 +2918,7 @@ the <code>searchTerm</code> level as well.</p>
     title with no languages listed, get No-Intro or Redump to fix it.</p>
 </li>
 <li>
-<p><strong><em>Change</em></strong>: There's now a check if a DAT tries to start a filename with
+<p><strong><em>Change</em></strong>: There's now a check if a DAT file starts a filename with
     <code>.</code>. In these circumstances, it's replaced with the fixed-width version,
     <code>．</code>.</p>
 </li>
@@ -3102,7 +3103,7 @@ achieve what you want using other clone list methods.</p>
 <p><strong><em>Fix</em></strong>: Windows: Fixed checkboxes flickering on hover on 4k monitors.</p>
 </li>
 <li>
-<p><strong><em>Fix</em></strong>: Ubuntu dark mode fixes: link colors are now more readable, title
+<p><strong><em>Fix</em></strong>: Ubuntu: link colors are now more readable in dark mode, and title
     tool fields are no longer white text on a white background.</p>
 </li>
 </ul>
