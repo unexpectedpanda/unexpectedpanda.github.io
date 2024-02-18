@@ -1351,7 +1351,7 @@ iterated over when processing a title's full name, so the order is important.</p
 <li>
 <p>Removing <a href="../terminology/#tags">tags</a> and version-like strings as defined in the
     <code>ignore_tags</code>, <code>promote_editions</code>, <code>demote_editions</code>, and <code>modern_editions</code> arrays in
-    <code>config/internal-config.json</code></p>
+    <code>config/internal-config.json</code>.</p>
 </li>
 <li>
 <p>Removing regions and languages.</p>
@@ -1387,11 +1387,12 @@ looks like a version is removed.</p>
 <p>Are both assigned to the same group by default:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>this is a title
 </code></pre></div>
-<p>Group can also be set manually in the <a href="../contribute-clone-lists-variants/"><code>variants</code></a> array in
-a clone list.</p>
+<p>Group names can also be set manually in the <a href="../contribute-clone-lists-variants/"><code>variants</code></a>
+array in a clone list.</p>
 <h2 id="region-free-names">Region-free names</h2>
 <p>Region-free names are the same as full names, except their regions and languages have been
-removed.</p>
+removed. They're used in clone lists when specifying a short name or using a filter isn't
+appropriate.</p>
 <p>For example, the following full name:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>This is a title (USA) (En,Fr) (Disc A) (Best Collection)
 </code></pre></div>
