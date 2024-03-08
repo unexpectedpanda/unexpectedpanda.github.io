@@ -14,7 +14,7 @@
       
       
       <link rel="icon" href="../images/retool.ico">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.1">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.5.12">
     
     
       
@@ -22,7 +22,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.45e1311d.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.7e359304.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -307,14 +307,14 @@
     
     
     
-    
-    
       
+        
+        
       
+    
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_4" >
@@ -438,14 +438,14 @@
     
     
     
-    
-    
       
+        
+        
       
+    
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5" >
@@ -478,11 +478,11 @@
     
     
     
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_5_1" >
@@ -698,14 +698,14 @@
     
     
     
-    
-    
       
+        
+        
       
+    
     
     <li class="md-nav__item md-nav__item--section md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
@@ -759,11 +759,11 @@
     
     
     
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2" >
@@ -901,11 +901,11 @@
     
     
     
+      
     
     
     <li class="md-nav__item md-nav__item--nested">
       
-        
         
         
         <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6_2_6" >
@@ -1190,42 +1190,6 @@
   
 </li>
       
-        <li class="md-nav__item">
-  <a href="#automatic-clone-detection" class="md-nav__link">
-    <span class="md-ellipsis">
-      Automatic clone detection
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#clone-lists" class="md-nav__link">
-    <span class="md-ellipsis">
-      Clone lists
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#metadata" class="md-nav__link">
-    <span class="md-ellipsis">
-      Metadata
-    </span>
-  </a>
-  
-</li>
-      
-        <li class="md-nav__item">
-  <a href="#language-and-region-priority" class="md-nav__link">
-    <span class="md-ellipsis">
-      Language and region priority
-    </span>
-  </a>
-  
-</li>
-      
     </ul>
   
 </nav>
@@ -1246,11 +1210,11 @@
 
 <h1 id="how-retool-works">How Retool works</h1>
 <p>This is a technical piece, and is best suited to developers who want to create similar
-functionality for their tools. It's correct as of Retool v2.02.0.</p>
+functionality for their tools. It's correct as of Retool v2.02.2.</p>
 <p>Retool has two primary functions:</p>
 <ol>
 <li>
-<p>To filter DATs based on user criteria, including:</p>
+<p>To filter DAT files based on user criteria, including:</p>
 <ul>
 <li>
 <p>Language preference</p>
@@ -1269,7 +1233,7 @@ functionality for their tools. It's correct as of Retool v2.02.0.</p>
 <li>
 <p>To discover titles that have relationships with each other, and use that to implement
     <a href="../terminology/#1g1r">1G1R</a>. It does not make use of existing parent/clone data found
-    in DATs.</p>
+    in DAT files.</p>
 </li>
 </ol>
 <p>Retool uses the following data sources to achieve this:</p>
@@ -1298,8 +1262,8 @@ like filters that remove candidates that don't meet specific criteria.</p>
 <p class="admonition-title">A note about updating clone lists and metadata</p>
 <p>Clone lists and metadata need to be kept regularly up to date to ensure Retool's
 effectiveness. When they stop updating, Retool gradually becomes less accurate over
-time as changes are made to DATs. Automatic detection picks up a lot, but it's not
-foolproof, especially as vital information is regularly missing from the DATs
+time as changes are made to DAT files. Automatic detection picks up a lot, but it's
+not foolproof, especially as vital information is regularly missing from the DAT files
 themselves.</p>
 <p>Users are more likely to notice when Retool gets out of sync with No-Intro than
 Redump, particularly in the chaotic NES DAT.</p>
@@ -1312,7 +1276,7 @@ database, and isn't particularly great at adhering to its own standards. I suspe
 lack of validation in its backend and a lot of free text fields are at fault, along
 with multiple contributors who don't necessarily agree on how a title should be named
 or classified.</p>
-<p>This means that every now and then No-Intro makes awide-ranging change that breaks
+<p>This means that every now and then No-Intro makes a wide-ranging change that breaks
 things, which can mean updates are required for clone lists, metadata files, the
 Retool application, or sometimes all three. It also means that the ideal cadence for
 Retool's No-Intro updates is every few weeks, a pace that's hard to keep for a site
@@ -1459,9 +1423,11 @@ how Retool interprets it:</p>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p>When debugging, if you run the CLI version of Retool with the <code>--singlecpu</code> flag, you
-can use <code>input(&lt;TITLE_OBJECT_NAME&gt;)</code> to print a title object to screen that looks like
-the previous example. This can give you insight as to what a title's object looks like
-as it goes through through Retool's process. The <code>--singlecpu</code> flag is required because <code>input()</code> doesn't play well when multi-processing is on.</p>
+can use <code>input(&lt;TITLE_OBJECT_NAME&gt;)</code> in the Python code to print a title object to
+screen that looks like the previous example. This can give you insight as to what a
+title's object looks like as it goes through through Retool's process. The
+<code>--singlecpu</code> flag is required because <code>input()</code> doesn't play well when
+multi-processing is on.</p>
 </div>
 <p>This object is what's primarily used to compare titles against each other, and is updated
 as Retool operates.</p>
@@ -1483,19 +1449,19 @@ as Retool operates.</p>
    <br>
    If a numbered DAT file is in use, the original full name is stored in
    <code>numbered_name</code>, which is only used again when the output DAT file is written. The
-   <code>full_name</code> gets set to the <code>numbered_name</code> stripped of the release number, which
-   is always just the first 7 characters. This is so the release numbers don't
-   influence comparison later on. No-Intro metadata also doesn't include the release
-   number, so this name is required for metadata lookup.</li>
+   <code>full_name</code> gets set to the <code>numbered_name</code> stripped of the first 7 characters,
+   which is the number prefix. This is so the release numbers don't influence
+   comparison later on. No-Intro metadata also doesn't include the release number, so
+   this name is required for metadata lookup.</li>
 </ul>
 </li>
 <li>Language codes are retrieved from the full name and stored in <code>languages_title</code> as a
-    tuple, and <code>languages_title_orig_str</code> as a string using a regular expression. This
-    doesn't just involve individual language codes: No-Intro Game Boy Advance titles can
-    assign languages to a compilation's constituent titles in the following format:
-    <code>(En+En,De)</code>, meaning many language combinations need to be taken into account to
-    capture everything. As such, the languages regular expression is generated using the
-    following template: <br>
+    tuple, and <code>languages_title_orig_str</code> as a string that's found by using a regular
+    expression. This doesn't just involve searching for individual language codes:
+    No-Intro Game Boy Advance titles can assign languages to a compilation's constituent
+    titles in the following format: <code>(En+En,De)</code>, meaning many language combinations need
+    to be taken into account to capture everything. As such, the languages regular
+    expression is generated using the following template:<br>
     <div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>&#39;\(((&#39; + LANGUAGES + &#39;)(,\s?)?)*\)&#39;
 </code></pre></div>
     <br>
@@ -1513,13 +1479,13 @@ as Retool operates.</p>
 <li>Regions are retrieved from the full name using the region order found in the
     <code>defaultRegionOrder</code> key in <code>config/internal-config.json</code>. The <code>primary_region</code> is
     also defined, based on the highest match found in the user's region order.</li>
-<li>The languages are retrieved for the matching title from the metadata, and stored in
+<li>The languages are retrieved from the matching title in the metadata, and stored in
     <code>languages_online</code>.</li>
 <li>The <a href="../terminology/#implied-languages">implied language</a> is set based on
     <code>primary_region</code>. Implied languages are stored in the <code>defaultRegionOrder</code> key in
     <code>config/internal-config.json</code>.</li>
-<li>The canonical languages for the title are set in <code>languages</code>. This is done in the
-    following priority order:<ol>
+<li>The canonical languages for the title are set in <code>languages</code>. The canonical languages
+    are chosen from one of the following language sets, in priority order:<ol>
 <li>Languages taken from metadata, if they exist or don't equal <code>nolang</code>.</li>
 <li>Languages taken from the title full name.</li>
 <li>The implied language for the title.</li>
@@ -1535,8 +1501,8 @@ as Retool operates.</p>
     <a href="../naming-system/#short-names">Short names</a> for more on how this is generated.</li>
 <li>The region-free name is generated. This is the same as the full name, but with regions
     and languages removed. It is most useful in clone lists when you need more precision
-    than a short name, and <a href="../contribute-clone-lists-variants-filters/"><code>filters</code></a> might
-    not be as elegant a solution.</li>
+    than a short name, and when <a href="../contribute-clone-lists-variants-filters/"><code>filters</code></a>
+    aren't an elegant solution.</li>
 <li>The group name is created. See <a href="../naming-system/#group-names">Group names</a> for more on
     how this is generated.</li>
 <li><a href="../contribute-clone-lists-variants-local/">Local names</a> are imported from metadata
@@ -1558,9 +1524,9 @@ as Retool operates.</p>
     categories of <code>Console</code> are renamed to <code>BIOS</code>.</li>
 <li>The <code>Applications</code> category is added to titles whose full name matches the regex
     pattern <code>\((?:Test )?Program\)|(Check|Sample) Program</code>.</li>
-<li>The <code>BIOS</code> category is added to titles whose full name has a match in the
+<li>The <code>BIOS</code> category is added to titles whose full name matches the
     case-insensitive regex pattern <code>\[BIOS\]|\(Enhancement Chip\)</code>.</li>
-<li>The <code>Demos</code> category is added to titles whose full name has a match in any of the
+<li>The <code>Demos</code> category is added to titles whose full name matches any of the
     following case-insensitive regex patterns:<ul>
 <li><code>\((?:\w[-.]?\s*)*Demo(?:,?\s[\w0-9\.]*)*\)</code></li>
 <li><code>Taikenban</code></li>
@@ -1573,9 +1539,9 @@ as Retool operates.</p>
 <li><code>\((?:\w-?\s*)*?Kiosk,?(?:\s\w*?)*\)|Kiosk Demo Disc|(PSP System|PS2) Kiosk</code></li>
 </ul>
 </li>
-<li>The <code>Multimedia</code> category is added to titles whose full name has a match in the
+<li>The <code>Multimedia</code> category is added to titles whose full namematches the
     case-insensitive regex pattern <code>\(Magazine\)</code>.</li>
-<li>The <code>Preproduction</code> category is added to titles whose full name has a match in any
+<li>The <code>Preproduction</code> category is added to titles whose full name matches any
     of the following case-insensitive regex patterns:<ul>
 <li><code>\((?:\w*?\s)*Alpha(?:\s\d+)?\)</code></li>
 <li><code>\((?:\w*?\s)*Beta(?:\s\d+)?\)</code></li>
@@ -1584,7 +1550,7 @@ as Retool operates.</p>
 <li><code>\(DEV|DEBUG\)</code></li>
 </ul>
 </li>
-<li>The <code>Video</code> category is added to titles whose full name has a match in any of the
+<li>The <code>Video</code> category is added to titles whose full name matches any of the
     following case-insensitive regex patterns:<ul>
 <li><code>Game Boy Advance Video</code></li>
 <li><code>- (Preview|Movie) Trailer</code></li>
@@ -1595,8 +1561,8 @@ as Retool operates.</p>
 </li>
 <li>If a title has a category of <code>Demo</code>, but it doesn't have a <code>(Demo)</code> or similar tag in
     the full name, Retool adds the <code>(demo)</code> tag to both <code>short_name</code> and <code>region_free</code>
-    name, so demos don't get mixed up with retail titles. The tags Retool looks for are
-    the same as the ones it uses for auto-assigning the <code>Demos</code> category.</li>
+    name, so demos don't get mixed up with retail titles. The demo tags Retool looks for
+    are the same as the ones it uses for auto-assigning the <code>Demos</code> category.</li>
 <li>The title's <code>region_priority</code> is a 0-index number based on the user's region order and
     what's stored in <code>primary_region</code>. Lower is better. For example, if a user sets USA
     followed by Europe as their region order, and the title's primary region is <code>USA</code>, its
@@ -1605,8 +1571,8 @@ as Retool operates.</p>
 <li>The title's <code>language_priority</code> is a 0-index number based on the user's language order
     and what's stored in <code>languages</code>. Lower is better. If the title supports multiple
     languages, the highest priority language is used for this number. If the user hasn't
-    provided a language order, and order is inferred using implied languages based on
-    their region order. For example, if a user sets English followed by Japanese as their
+    provided a language order, an order is inferred using implied languages based on their
+    region order. For example, if a user sets English followed by Japanese as their
     language order, and the title's top language is English, its <code>language_priority</code> is
     set to <code>0</code>. If the title's top language is Japanese, it's set to <code>1</code>.</li>
 </ol>
@@ -1623,10 +1589,6 @@ process. The dictionary's final state is what's written to the output DAT file.<
 that is never modified, in case a user tries to force include titles and Retool needs
 to quickly retrieve those details.</p>
 <h2 id="stage-2-supplementing-the-data-with-clone-lists">Stage 2: Supplementing the data with clone lists</h2>
-<h2 id="automatic-clone-detection">Automatic clone detection</h2>
-<h2 id="clone-lists">Clone lists</h2>
-<h2 id="metadata">Metadata</h2>
-<h2 id="language-and-region-priority">Language and region priority</h2>
 
 
 
@@ -1692,10 +1654,10 @@ to quickly retrieve those details.</p>
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.sections", "toc.follow"], "search": "../assets/javascripts/workers/search.f886a092.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "content.tabs.link", "header.autohide", "navigation.sections", "toc.follow"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.d7c377c4.min.js"></script>
+      <script src="../assets/javascripts/bundle.c8d2eff1.min.js"></script>
       
     
   </body>
