@@ -1223,28 +1223,32 @@ platform, then this option is for you.</p>
 </li>
 <li>
 <p>Install Retool's dependencies, either with Pip or
-    <a href="https://python-poetry.org/">Poetry</a>:</p>
-<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="pip" name="__tabbed_2" type="radio" /><input id="poetry" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="pip">Pip</label><label for="poetry">Poetry</label></div>
+    <a href="https://hatch.pypa.io/">Hatch</a>:</p>
+<div class="tabbed-set tabbed-alternate" data-tabs="2:2"><input checked="checked" id="pip" name="__tabbed_2" type="radio" /><input id="hatch" name="__tabbed_2" type="radio" /><div class="tabbed-labels"><label for="pip">Pip</label><label for="hatch">Hatch</label></div>
 <div class="tabbed-content">
 <div class="tabbed-block">
-<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install alive-progress lxml psutil pyside6 darkdetect strictyaml validators
+<div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>pip install .
 </code></pre></div>
 </div>
 <div class="tabbed-block">
 <ol>
 <li>
-<p>Install Poetry if you haven't already:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install poetry
+<p>Install Hatch if you haven't already:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-2-1" name="__codelineno-2-1" href="#__codelineno-2-1"></a>pip install hatch
 </code></pre></div>
 </li>
 <li>
-<p>Install Retool's dependencies:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>poetry install
+<p>Enter the Hatch virtual environment:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hatch shell
 </code></pre></div>
+<div class="admonition info">
+<p class="admonition-title">Info</p>
+<p>To exit the environment at any time, run the <code>exit</code> command.</p>
+</div>
 </li>
 <li>
-<p>Enter the Poetry virtual environment:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>poetry shell
+<p>Install Retool's dependencies in the environment:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>pip install .
 </code></pre></div>
 </li>
 </ol>
@@ -1253,26 +1257,21 @@ platform, then this option is for you.</p>
 </div>
 <div class="admonition info">
 <p class="admonition-title">Info</p>
-<p>On systems that have both Python 2 and 3 installed, you might need to run <code>pip3</code>
-instead of <code>pip</code>.</p>
+<p>On systems that have both Python 2 and 3 installed, you might need to run
+<code>pip3</code> instead of <code>pip</code>.</p>
 </div>
 </li>
 <li>
 <p>Download the latest clone lists and metadata files:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>retool.py --update
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>retool --update
 </code></pre></div>
-<div class="admonition info">
-<p class="admonition-title">Info</p>
-<p>On some operating systems you might need to prefix Python files with <code>python3</code>
-or <code>python</code> to run them.</p>
-</div>
 </li>
 <li>
-<p>You can now run <code>retool.py</code> or <code>retoolgui.py</code> with Python.</p>
+<p>You can now run <code>retool</code> or <code>retoolgui</code>.</p>
 </li>
 </ol>
 <p><strong>Linux issues</strong></p>
-<p>If you get a libxcb error in Linux when launching <code>retoolgui.py</code>, this fixed
+<p>If you get a libxcb error in Linux when launching <code>retoolgui</code>, this fixed
 the problem for me in Ubuntu 20.04:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>sudo apt-get install libxcb-randr0-dev \
 <a id="__codelineno-6-2" name="__codelineno-6-2" href="#__codelineno-6-2"></a>        libxcb-xtest0-dev libxcb-xinerama0-dev libxcb-shape0-dev libxcb-xkb-dev
