@@ -71,6 +71,11 @@
          <changefreq>daily</changefreq>
     </url>
     <url>
+         <loc>https://unexpectedpanda.github.io/retool/contribute-code/</loc>
+         <lastmod>2024-04-06</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
+    <url>
          <loc>https://unexpectedpanda.github.io/retool/contribute-metadata-files/</loc>
          <lastmod>2024-04-06</lastmod>
          <changefreq>daily</changefreq>
