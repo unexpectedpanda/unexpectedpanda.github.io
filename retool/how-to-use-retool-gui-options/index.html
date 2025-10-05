@@ -739,6 +739,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#online-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug-options" class="md-nav__link">
     <span class="md-ellipsis">
       Debug options
@@ -1533,6 +1542,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#online-features" class="md-nav__link">
+    <span class="md-ellipsis">
+      Online features
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#debug-options" class="md-nav__link">
     <span class="md-ellipsis">
       Debug options
@@ -1579,11 +1597,6 @@
   <br>
   <br>If this option is disabled, it's because you've enabled
   <strong>Output DAT files in legacy parent/clone format</strong>, which isn't compatible with this feature.</p>
-</li>
-<li>
-<p><strong>Include titles without hashes or sizes specified in input DAT files</strong>
-  <br>Some DAT files don't list any hashes or sizes for some files, and Retool filters these
-  out by default. This option makes sure those files are kept.</p>
 </li>
 <li>
 <p><strong>Prefer regions over languages</strong>
@@ -1670,11 +1683,6 @@
   original Redump and No-Intro DAT files already loaded in your ROM manager.</p>
 </li>
 <li>
-<p><strong>Don't use clone lists to mark titles as MIA</strong>
-  <br>MIA titles are scraped from Redump's wiki, however DatVault users should enable this
-  for more up-to-date information.</p>
-</li>
-<li>
 <p><strong>Use <code>&lt;machine&gt;</code> instead of <code>&lt;game&gt;</code> in output DAT files</strong>
    <br>Exports each title node using the MAME standard of <code>&lt;machine&gt;</code> instead of <code>&lt;game&gt;</code>.</p>
 </li>
@@ -1691,7 +1699,7 @@
   removed.</p>
 </li>
 <li>
-<p><strong>Also output lists of what titles have been kept and removed</strong>
+<p><strong>Also output reports of what titles have been kept and removed</strong>
   <br>In addition to output DAT files, produce TXT files that list what titles have been
   kept, and what titles have been removed.</p>
 </li>
@@ -1701,6 +1709,29 @@
   title in the output DAT files, and optionally add a prefix and suffix to each name.
   If you add a prefix that starts with <code>http://</code>, <code>https://</code> or <code>ftp://</code>, each line in the
   file is URL encoded.</p>
+</li>
+</ul>
+<h2 id="online-features">Online features</h2>
+<p>These features use data supplied by third parties. When those third parties stop updating,
+Retool might make choices that are out of date.</p>
+<ul>
+<li>
+<p><strong>Add MIA attributes to DAT files</strong>
+  <br>For files that no one has, adds <code>mia="yes"</code> to <code>rom/file</code> tags.</p>
+</li>
+<li>
+<p><strong>Add RetroAchievements attributes to DAT files</strong>
+  <br>For titles that support RetroAchievements, adds <code>retroachievements="yes"</code> to
+  <code>game/machine</code> tags. The data source uses hashes from CHD/RVZ files for disc-based
+  images, so for this feature to work on Redump DAT files you need to use CHD/RVZ
+  versions, like those found at <a href="https://github.com/MetalSlug/MAMERedump">MAME Redump</a>.</p>
+</li>
+<li>
+<p><strong>Prefer titles with RetroAchievements</strong>
+  <br>Prioritizes titles that support RetroAchievements. The data source uses hashes from
+  CHD/RVZ files for disc-based images, so for this feature to work on Redump DAT files you
+  need to use CHD/RVZ versions, like those found at
+  <a href="https://github.com/MetalSlug/MAMERedump">MAME Redump</a>.</p>
 </li>
 </ul>
 <h2 id="debug-options">Debug options</h2>
@@ -1719,10 +1750,6 @@
   <br>Not recommended unless you're debugging or comparing outputs between DAT file
   versions. If this is disabled, it's because you've disabled 1G1R filtering or chosen to
   split by region, which isn't compatible with this option.</p>
-</li>
-<li>
-<p><strong>Bypass DTD validation</strong>
-  <br>Skips DTD validation of DAT files, useful if validation is causing issues.</p>
 </li>
 <li>
 <p><strong>Disable multiprocessor usage</strong>
