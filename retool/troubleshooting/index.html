@@ -1767,12 +1767,14 @@ when trying to download files in Retool, it's a
 <a href="https://github.com/python/cpython/issues/80192#issuecomment-1093815322">shortcoming in the way Python's SSL module is designed</a>
 that prevents it from obtaining the certificates it needs to verify that it can trust
 the secure website it wants to download from.</p>
-<p>To work around this, run the following commands, which will download the required
-certificates into your home folder and add them to your system keychain.</p>
+<p>To work around this, run the following commands, which download the required
+certificates into your home folder and then add them to your system keychain. Replace
+<span class="variable">PYTHON_VERSION</span> with the major.minor version of your
+Python install. For example, for Python 3.14.0, use <code>3.14</code>.</p>
 <p><pre class="copy"><code>curl -o ~/cacert.pem https://curl.se/ca/cacert.pem
 awk '/-----BEGIN CERTIFICATE-----/{flag=1} flag{print} /-----END CERTIFICATE-----/{exit}' ~/cacert.pem &gt; ~/first-cert.pem
 sudo security add-trusted-cert -d -r trustRoot -k /Library/Keychains/System.keychain ~/first-cert.pem
-open /Applications/Python 3.<span class="variable">REPLACE_WITH_PYTHON_MINOR_VERSION</span>/Install Certificates.command</code></pre></p>
+open "/Applications/Python <span class="variable">PYTHON_VERSION</span>/Install Certificates.command"</code></pre></p>
 </div>
 <div class="tabbed-block">
 <p><h4>libxcb error</h4></p>
