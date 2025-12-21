@@ -395,10 +395,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#246-2025-18-11" class="md-nav__link">
+  <a href="#247-2025-12-20" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.6 (2025-18-11)
+        2.4.7 (2025-12-20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246-2025-12-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.6 (2025-12-18)
       
     </span>
   </a>
@@ -2892,10 +2903,21 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#246-2025-18-11" class="md-nav__link">
+  <a href="#247-2025-12-20" class="md-nav__link">
     <span class="md-ellipsis">
       
-        2.4.6 (2025-18-11)
+        2.4.7 (2025-12-20)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#246-2025-12-18" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.6 (2025-12-18)
       
     </span>
   </a>
@@ -4069,7 +4091,20 @@
 
 
 <h1 id="changelog">Changelog</h1>
-<h2 id="246-2025-18-11">2.4.6 (2025-18-11)</h2>
+<h2 id="247-2025-12-20">2.4.7 (2025-12-20)</h2>
+<ul>
+<li>
+<p><strong><em>Feature</em></strong>: Retool now reports the uncompressed space you've saved after filtering
+   (issue #361). Thanks for getting things started on this one,
+   <a href="https://github.com/steven-sheehy">steven-sheehy</a>!</p>
+</li>
+<li>
+<p><strong><em>Fix</em></strong>: Retool's icon is now shown on the macOS dock instead of the Python Launcher
+   icon when running Retool GUI. Unfortunately it doesn't seem possible to change the name
+   of the app in the dock or menu without providing an app bundle.</p>
+</li>
+</ul>
+<h2 id="246-2025-12-18">2.4.6 (2025-12-18)</h2>
 <ul>
 <li>
 <p><strong><em>Change</em></strong>: Excluding Add-ons now also excludes titles with <code>(DLC)</code>, <code>(Addon)</code>, and
@@ -4085,7 +4120,7 @@
    the app.</p>
 </li>
 <li>
-<p><strong><em>Fix</em></strong>: If a user cancels out of adding DAT files, and there's no DAT files in the
+<p><strong><em>Fix</em></strong>: If a user cancels out of adding DAT files, and there are no DAT files in the
    list, Retool now returns the placeholder text to "No DAT files added yet".</p>
 </li>
 <li>
@@ -4186,15 +4221,15 @@
 <h2 id="241-2025-08-13">2.4.1 (2025-08-13)</h2>
 <ul>
 <li>
-<p>Fix: Turns out pathing in QT is case sensitive, and a path rename broke wherever there
-  were arrow icons on buttons. This has now been fixed.</p>
+<p><strong><em>Fix</em></strong>: Turns out pathing in QT is case sensitive, and a path rename broke wherever
+  there were arrow icons on buttons. This has now been fixed.</p>
 </li>
 <li>
-<p>Fix: The <code>&lt;retool&gt;</code> element is now added to output DAT file headers again in all
+<p><strong><em>Fix</em></strong>: The <code>&lt;retool&gt;</code> element is now added to output DAT file headers again in all
   circumstances. This enables the skipping of files that have already been processed.</p>
 </li>
 <li>
-<p>Fix: Added a Benesse ID regex to version detection.</p>
+<p><strong><em>Fix</em></strong>: Added a Benesse ID regex to version detection.</p>
 </li>
 </ul>
 <h2 id="240-2025-08-11">2.4.0 (2025-08-11)</h2>
@@ -6137,7 +6172,7 @@ the first 0 priority title was ranked above the second.</p>
 <a id="__codelineno-16-11" name="__codelineno-16-11" href="#__codelineno-16-11"></a><span class="w">  </span><span class="p">]</span>
 <a id="__codelineno-16-12" name="__codelineno-16-12" href="#__codelineno-16-12"></a><span class="p">}</span>
 </code></pre></div>
-<p>Retool v2 now chooses the correct superset for the selected region, You can
+<p>Retool v2 now chooses the correct superset for the selected region. You can
 still specify a <code>priority</code> on supersets, just in case there are multiple
 supersets of varying amounts of content. That priority is <em>only</em> respected
 between supersets, and isn't related to the priority set on a <code>title</code>.</p>
@@ -7013,7 +7048,7 @@ for more information.</p>
 <li>
 <p>The exclude compilations option has been removed, and compilations are now
   usually treated in one of two ways:</p>
-</li>
+<ul>
 <li>
 <p>As a remove; that is, the compilation is removed entirely from the DAT
     as it's covered by other titles or compilations.</p>
@@ -7021,10 +7056,12 @@ for more information.</p>
 <li>
 <p>As the 1G1R title for a set, depending on the region.</p>
 </li>
+</ul>
+</li>
 <li>
 <p>The guidelines for when to use a 0 priority in clone lists have changed
   because of this. You can use a 0 for:</p>
-</li>
+<ul>
 <li>
 <p>Compilations that include multiple titles.</p>
 </li>
@@ -7044,6 +7081,8 @@ for more information.</p>
 <p>A title in one region that definitely has more content than another
     region. For example, a release in Europe that's uncensored compared to
     the US release.</p>
+</li>
+</ul>
 </li>
 </ul>
 </li>
