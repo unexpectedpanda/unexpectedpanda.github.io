@@ -395,6 +395,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#248-2026-01-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.8 (2026-01-02)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#247-2025-12-20" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2413,34 +2424,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../contribute-clone-lists-mias/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MIAs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -2452,10 +2435,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_5" >
         
           
-          <label class="md-nav__link" for="__nav_8_1_6" id="__nav_8_1_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1_5" id="__nav_8_1_5_label" tabindex="0">
             
   
   
@@ -2473,8 +2456,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_1_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -2901,6 +2884,17 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#248-2026-01-02" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.8 (2026-01-02)
+      
+    </span>
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#247-2025-12-20" class="md-nav__link">
@@ -4091,66 +4085,89 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="248-2026-01-02">2.4.8 (2026-01-02)</h2>
+<ul>
+<li>
+<p><strong><em>Fix</em></strong>: Added yet another No-Intro date format: <code>(MM-DD)</code>. This should help
+    auto-detect versions in the Satellaview DAT file.</p>
+</li>
+<li>
+<p><strong><em>Fix</em></strong>: If you prefer RetroAchievements titles, and a compilation is the only
+    variant of a RetroAchievements title, then that compilation is now selected in all
+    scenarios.</p>
+</li>
+<li>
+<p><strong><em>Change</em></strong>: Retool used to append <code>(Demo)</code> to the short names of demos it found that
+    were missing a demo tag -- it did this to prevent demos from getting confused with full
+    versions of titles during title comparison. Unfortunately, it also made adding these
+    titles to clone lists confusing for contributors, as you had to know what Retool was
+    doing behind the scenes, and when to add the <code>(Demo)</code> string to a title in the clone
+    list to match that behavior.</p>
+<p>Retool now handles demo/full version comparison behind the scenes without adding a
+<code>(Demo)</code> tag to short names, meaning you also don't need to know when to add it in
+clone lists.</p>
+</li>
+</ul>
 <h2 id="247-2025-12-20">2.4.7 (2025-12-20)</h2>
 <ul>
 <li>
 <p><strong><em>Feature</em></strong>: Retool now reports the uncompressed space you've saved after filtering
-   (issue #361). Thanks for getting things started on this one,
-   <a href="https://github.com/steven-sheehy">steven-sheehy</a>!</p>
+    (issue #361). Thanks for getting things started on this one,
+    <a href="https://github.com/steven-sheehy">steven-sheehy</a>!</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Retool's icon is now shown on the macOS dock instead of the Python Launcher
-   icon when running Retool GUI. Unfortunately it doesn't seem possible to change the name
-   of the app in the dock or menu without providing an app bundle.</p>
+    icon when running Retool GUI. Unfortunately it doesn't seem possible to change the name
+    of the app in the dock or menu without providing an app bundle.</p>
 </li>
 </ul>
 <h2 id="246-2025-12-18">2.4.6 (2025-12-18)</h2>
 <ul>
 <li>
 <p><strong><em>Change</em></strong>: Excluding Add-ons now also excludes titles with <code>(DLC)</code>, <code>(Addon)</code>, and
-   <code>(Addon for XBLA)</code> tags (issue #359). Thanks
-   <a href="https://github.com/steven-sheehy">steven-sheehy</a>!</p>
+    <code>(Addon for XBLA)</code> tags (issue #359). Thanks
+    <a href="https://github.com/steven-sheehy">steven-sheehy</a>!</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Running tests through Hatch doesn't rely on there being a <code>.dev</code> file in
-   Retool's root folder any more.</p>
+    Retool's root folder any more.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Fixed missing grip handle graphic between the DAT files list and the rest of
-   the app.</p>
+    the app.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: If a user cancels out of adding DAT files, and there are no DAT files in the
-   list, Retool now returns the placeholder text to "No DAT files added yet".</p>
+    list, Retool now returns the placeholder text to "No DAT files added yet".</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: If you select <strong>Override global settings</strong> in the system <strong>Options</strong> tab,
-   but nothing else in the options tab, Retool no longer outputs an empty options string
-   (<code>(-)</code>) in the filename.</p>
+    but nothing else in the options tab, Retool no longer outputs an empty options string
+    (<code>(-)</code>) in the filename.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: I bought myself a Mac, and so the following things have been fixed in the
-   GUI on macOS:</p>
-</li>
+    GUI on macOS:</p>
+<ul>
 <li>
 <p>The <strong>Settings</strong> and <strong>About</strong> options are now in the proper menus, and not moved by
-     macOS heuristics into different places.</p>
+  macOS heuristics into different places.</p>
 </li>
 <li>
 <p>The delete key now works for removing items from list boxes.</p>
 </li>
 <li>
 <p>The minimum width and height of the Retool GUI has been increased to accommodate
-     better widget rendering on macOS.</p>
+ better widget rendering on macOS.</p>
 </li>
 <li>
 <p>Fonts are no longer statically set in the QT design file. Instead they're assigned
-     on an OS-basis in Python, which avoids font loading miss penalties and wrong font
-     sizes being assigned.</p>
+ on an OS-basis in Python, which avoids font loading miss penalties and wrong font
+ sizes being assigned.</p>
 </li>
 <li>
 <p>Many buttons now have a fixed size with explicitly set minimum and maximum sizes to
-     prevent deformation into odd aspect ratios.</p>
+ prevent deformation into odd aspect ratios.</p>
 </li>
 <li>
 <p>Custom checkboxes have been replaced with native checkboxes.</p>
@@ -4163,6 +4180,8 @@
 </li>
 <li>
 <p>Tabs labels now elide to the right to overcome tab width issues.</p>
+</li>
+</ul>
 </li>
 </ul>
 <h2 id="245-2025-11-05">2.4.5 (2025-11-05)</h2>
@@ -4178,11 +4197,11 @@
 <ul>
 <li>
 <p><strong><em>Fix</em></strong>: Prevents stacking of RetroAchievements tags if a DAT file is processed more
-   than once.</p>
+    than once.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Fixed a type warning when dragging and dropping files using Retool with
-   PySide6 6.10.0.0.</p>
+    PySide6 6.10.0.0.</p>
 </li>
 </ul>
 <h2 id="243-2025-10-20">2.4.3 (2025-10-20)</h2>
@@ -4192,41 +4211,41 @@
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Updated QT version bundled with the compiled Windows version to correct
-   issue #354.</p>
+    issue #354.</p>
 </li>
 </ul>
 <h2 id="242-2025-10-06">2.4.2 (2025-10-06)</h2>
 <ul>
 <li>
 <p><strong><em>Change</em></strong>: The <code>&lt;rom&gt;</code> elements in output DAT files are now listed in alphabetical
-   order based on file name. This makes it easier to find problems when analyzing DAT
-   files.</p>
+    order based on file name. This makes it easier to find problems when analyzing DAT
+    files.</p>
 </li>
 <li>
-<p><strong><em>Fix</em></strong>: Removed video regular expressions from the tags Retool ignores when grouping
-   titles together. These were added accidentally in 2.4.0.</p>
+<p><strong><em>Fix</em></strong>: Removed video regular expressions from the tags Retool ignores when
+    grouping titles together. These were added accidentally in 2.4.0.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Original header output now works again for custom No-Intro DAT files (for
-   example, RVZ and WUX versions of Redump DAT files). Turns out reading the file in as
-   bytes required extra work to deal with LF line endings.</p>
+    example, RVZ and WUX versions of Redump DAT files). Turns out reading the file in as
+    bytes required extra work to deal with LF line endings.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: The data source that provided RetroAchievements hashes has switched from
-   providing ISO, BIN, and CHD hashes to CHD and RVZ hashes. As such, Retool can now add
-   RetroAchievements labels to
-   <a href="https://github.com/MetalSlug/MAMERedump">MAME Redump DAT files</a>.</p>
+    providing ISO, BIN, and CHD hashes to CHD and RVZ hashes. As such, Retool can now add
+    RetroAchievements labels to
+    <a href="https://github.com/MetalSlug/MAMERedump">MAME Redump DAT files</a>.</p>
 </li>
 </ul>
 <h2 id="241-2025-08-13">2.4.1 (2025-08-13)</h2>
 <ul>
 <li>
 <p><strong><em>Fix</em></strong>: Turns out pathing in QT is case sensitive, and a path rename broke wherever
-  there were arrow icons on buttons. This has now been fixed.</p>
+    there were arrow icons on buttons. This has now been fixed.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: The <code>&lt;retool&gt;</code> element is now added to output DAT file headers again in all
-  circumstances. This enables the skipping of files that have already been processed.</p>
+    circumstances. This enables the skipping of files that have already been processed.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Added a Benesse ID regex to version detection.</p>

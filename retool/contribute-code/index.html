@@ -1202,34 +1202,6 @@
   
   
   
-    <li class="md-nav__item">
-      <a href="../contribute-clone-lists-mias/" class="md-nav__link">
-        
-  
-  
-  <span class="md-ellipsis">
-    
-  
-    MIAs
-  
-
-    
-  </span>
-  
-  
-
-      </a>
-    </li>
-  
-
-              
-            
-              
-                
-  
-  
-  
-  
     
     
     
@@ -1241,10 +1213,10 @@
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_8_1_5" >
         
           
-          <label class="md-nav__link" for="__nav_8_1_6" id="__nav_8_1_6_label" tabindex="0">
+          <label class="md-nav__link" for="__nav_8_1_5" id="__nav_8_1_5_label" tabindex="0">
             
   
   
@@ -1262,8 +1234,8 @@
             <span class="md-nav__icon md-icon"></span>
           </label>
         
-        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_6_label" aria-expanded="false">
-          <label class="md-nav__title" for="__nav_8_1_6">
+        <nav class="md-nav" data-md-level="3" aria-labelledby="__nav_8_1_5_label" aria-expanded="false">
+          <label class="md-nav__title" for="__nav_8_1_5">
             <span class="md-nav__icon md-icon"></span>
             
   
@@ -1884,9 +1856,9 @@
 
 <h1 id="contribute-to-code">Contribute to code</h1>
 <p>Retool uses <a href="https://github.com/pypa/hatch">Hatch</a> for environment management, code
-formatting and testing. Tests are run using Python 3.10, 3.11, and 3.12.</p>
-<p>You can install Hatch and <code>hatch-pip-compile</code> with the following command:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install hatch hatch-pip-compile
+formatting and testing. Tests are run using Python 3.10, 3.11, 3.12, and 3.13.</p>
+<p>You can install Hatch and the dependencies Retool uses with the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-0-1" name="__codelineno-0-1" href="#__codelineno-0-1"></a>pip install hatch hatch-pip-compile hatch-pyinstaller
 </code></pre></div>
 <p>To enter an environment and install Retool's depedencies, run the following command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-1-1" name="__codelineno-1-1" href="#__codelineno-1-1"></a>hatch shell
@@ -1898,34 +1870,40 @@ formatting and testing. Tests are run using Python 3.10, 3.11, and 3.12.</p>
 <p>Before running any tests, install <a href="https://code.visualstudio.com/">Visual Studio Code</a>,
 and set its path in <code>tests/integration.py</code>. This is used for comparing diffs if a test
 fails.</p>
-<p>To run all formatters and tests, run the following command:</p>
+<p>To run all formatters, and then run all tests with all defined Python versions in
+<code>pyproject.toml</code>, run the following command:</p>
 <div class="highlight"><pre><span></span><code><a id="__codelineno-3-1" name="__codelineno-3-1" href="#__codelineno-3-1"></a>hatch run all
+</code></pre></div>
+<p>For speed when developing, you can run quick tests instead. This skips the formatters, and
+runs all tests <em>except</em> the determinism test using only the latest defined Python version.
+To run the quick tests, run the following command:</p>
+<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hatch run quick:test
 </code></pre></div>
 <h3 id="formatting-and-syntax">Formatting and syntax</h3>
 <p>To only run <a href="https://github.com/psf/black"><code>black</code></a>, <a href="https://pycqa.github.io/isort/"><code>isort</code></a>,
 and <a href="https://github.com/astral-sh/ruff"><code>ruff</code></a> against the code:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-4-1" name="__codelineno-4-1" href="#__codelineno-4-1"></a>hatch run style:fix
+<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hatch run style:fix
 </code></pre></div>
 <p>To run MyPy against the code:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-5-1" name="__codelineno-5-1" href="#__codelineno-5-1"></a>hatch run types:check
+<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hatch run types:check
 </code></pre></div>
 <h3 id="integration-tests">Integration tests</h3>
 <p>Instead of running the complete test suite, you can run individual tests that validate
 specific Retool functionality.</p>
 <p>Tests different settings for compilation handling:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-6-1" name="__codelineno-6-1" href="#__codelineno-6-1"></a>hatch run integration:compilations
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hatch run integration:compilations
 </code></pre></div>
 <p>Tests that Retool outputs the same content five times in a row:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hatch run integration:determinism
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hatch run integration:determinism
 </code></pre></div>
 <p>Tests that Retool is correctly excluding all user-selected title types:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hatch run integration:exclusions
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch run integration:exclusions
 </code></pre></div>
 <p>Tests that Retool is correctly filtering by different language priorities:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch run integration:languages
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hatch run integration:languages
 </code></pre></div>
 <p>Tests that Retool is correctly filtering by different region priorities:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hatch run integration:regions
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hatch run integration:regions
 </code></pre></div>
 <h2 id="enable-developer-mode">Enable developer mode</h2>
 <p>If you create a file named <code>.dev</code> and place it in Retool's folder, the following options
