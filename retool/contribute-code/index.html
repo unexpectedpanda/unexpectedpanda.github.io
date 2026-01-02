@@ -1891,20 +1891,22 @@ and <a href="https://github.com/astral-sh/ruff"><code>ruff</code></a> against th
 <p>Instead of running the complete test suite, you can run individual tests that validate
 specific Retool functionality.</p>
 <p>Tests different settings for compilation handling:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hatch run integration:compilations
+<div class="highlight"><pre><span></span><code><a id="__codelineno-7-1" name="__codelineno-7-1" href="#__codelineno-7-1"></a>hatch run quick:compilations
 </code></pre></div>
 <p>Tests that Retool outputs the same content five times in a row:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hatch run integration:determinism
+<div class="highlight"><pre><span></span><code><a id="__codelineno-8-1" name="__codelineno-8-1" href="#__codelineno-8-1"></a>hatch run quick:determinism
 </code></pre></div>
 <p>Tests that Retool is correctly excluding all user-selected title types:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch run integration:exclusions
+<div class="highlight"><pre><span></span><code><a id="__codelineno-9-1" name="__codelineno-9-1" href="#__codelineno-9-1"></a>hatch run quick:exclusions
 </code></pre></div>
 <p>Tests that Retool is correctly filtering by different language priorities:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hatch run integration:languages
+<div class="highlight"><pre><span></span><code><a id="__codelineno-10-1" name="__codelineno-10-1" href="#__codelineno-10-1"></a>hatch run quick:languages
 </code></pre></div>
 <p>Tests that Retool is correctly filtering by different region priorities:</p>
-<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hatch run integration:regions
+<div class="highlight"><pre><span></span><code><a id="__codelineno-11-1" name="__codelineno-11-1" href="#__codelineno-11-1"></a>hatch run quick:regions
 </code></pre></div>
+<p>To view all tests that you can run, see the <code>[tool.hatch.envs.quick.scripts]</code> section in
+<code>pyproject.toml</code>.</p>
 <h2 id="enable-developer-mode">Enable developer mode</h2>
 <p>If you create a file named <code>.dev</code> and place it in Retool's folder, the following options
 are enabled by default:</p>
