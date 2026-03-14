@@ -395,6 +395,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#249-2026-03-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.9 (2026-03-14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#248-2026-01-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -2886,6 +2897,17 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#249-2026-03-14" class="md-nav__link">
+    <span class="md-ellipsis">
+      
+        2.4.9 (2026-03-14)
+      
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#248-2026-01-02" class="md-nav__link">
     <span class="md-ellipsis">
       
@@ -4085,6 +4107,48 @@
 
 
 <h1 id="changelog">Changelog</h1>
+<h2 id="249-2026-03-14">2.4.9 (2026-03-14)</h2>
+<ul>
+<li>
+<p><strong><em>Feature</em></strong>: You can now exclude titles with the following classification tags by
+    excluding add-ons:</p>
+<ul>
+<li><code>(Avatar)</code></li>
+<li><code>(Theme)</code></li>
+</ul>
+</li>
+<li>
+<p><strong><em>Feature</em></strong>: Titles with <code>(Soundtrack)</code> in their names now get assigned to the
+    <code>Audio</code> category.</p>
+</li>
+<li>
+<p><strong><em>Change</em></strong>: During the cross-region comparison phase, titles from the <em>World</em> region
+    are now treated as equivalent to the <em>USA</em>, <em>Europe</em>, and <em>Japan</em> regions when
+    checking for modern editions, promote editions, and demote editions as defined in
+    <code>internal-config.ini</code>.</p>
+<p>Mostly this means that titles originally released as cartridges on a console are
+likely to be chosen over rereleases distributed through other means.</p>
+<p>For example, take the following titles:</p>
+<ul>
+<li>
+<p><em>QuackShot Starring Donald Duck (USA) (En,Ja) (Sega Channel)</em></p>
+</li>
+<li>
+<p><em>QuackShot Starring Donald Duck (World) (En,Ja) (Rev A)</em></p>
+</li>
+</ul>
+<p>Previously, the <em>USA</em> title would have been selected as the 1G1R title if someone
+prioritized <em>USA</em> above <em>World</em> in their region priority.</p>
+<p>Now, Retool sees the demote edition tag (<code>(Sega Channel)</code>), considers the <em>World</em> and
+<em>USA</em> regions to be the same, and chooses the <em>World</em> title instead.</p>
+</li>
+<li>
+<p><strong><em>Fix</em></strong>: Modified the PlayStation Vita ID regex.</p>
+</li>
+<li>
+<p><strong><em>Fix</em></strong>: Made sure version detection didn't pick up <code>(V.Smile.*)</code> tags.</p>
+</li>
+</ul>
 <h2 id="248-2026-01-02">2.4.8 (2026-01-02)</h2>
 <ul>
 <li>
@@ -4098,11 +4162,11 @@
 </li>
 <li>
 <p><strong><em>Change</em></strong>: Retool used to append <code>(Demo)</code> to the short names of demos it found that
-    were missing a demo tag -- it did this to prevent demos from getting confused with full
-    versions of titles during title comparison. Unfortunately, it also made adding these
-    titles to clone lists confusing for contributors, as you had to know what Retool was
-    doing behind the scenes, and when to add the <code>(Demo)</code> string to a title in the clone
-    list to match that behavior.</p>
+    were missing a demo tag -- it did this to prevent demos from getting confused with
+    full versions of titles during title comparison. Unfortunately, it also made adding
+    these titles to clone lists confusing for contributors, as you had to know what Retool
+    was doing behind the scenes, and when to add the <code>(Demo)</code> string to a title in the
+    clone list to match that behavior.</p>
 <p>Retool now handles demo/full version comparison behind the scenes without adding a
 <code>(Demo)</code> tag to short names, meaning you also don't need to know when to add it in
 clone lists.</p>
@@ -4117,8 +4181,8 @@ clone lists.</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: Retool's icon is now shown on the macOS dock instead of the Python Launcher
-    icon when running Retool GUI. Unfortunately it doesn't seem possible to change the name
-    of the app in the dock or menu without providing an app bundle.</p>
+    icon when running Retool GUI. Unfortunately it doesn't seem possible to change the
+    name of the app in the dock or menu without providing an app bundle.</p>
 </li>
 </ul>
 <h2 id="246-2025-12-18">2.4.6 (2025-12-18)</h2>
@@ -4133,12 +4197,12 @@ clone lists.</p>
     Retool's root folder any more.</p>
 </li>
 <li>
-<p><strong><em>Fix</em></strong>: Fixed missing grip handle graphic between the DAT files list and the rest of
-    the app.</p>
+<p><strong><em>Fix</em></strong>: Fixed missing grip handle graphic between the DAT files list and the rest
+    of the app.</p>
 </li>
 <li>
-<p><strong><em>Fix</em></strong>: If a user cancels out of adding DAT files, and there are no DAT files in the
-    list, Retool now returns the placeholder text to "No DAT files added yet".</p>
+<p><strong><em>Fix</em></strong>: If a user cancels out of adding DAT files, and there are no DAT files in
+    the list, Retool now returns the placeholder text to "No DAT files added yet".</p>
 </li>
 <li>
 <p><strong><em>Fix</em></strong>: If you select <strong>Override global settings</strong> in the system <strong>Options</strong> tab,
